@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LFP Atlas — global LFP/LMFP synthesis-route &amp; producer intelligence</title>
+<meta name="description" content="Every documented LFP/LMFP cathode-material producer — with the synthesis route, the patent history that shaped the industry, capacity claims and the sourcing shown.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <header>
+    <div class="brand">
+      <h1>LFP ATLAS</h1>
+      <span class="tag" id="asof">Seeded edition</span>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </header>
+
+  <nav>
+    <button data-p="map" class="on">Map</button>
+    <button data-p="table">Producers</button>
+    <button data-p="methods">Synthesis methods</button>
+    <button data-p="patents">Patents &amp; licensing</button>
+    <button data-p="cite">Cite &amp; downloads</button>
+    <button data-p="method">Methodology</button>
+    <span class="sp"></span>
+    <span class="act">
+      <button class="btn mobonly" id="filtersbtn">Filters</button>
+      <button class="btn" id="reset">Reset filters</button>
+      <button class="btn p" id="csv">Export CSV</button>
+    </span>
+  </nav>
+
+  <div class="body">
+    <aside class="rail">
+      <div class="fgroup">
+        <h4>Search</h4>
+        <input id="q" placeholder="Company, method, country, notes…" autocomplete="off">
+      </div>
+      <div class="fgroup"><h4>Status <span class="clr" data-c="status">clear</span></h4><div class="chips" id="f-status"></div></div>
+      <div class="fgroup"><h4>Country <span class="clr" data-c="country">clear</span></h4><div class="chips" id="f-country"></div></div>
+      <div class="fgroup"><h4>Route family <span class="clr" data-c="route">clear</span></h4><div class="chips" id="f-route"></div></div>
+      <div class="fgroup"><h4>Makes <span class="clr" data-c="chem">clear</span></h4><div class="chips" id="f-chem"></div></div>
+      <div class="fgroup">
+        <h4>Attributes</h4>
+        <label class="tog"><input type="checkbox" id="t-cap"> Counted operating figure</label>
+        <label class="tog"><input type="checkbox" id="t-pipe"> Announced / building figure</label>
+        <label class="tog"><input type="checkbox" id="t-lmfp"> LMFP involved</label>
+        <label class="tog"><input type="checkbox" id="t-lic"> In the licensing web</label>
+      </div>
+    </aside>
+
+    <div class="view">
+      <!-- MAP -->
+      <section class="pane on" id="p-map">
+        <div class="hero" id="hero">
+          <h2>~90% of the world's LFP moves through one synthesis route — and ~95–98% of it is made in China.</h2>
+          <p id="herotext"></p>
+        </div>
+        <div class="regionbar" id="regions"></div>
+        <div class="mapgrid">
+          <div class="mapwrap">
+            <svg id="map" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet"></svg>
+            <div class="maptools">
+              <button id="zin" title="Zoom in">+</button>
+              <button id="zout" title="Zoom out">−</button>
+              <button id="zfit" title="Reset view">⤢</button>
+            </div>
+            <div class="maplegend" id="mleg"></div>
+            <div class="maphint" id="mhint">drag to pan · scroll to zoom · click a producer</div>
+            <div class="focusbar" id="focusbar" hidden>
+              <span id="focustxt"></span><button id="focusoff">clear focus</button>
+            </div>
+          </div>
+          <aside class="supply" id="supply"></aside>
+        </div>
+        <div class="grid g2" style="margin-top:14px">
+          <div class="card">
+            <h3>Links</h3>
+            <p class="sub">Blue = disclosed customer / offtake · violet dashes = process license · grey = JV / partnership · red dashes = terminated or dead.</p>
+            <label class="tog"><input type="checkbox" id="t-flow" checked> Show supply links</label>
+            <label class="tog"><input type="checkbox" id="t-liclinks" checked> Show license links</label>
+            <label class="tog"><input type="checkbox" id="t-cust-dots" checked> Show customers</label>
+            <label class="tog"><input type="checkbox" id="t-labels"> Always show labels <span class="muted">(auto below ~3× zoom)</span></label>
+            <label class="tog"><input type="checkbox" id="t-spider" checked> Fan out co-located producers</label>
+          </div>
+          <div class="card">
+            <h3>Marker sizing &amp; honesty</h3>
+            <p class="sub">Filled area ∝ counted OPERATING nameplate; dashed hollow rings are announced / under-construction pipeline (never mixed into the same total). Producers with no counted figure draw at minimum size. Dot position honours the seed's precision — many Chinese rows are province- or country-level only, and say so on hover.</p>
+            <div id="sizeleg"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCERS TABLE -->
+      <section class="pane" id="p-table">
+        <div class="card" style="padding:0;overflow:hidden">
+          <div style="overflow:auto;max-height:calc(100vh - 200px)">
+            <table id="tbl"><thead id="thead"></thead><tbody id="tbody"></tbody></table>
+          </div>
+        </div>
+      </section>
+
+      <!-- METHODS -->
+      <section class="pane" id="p-methods">
+        <div class="hero">
+          <h2>28 documented synthesis routes, five families — one dominates.</h2>
+          <p>The taxonomy below mirrors the NMC Atlas scheme (solid-state / wet-chemistry / spray) and extends it for the olivine world: melt routes and a novel/hybrid family. Each card carries how the route works, its trade-offs, who uses it, and a real reference. The commercial LFP workflow is a <b>chain across families</b>: precipitate an FePO₄ precursor (C) → spray-dry granulate (D) → carbothermal calcine (A).</p>
+        </div>
+        <div class="regionbar" id="fambar"></div>
+        <div id="methodhost"></div>
+      </section>
+
+      <!-- PATENTS -->
+      <section class="pane" id="p-patents">
+        <div class="hero">
+          <h2>The licensing web that held LFP in place — until the patents expired.</h2>
+          <p>From Goodenough's 1996–97 olivine discovery to the <b>~end-2022 patent cliff</b>, LFP production outside Asia ran through one Swiss patent pool and a handful of licensees. The cliff is why Western and Indian entries cluster after 2022–23. Click any event for its source.</p>
+        </div>
+        <div class="tlwrap"><div id="timeline"></div></div>
+        <div class="card" style="margin-top:14px"><h3>Event register</h3><div id="tlist"></div></div>
+      </section>
+
+      <!-- CITE -->
+      <section class="pane" id="p-cite">
+        <div class="grid g2">
+          <div class="card"><h3>Cite this dataset</h3>
+            <p class="sub" id="citeblock"></p>
+            <button class="btn p" id="dl-json">Download JSON</button>
+            <button class="btn" id="dl-claims">Download claims CSV</button>
+            <button class="btn" id="dl-plants">Download producers CSV</button>
+          </div>
+          <div class="card"><h3>Backbone references</h3>
+            <p class="sub">The reviews and foundational papers the seed compilation rests on.</p>
+            <div id="refs"></div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:14px"><h3>Changelog</h3>
+          <p class="sub">Generated from the canonical dataset, not hand-written.</p>
+          <div id="changelog"></div>
+        </div>
+      </section>
+
+      <!-- METHODOLOGY -->
+      <section class="pane" id="p-method">
+        <div class="prose">
+          <h2>What this is — and what it is not yet</h2>
+          <p><b>LFP Atlas v0.1 is a seeded edition.</b> It restructures a compiled research workbook (19 July 2026) into the same
+          claim architecture as its sibling <b>NMC Atlas</b>: one canonical JSON file, every figure a discrete claim with its own
+          source, basis, scope and chemistry tag, and a build that fails if any displayed figure lacks a citation. What it does
+          <i>not</i> yet have is NMC Atlas's evidence depth: claims currently inherit row-level seed sources, most lack vintages,
+          and no source is snapshot-archived. Every one of those weaknesses is listed in the gaps register below — shipped
+          openly, not smoothed over. The v0.2 work programme is figure-level re-sourcing to the NMC standard.</p>
+          <h2>The counting rule (the olivine rule, seed edition)</h2>
+          <p id="rulep"></p>
+          <h2>What the labels mean</h2>
+          <p><b>kind</b> — capacity (nameplate), shipments, output, cumulative output, a rate in native units, a market share, or a
+          qualitative claim. Only <i>capacity</i> can ever count toward a total; shipments and output are market context.<br>
+          <b>basis</b> — built, reported (stated as current, vintage unclear), construction, announced, planned, target, historic
+          or cancelled. Targets count toward nothing: expansion goals often subsume current figures, and adding them would
+          double-count.<br>
+          <b>chem</b> — LFP, LMFP, L(M)FP-unsplit (the document doesn't split them), cathode-unsplit (broader cathode figure),
+          FePO₄ (precursor — never in CAM totals), or not-LFP.<br>
+          <b>scope</b> — site, company or group; site-scope pipeline claims add up, company-scope claims take the maximum.<br>
+          <b>bundle</b> — the stated figure includes non-CAM tonnage (e.g. "LFP + iron-phosphate"); rides in the upper bound only.</p>
+          <h2>Seed provenance</h2>
+          <p>Sixty-five producer rows (including precursor-only, exited, and cell-maker context rows — greyed, counting nothing),
+          28 synthesis methods in five families, 18 patent &amp; licensing events and 10 backbone references, from
+          <i>LFP_LMFP_Synthesis_Methods_and_Producers.xlsx</i> (compiled 19 July 2026). The workbook's own evidence policy:
+          no sources, companies, patents or numbers were fabricated; each row carries a confidence rating and a source.
+          Geography is honest about its own precision: where the seed states only a province or country, the dot says so.</p>
+          <div id="kfhost"></div>
+          <h2>Toward Cathodes ATLAS</h2>
+          <p>This atlas is built schema-compatible with NMC Atlas by design: same claim model, same build discipline, same
+          publishing boundary. When LFP Atlas reaches evidence maturity, both fold into a single <b>Cathodes ATLAS</b> with
+          chemistry as a first-class dimension — the band engine already treats chemistry rules as configuration.</p>
+          <div id="gapsreg"></div>
+          <h2>License</h2>
+          <p>Dataset and site: <b>CC-BY 4.0</b>, attribution "LFP Atlas" + version. Cited documents remain under their
+          publishers' rights. World geometry: Natural Earth (public domain).</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<div id="drawer"></div>
+<div id="tip"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

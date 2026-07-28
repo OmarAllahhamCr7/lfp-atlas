@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Western Mining Plans to Invest in Taifeng Pulead so as to Enter Market for LFP Materials - EnergyTrend</title>
+    <meta name="keywords" content="Li-ion battery">
+    <meta name="description" content="In late June, Western Mining released a notice stating that it plans to participate in an auction for a 6.29% stake in Qinghai Taifeng Pulead Lithium ..."/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="alternate" type="application/rss+xml"
+          title="EnergyTrend - Solar Energy, Electric Vehicle, Power Battery, Wind Energy , Renewable Energy, Green Energy RSS"
+          href="/rss.xml">
+    <link rel="stylesheet" href="/wp-content/themes/twentytwelve/style.css" type="text/css">
+
+            <!-- twitter card -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta property="og:url" content="https://www.energytrend.com/news/20230628-32610.html"/>
+        <meta property="og:title" content="Western Mining Plans to Invest in Taifeng Pulead so as to Enter Market for LFP Materials - EnergyTrend"/>
+        <meta property="og:description" content="In late June, Western Mining released a notice stating that it plans to participate in an auction for a 6.29% stake in Qinghai Taifeng Pulead Lithium ..."/>
+        <meta property="og:image" content="https://www.energytrend.com/wp-content/uploads/2019/10/拍信素材-11463659-xl2.png"/>
+    
+        
+    
+                        <link rel="canonical" href="https://www.energytrend.com/news/20230628-32610.html">
+            <link rel="alternate" media="only screen and (max-width: 640px)"
+                  href="https://m.energytrend.com/news/20230628-32610.html"/>
+            
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1991057826427406" crossorigin="anonymous"></script>
+	
+    <!-- 載入Jquery -->
+    <!-- <script src="https://www.energytrend.com/wp-content/themes/twentytwelve/js/jquery-3.2.1.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	
+	<!-- 設置 SweetAlert 的 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- 設置 SweetAlert 的 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script type='text/javascript' src="/wp-content/themes/twentytwelve/js/et-cookies.js?ver=2607280721"></script>
+
+    <script type="text/javascript">
+        //getUserHeader();
+
+        /*
+         * 取得使用者header
+         * @return [type] [description]
+         */
+        function getUserHeader() {
+            $.ajax({
+                url: "/user/header",
+                success: function (data) {
+                    $('#user_header').html(data);
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+		
+		jQuery(document).ready(function() {
+            var etUserCookieDays = 1;
+            var domainHost = 'www.energytrend.com';
+            const token = new URLSearchParams(window.location.search).get('device_token');
+            const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;
+            history.replaceState({path: cleanUrl}, '', cleanUrl);
+            // 重新添加註冊按鈕的事件監聽
+            $('.register-button').on('click', function(event) {
+                event.preventDefault(); // 防止默認連結行為
+                const registrationUrl = 'https://www.energytrend.com/news/20230628-32610.html';
+                const host = 'https://www.trendforce.com';
+
+                // 使用 SweetAlert 來顯示對話框
+                Swal.fire({
+                    title: 'Important Notice',
+                    html: `
+                                <p>Please be advised that we are currently undergoing brand integration.</p>
+                                <p>To register for a new account, kindly visit our TrendForce website:</p>
+                                <p><a href="https://www.trendforce.com" target="_blank">https://www.trendforce.com</a></p>
+                                <p>Thank you for your understanding. We look forward to your registration!</p>
+                            `,
+                    showCloseButton: true,
+                    confirmButtonText: 'Take me to it'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = host + '/register?redirect=' + registrationUrl;
+                    }
+                });
+            });
+
+            $('.logout-btn').on('click', function(event) {
+                destroy_user_cookie(domainHost);
+            });
+
+            jQuery.when(get_login_status())
+                .then(function(response, textStatus) {
+                    header_btn_display();
+                })
+                .fail(function(response, textStatus) {
+                    header_btn_display();
+                });
+
+            // 檢查登入狀態
+                function get_login_status() {
+                    var etUser = get_user_cookie();
+                    if (etUser.is_login == 1) {
+                        console.log('get_login_status:', 'already login');
+                        return {};
+                    }
+                    var memberHost = 'https://www.trendforce.com/';
+
+                    return jQuery.ajax({
+                        method: 'GET',
+                        url: memberHost + 'api/user/getUserInfo?device_token=' + token,
+                        dataType: 'json',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                            'Authorization': "41dfC7e0ff88ib251a02B73J6e7c57m5",
+                        },
+                        success: function (response) {
+                            console.log('loginStatus:', response.message);
+
+                            if (response.error == 1) {
+                                console.log('loginError:', response.message);
+                            } else {
+                                console.log('loginName:', response.result.name);
+                                set_user_cookie(
+                                    response.result.name,
+                                    response.result.email,
+                                    response.result.user_id,
+                                    etUserCookieDays, domainHost
+                                );
+                            }
+                        },
+                        error: function (response, textStatus, jqXHR) {
+                            console.log('loginStatus:', 'member site connect fail');
+                        }
+                    });
+                }
+
+                // 使用cookie判斷版位顯示/隱藏
+                function header_btn_display() {
+                    var etUser = get_user_cookie();
+                    var username = etUser.username;
+					var email = etUser.email;
+
+                    if (etUser.is_login == 1) {
+                        console.log(etUser.username);
+                        jQuery('#register_header').hide()
+                        jQuery('#user_header').show()
+                    } else {
+                        jQuery('#register_header').show()
+                        jQuery('#user_header').hide()
+                    }
+                }
+        });
+    </script>
+
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+        window.googletag = window.googletag || {
+            cmd: []
+        };
+        googletag.cmd.push(function() {
+            googletag.defineSlot('/23101350658/ET_EN_PC_All_H1_728x90', [728, 90], 'div-gpt-ad-1713167266079-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_All_H2_300x250', [300, 250], 'div-gpt-ad-1713167315193-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_IDX_H3_300x50', [300, 50], 'div-gpt-ad-1713167369077-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_IDX_H4_300x50', [300, 50], 'div-gpt-ad-1713167395475-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_H5-SingleVideo_300x168', [300, 168], 'div-gpt-ad-1713167416504-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_H5-VideoBanner_300x600', [300, 600], 'div-gpt-ad-1713167437480-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L01_150x75', [150, 75], 'div-gpt-ad-1713167459359-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L02_150x75', [150, 75], 'div-gpt-ad-1713167486111-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L03_150x75', [150, 75], 'div-gpt-ad-1713167511572-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L04_150x75', [150, 75], 'div-gpt-ad-1713167537123-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L05_150x75', [150, 75], 'div-gpt-ad-1713167564361-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L06_150x75', [150, 75], 'div-gpt-ad-1713167587985-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L07_150x75', [150, 75], 'div-gpt-ad-1713167611608-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L08_150x75', [150, 75], 'div-gpt-ad-1713167634131-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L09_150x75', [150, 75], 'div-gpt-ad-1713167678953-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L10_150x75', [150, 75], 'div-gpt-ad-1713167702764-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L11_150x75', [150, 75], 'div-gpt-ad-1713167726672-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_L12_150x75', [150, 75], 'div-gpt-ad-1713167752871-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.defineSlot('/23101350658/ET_EN_PC_Contact_Bottom01_728x90', [728, 90], 'div-gpt-ad-1758866319395-0').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+</head>
+
+<body>
+
+<div id="page" class="hfeed site">
+    <header id="masthead" class="site-header site-header-revision" role="banner">
+        <!--   最頂層    -->
+        <div class="tipbar">
+            <div class="tip">
+                <form role="search" method="get" id="searchform" action="/">
+                    <div class="search"><label class="screen-reader-text" for="s">search：</label>
+                        <input type="text" value="" name="s" id="s"/>
+                        <input type="submit" id="searchsubmit" value="search"/>
+                    </div>
+                </form>
+                <a href="//www.energytrend.cn" target="_blank" class="lang" rel="nofollow">CN</a>
+                <a href="/" target="_blank" class="lang">EN</a>
+                <a href="//m.energytrend.com" target="_blank" rel="nofollow">
+                    <img class="social" src="/wp-content/themes/twentytwelve/images/phone.gif" width="24" height="24"
+                         title="mobile" alt="mobile">
+                </a>
+                <!-- <a href="//plus.google.com/+Energytrend_TF" target="_blank" rel="nofollow">
+                    <img class="social" src="/wp-content/themes/twentytwelve/images/googleplus-icon.gif" width="24" height="24" title="google plus" alt="EnergyTrend google plus">
+                </a> -->
+                <a href="//twitter.com/energytrend_tf" target="_blank" rel="nofollow">
+                    <img class="social" src="/wp-content/themes/twentytwelve/images/twitter-icon.gif" width="24"
+                         height="24" title="twitter" alt="EnergyTrend twitter">
+                </a>
+                <a href="//www.linkedin.com/company/energytrend" target="_blank" rel="nofollow">
+                    <img class="social" src="/wp-content/themes/twentytwelve/images/btn_color_linkin.png"
+                         title="linkedin" alt="linkedin">
+                </a>
+                <a href="//www.facebook.com/EnergyTrend?fref=ts" target="_blank" rel="nofollow">
+                    <img class="social" src="/wp-content/themes/twentytwelve/images/facebook-icon.gif" width="24"
+                         height="24" title="facebook" alt="EnergyTrend facebook">
+                </a>
+                <a href="/rss.xml" target="_blank" rel="nofollow">
+                    <img class="social" src="/wp-content/themes/twentytwelve/images/btn_color_rss_24x24.gif" title="RSS"
+                         alt="EnergyTrend RSS"/>
+                </a>
+                <!--<a href="/graph/rank" class="login-bar" rel="nofollow">Graph Download</a>-->
+                <div id="register_header" style="display:none">
+                    <a href="/user/register" class="login-bar register-button" rel="nofollow">Register</a>
+                </div>
+                <div id="user_header" style="display:none">
+                    <a href="https://www.trendforce.com/member/personal" class="login-bar" rel="nofollow">My account</a>
+                </div>
+            </div>
+        </div>
+
+        <!--- Logo   -->
+        <hgroup>
+            <div class="logobar">
+                <a class="float-left" href="/">
+                    <img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/logo.svg" alt="EnergyTrend logo" title="EnergyTrend"
+                         width="282" height="65">
+                </a>
+                <div class="icon-bg">
+                    <a href="/taxonomy/term/solar-pv/" title="Solar" target="_blank" rel="home" class="menu-pv">Solar PV</a>
+                    <a href="/taxonomy/term/lithium-battery/" title="Lithium Battery" target="_blank" rel="home" class="menu-battery">Lithium Battery</a>
+                    <a href="/taxonomy/term/energystorage/" title="Storage" target="_blank" rel="home" class="menu-ev">Storage</a>
+                </div>
+                <div id="ADTOP">
+                                        </div>
+            </div>
+        </hgroup>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="logobar">
+                <div class="menu-menu-2-container"><ul id="menu-menu-2" class="nav-menu"><li id="menu-item-12571" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12571"><a target="_blank" rel="noopener" href="/">Home</a></li>
+<li id="menu-item-12572" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-12572"><a target="_blank" rel="noopener" href="https://www.energytrend.com/./news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-12576" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12576"><a target="_blank" rel="noopener" href="/taxonomy/term/148/">China</a></li>
+	<li id="menu-item-32247" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32247"><a target="_blank" rel="noopener" href="/taxonomy/term/1387/">Asia</a></li>
+	<li id="menu-item-12573" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12573"><a target="_blank" rel="noopener" href="/taxonomy/term/279/">Europe</a></li>
+	<li id="menu-item-12574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12574"><a target="_blank" rel="noopener" href="/taxonomy/term/294/">North America</a></li>
+	<li id="menu-item-12581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12581"><a target="_blank" rel="noopener" href="/taxonomy/term/295/">South America</a></li>
+	<li id="menu-item-12582" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12582"><a target="_blank" rel="noopener" href="/taxonomy/term/1258/">Africa</a></li>
+	<li id="menu-item-12583" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12583"><a target="_blank" rel="noopener" href="/taxonomy/term/65/">Oceania</a></li>
+</ul>
+</li>
+<li id="menu-item-12584" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12584"><a target="_blank" rel="noopener" href="https://www.energytrend.com/./research/">Analysis</a></li>
+<li id="menu-item-21762" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-21762"><a target="_blank" rel="noopener" href="https://www.energytrend.com/./miservice/">Intelligence</a>
+<ul class="sub-menu">
+	<li id="menu-item-36664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36664"><a href="/miservice/solars.html">Solar</a></li>
+	<li id="menu-item-36665" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36665"><a href="/miservice/energy-storage.html">Energy Storage</a></li>
+	<li id="menu-item-36666" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36666"><a href="/miservice/battery-ev.html">Battery/Electric Vehicle</a></li>
+	<li id="menu-item-36667" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36667"><a href="/miservice/customize.html">Customized</a></li>
+</ul>
+</li>
+<li id="menu-item-12587" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-12587"><a target="_blank" rel="noopener" href="https://www.energytrend.com/./pricequotes/">Price Trend</a>
+<ul class="sub-menu">
+	<li id="menu-item-12588" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12588"><a target="_blank" rel="noopener" href="/solar-price.html">Solar Price</a></li>
+	<li id="menu-item-12589" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12589"><a target="_blank" rel="noopener" href="/battery-price.html">Lithium Battery</a></li>
+</ul>
+</li>
+<li id="menu-item-12590" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12590"><a target="_blank" rel="noopener" href="https://www.energytrend.com/./interview/">Interviews</a></li>
+<li id="menu-item-12591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12591"><a target="_blank" rel="noopener" href="/knowledge/">knowledge</a>
+<ul class="sub-menu">
+	<li id="menu-item-12592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12592"><a target="_blank" rel="noopener" href="/knowledge/solar.html">Solar</a></li>
+	<li id="menu-item-12593" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12593"><a target="_blank" rel="noopener" href="/knowledge/battery.html">Energy Storage</a></li>
+	<li id="menu-item-12594" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12594"><a target="_blank" rel="noopener" href="/knowledge/ev.html">EV</a></li>
+	<li id="menu-item-12595" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12595"><a target="_blank" rel="noopener" href="/knowledge/windenergy.html">Wind Energy</a></li>
+</ul>
+</li>
+<li id="menu-item-12596" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-12596"><a target="_blank" rel="noopener" href="https://www.energytrend.com/./event/">Event</a>
+<ul class="sub-menu">
+	<li id="menu-item-12597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12597"><a target="_blank" rel="noopener" href="/showreport/">Show Report</a></li>
+	<li id="menu-item-12598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12598"><a target="_blank" rel="noopener" href="/event/list.html">Show Schedule</a></li>
+</ul>
+</li>
+</ul></div>            </div>
+        </nav>
+    </header>
+    <!-- #masthead -->
+</div>
+
+
+<div id="main" class="wrapper">
+
+    <!-- add by Shian 2017-06-08 -->
+    <style>
+        a:link, a:visited, a:active {
+            color: #4e8b00;
+            text-decoration: none;
+        }
+
+        a.lang {
+            background-color: #666;
+            color: #FFF;
+            margin-top: 3px;
+            padding: 1px;
+            font-size: 15px;
+            margin-right: 6px;
+            display: inline-block;
+        }
+
+        a.login-bar {
+            padding: 3px 4px;
+            margin: 3px;
+            color: #ffffff;
+            background-color: #7daf08;
+        }
+
+        a.login-name {
+            margin: 6px;
+        }
+    </style>
+<div id="single" class="logobar">
+    <div id="primary" class="site-content">
+        <div id="content" role="main">
+            <!-- /23101350658/ET_EN_PC_All_H1_728x90 -->
+			<div id='div-gpt-ad-1713167266079-0' style='min-width: 728px; min-height: 90px;'>
+				<script>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1713167266079-0'); });
+				</script>
+			</div>
+                            <a style="color:#444444;" href="/">HOME</a> > <a style="color:#444444;"
+                                                                 href="/news/">News</a>
+                        <div class="newstop"></div>
+            
+                
+
+
+<style>
+    .indexsocial {
+        top: initial;
+    }
+
+    .indexsocial .taglink {
+        font-size: 12px;
+        margin-left: 0;
+    }
+</style>
+<article id="post-32610" class="post-32610 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-li-ion-battery">
+
+    <div class="content">
+        
+        <!-- 文章 header -->
+        <header class="entry-header">
+            <table>
+                <tr> <!-- 文章標題 -->
+                    <td class="maintitle">
+                        <h1 class="entry-title">
+                            <!--
+                            <a href="https://www.energytrend.com/news/20230628-32610.html" title="Western Mining Plans to Invest in Taifeng Pulead so as to Enter Market for LFP Materials" rel="bookmark">
+                                Western Mining Plans to Invest in Taifeng Pulead so as to Enter Market for LFP Materials                            </a>
+							-->
+                            Western Mining Plans to Invest in Taifeng Pulead so as to Enter Market for LFP Materials                        </h1>
+                    </td>
+                </tr>
+                <tr> <!-- 文章相關資訊 -->
+                    <td style="padding:7px 0;">
+                        <span class="head">published:</span>
+                        <span class="body newsdate">2023-06-28 9:30 </span>
+                        <!--<span style="padding:0 8px;">|</span>
+                        <span class="head">:</span>
+                        <span class="body"></span>-->
+                        <!--<span style="padding:0 8px;">|</span>
+                        <span class="head">:</span>
+                        <span class="body">
+                                                                                                                                    <a title="" href="">
+                                                                            </a>
+                                                                                                                        </span>-->
+                                                    <span class="body" id="edlink" style="display:none">
+                            <a class="edit" href="/wp-admin/post.php?action=edit&post=32610">Edit</a>
+                        </span>
+                                            </td>
+                </tr>
+            </table>
+        </header>
+
+        <!-- 分隔線 -->
+        <div>
+            <img src="//www.energytrend.com/wp-content/themes/twentytwelve/images/title_bar.gif" width="650px"
+                 height="4" style="width:100%;">
+        </div>
+
+                    <!-- 文章內容 -->
+            <div class="entry-content">
+                
+                <div class="indent">
+                    
+                    <p><img decoding="async" fetchpriority="high" class="alignnone size-large wp-image-15385" src="https://img.energytrend.com/wp-content/uploads/2019/10/%E6%8B%8D%E4%BF%A1%E7%B4%A0%E6%9D%90-11463659-xl2.png" alt="" width="625" height="416" /></p>
+<p>In late June, Western Mining released a notice stating that it plans to participate in an auction for a 6.29% stake in Qinghai Taifeng Pulead Lithium Energy Technology. This stake is currently owned by Western Mining’s controlling shareholder Western Mining Group, and the bid price starts at a low of RMB 791 million.<span id="more-32610"></span></p>
+<p>As of July 31, 2022, the assessed value of Taifeng Pulead had reached RMB 13.81 billion. Based on the calculation that factors in the proportion of the paid-in capital, the estimated corresponding value of the 6.29% stake would be RMB 878.46 million.</p>
+<p>Under the ownership of the Western Mining Group, the lowest listing price of the 6.29% stake is RMB 790.6157 million. Western Mining intends to bid for the stake in a public auction with a bid price that is exactly the same as the lowest listing price.</p>
+<p>Taifeng Pulead manufactures various materials that used in Li-ion batteries. Currently, the company has offerings related to LFP materials, ternary cathode materials, and separators. Moreover, the company have developing its own sources of lithium resources, including lithium brine and lithium carbonate.</p>
+<p>Taifeng Pulead operates a manufacturing base in the Nanchuan Industrial Park that is located in Xining, a major city in China’s Qinghai Province. In terms of production capacity, the base accommodates 185,000 tons per year for LFP, 10,000 tons per year for LCO, 8,000 tons per year for ternary cathode, and 420 million square meters per year for separators. Of the total production capacity for LFP, the portion that is in normal operation comprises 25,000 tons, and the first-phase expansion that is now in pilot production comprises 160,000 tons. The company plans to add another 140,000 tons in the upcoming second-phase expansion.</p>
+<p>Through its subsidiary Qinghai East Taijinaier Lithium Resources, Taifeng Pulead indirectly holds stakes in a brine lake project in Golmud, which is another city in Qinghai Province. This brine lake, also known as East Taijinar Lake, contains significant reserves of lithium, boron, and potassium. In fact, it is one of the largest of its kind in China.</p>
+<p>In terms of financial performance, Taifeng Pulead’s net profit figures for 2020, 2021, and 2022 were RMB 104 million, RMB 866 million, and RMB 4.325 billion respectively. Its annual profit growth rate came to 729.65% for 2021 and 399.59% for 2022.</p>
+<p>In recent years, Western Mining has been aggressively acquiring projects related to extracting battery-related metals from brine lakes. The company acquired a 91.4% stake in Qinghai West Magnesium, and it then acquired a 27% stake in Qinghai Jinaier Lithium Resources. These deals gave Western Mining extensive rights to harvest magnesium salts from Tuanjie Lake and various other metals from East Taijinar Lake (e.g., lithium, boron, and potassium).</p>
+<p>Western Mining said the acquisition of the 6.29% stake in Taifeng Pulead will enable expansions into the market for LFP materials. This market is downstream to the market for lithium carbonate. Therefore, Western Mining will able to form its own complete industry chain for cathode materials used in Li-ion batteries, as it will be involved in both mining activities and cathode manufacturing. At the same time, this deal will benefit Western Mining in terms of developing its production capacity within Qinghai and operating a world-class base that manufactures battery materials and is conveniently located next to several major brine lakes.</p>
+<p>In these past few years, Taifeng Pulead has maintained a high profit margin and a low asset-liability ratio, so its financial situation is fairly healthy. Furthermore, Taifeng Pulead and its subsidiaries currently possess 87 patents related to cathode materials and the extraction of lithium from brine lakes. Among Chinese suppliers for battery materials, Taifeng Pulead is very much ahead of the competition in terms of R&amp;D.</p>
+<p>Looking at its manufacturing bases, Taifeng Pulead has three bases for outputting cathode materials and separators and one base for outputting lithium carbonate and potassium-based fertilizers. Besides having the most advanced technologies among Chinese companies for harvesting lithium from brine lakes, Taifeng Pulead has also reached a high degree of maturity with respect to product development, manufacturing processes, and sales channels. All of these will bring favorable investment returns for the company.</p>
+<p><em>This article is a translation of a Chinese article posted by TrendForce. It contains information that is either sourced from other news outlets or accessible in the public domain. Some Chinese names are transcribed into English using Hanyu Pinyin.</em></p>
+                </div>
+
+                            </div>
+            </div>
+</article>
+<!-- #post -->
+
+                <!-- 文章分享、在線投稿、轉寄、列印、關鍵字 -->
+                <div class="content_rss" style="clear:both;">
+                    <img alt="announcements" src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/announcements_icon.gif"
+                         style="vertical-align: middle;">
+                    <a href="/announcements" target="_blank"
+                       rel="nofollow">add announcements</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- <img alt="mail" src="/mail_icon.gif" style="vertical-align: middle;">
+	            	<a href="/printmail/" target="_blank" rel="nofollow"></a>&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <img alt="mail" src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/print_icon.gif" style="vertical-align: middle;">
+                    <a href="/print/32610" target="_blank"
+                       rel="nofollow">print</a>
+                    <!-- AddToAny BEGIN -->
+                    <div id="ckepop" style="float: left; width:100px; ">
+                        <a class="a2a_dd" href="//www.addtoany.com/share" target="_blank">
+                            <img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/share_icon.jpg" width="88" height="24" border="0"
+                                 alt="Share">
+                        </a>
+                        <script>
+                            var a2a_config = a2a_config || {};
+                            a2a_config.locale = "en-US";
+                            a2a_config.num_services = 6;
+                        </script>
+                        <script async="" src="//static.addtoany.com/menu/page.js"></script>
+                    </div>
+                    <!-- AddToAny END -->
+
+                    <!-- 關鍵字(限制在5個關鍵字, 太多會跑版) -->
+                    <div class="taglink">
+                        <span>Tags: </span>
+                        <a href="https://www.energytrend.com/taxonomy/term/li-ion-battery/" rel="tag">Li-ion battery</a>                    </div>
+                </div>
+
+                <!-- 前後一頁相關文章 -->
+                                <div class="content_next">
+                    <nav class="nav-single set_text">
+                        <h3 class="assistive-text">Post navigation</h3>
+                        <!-- 前一篇文章 -->
+                                                    <span class="nav-previous">
+							<a href="https://www.energytrend.com/news/20230627-32638.html">
+								<div class="row">
+								 <div class="col-1 col-lg-1 col-md-1"><span class="meta-nav">←</span></div>
+								 <div class="col-11 col-lg-11 col-md-11">Rocks Found Locally in Tanzania Become Desirable Energy Storage Materials</div>
+								</div>	
+							</a>
+						</span>
+                                                <!-- 下一篇文章 -->
+                                                    <span class="nav-next">
+							<a href="https://www.energytrend.com/news/20230628-32434.html">
+								<div class="row">
+								<div class="col-11 col-lg-11 col-md-11">Global Challenge: Effective Recycling of Solar Panels Emerges as Key to Averting Ecological Disaster</div>
+								<div class="col-1 col-lg-1 col-md-1"><span class="meta-nav">→</span></div>
+								</div>	
+							</a>
+						</span>
+                                            </nav>
+                </div>
+                             <!-- end of the loop. -->
+
+            <!-- 相关推荐_Donna_20221124 -->
+                                    <div class="article">
+                <div id="tit">
+                    <div class="title"><span>Recommend</span></div>
+                </div>
+                                    <div class="content img_line">
+                        <div class="entry-content_line ">
+                                                            <div class="img_frame">
+                                    <a href="https://www.energytrend.com/news/20240819-48224.html" title="China's Ministry of Industry and Information Technology: Li-ion battery production for energy storage exceeds 110GWh in H1 2024"
+                                       target="_blank">
+                                        <div class="img"><img width="300" height="175"
+                                                              src="https://img.energytrend.com/wp-content/uploads/2024/05/%E6%8B%8D%E4%BF%A1%E7%B4%A0%E6%9D%90-158683946-624x374.jpg"
+                                                              class="attachment-medium size-medium wp-post-image" alt=""
+                                                              style=""></div>
+                                    </a>
+                                </div>
+                                                        <div class="rightifo">
+                                <a href="https://www.energytrend.com/news/20240819-48224.html" title="China's Ministry of Industry and Information Technology: Li-ion battery production for energy storage exceeds 110GWh in H1 2024"
+                                   target="_blank">
+                                    <h3 class="line-topic-h3">China's Ministry of Industry and Information Technology: Li-ion battery production for energy storage exceeds 110GWh in H1 2024</h3>
+                                </a>
+                                <p class="line-topic-p">
+                                    published: 2024-08-19 17:54&nbsp;
+                                                                            |&nbsp; tags: <a href="https://www.energytrend.com/taxonomy/term/battery/" rel="tag">battery</a>,  <a href="https://www.energytrend.com/taxonomy/term/148/" rel="tag">China green energy</a>,  <a href="https://www.energytrend.com/taxonomy/term/li-ion-battery/" rel="tag">Li-ion battery</a>                                                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="content img_line">
+                        <div class="entry-content_line ">
+                                                            <div class="img_frame">
+                                    <a href="https://www.energytrend.com/news/20230707-32584.html" title="Slight Adjustment in Process with Identical Materials Prompted More Effective Electrolytes for Solid-State Battery"
+                                       target="_blank">
+                                        <div class="img"><img width="300" height="175"
+                                                              src="https://img.energytrend.com/wp-content/uploads/2023/06/Electrolyte.StoryTip-624x406-624x406.png"
+                                                              class="attachment-medium size-medium wp-post-image" alt=""
+                                                              style=""></div>
+                                    </a>
+                                </div>
+                                                        <div class="rightifo">
+                                <a href="https://www.energytrend.com/news/20230707-32584.html" title="Slight Adjustment in Process with Identical Materials Prompted More Effective Electrolytes for Solid-State Battery"
+                                   target="_blank">
+                                    <h3 class="line-topic-h3">Slight Adjustment in Process with Identical Materials Prompted More Effective Electrolytes for Solid-State Battery</h3>
+                                </a>
+                                <p class="line-topic-p">
+                                    published: 2023-07-07 9:30&nbsp;
+                                                                            |&nbsp; tags: <a href="https://www.energytrend.com/taxonomy/term/li-ion-battery/" rel="tag">Li-ion battery</a>                                                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="content img_line">
+                        <div class="entry-content_line ">
+                                                            <div class="img_frame">
+                                    <a href="https://www.energytrend.com/news/20230705-32581.html" title="A Big No on Cobalt Mine Extraction by Child Labor; the US to Research and Develop Cobalt-Free and Low-Nickel Li-Ion Batteries"
+                                       target="_blank">
+                                        <div class="img"><img width="300" height="175"
+                                                              src="https://img.energytrend.com/wp-content/uploads/2023/06/shutterstock_1963852834-624x351-624x351.jpg"
+                                                              class="attachment-medium size-medium wp-post-image" alt=""
+                                                              style=""></div>
+                                    </a>
+                                </div>
+                                                        <div class="rightifo">
+                                <a href="https://www.energytrend.com/news/20230705-32581.html" title="A Big No on Cobalt Mine Extraction by Child Labor; the US to Research and Develop Cobalt-Free and Low-Nickel Li-Ion Batteries"
+                                   target="_blank">
+                                    <h3 class="line-topic-h3">A Big No on Cobalt Mine Extraction by Child Labor; the US to Research and Develop Cobalt-Free and Low-Nickel Li-Ion Batteries</h3>
+                                </a>
+                                <p class="line-topic-p">
+                                    published: 2023-07-05 9:30&nbsp;
+                                                                            |&nbsp; tags: <a href="https://www.energytrend.com/taxonomy/term/li-ion-battery/" rel="tag">Li-ion battery</a>                                                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="content img_line">
+                        <div class="entry-content_line ">
+                                                            <div class="img_frame">
+                                    <a href="https://www.energytrend.com/news/20230629-32622.html" title="CNGR and POSCO Plan to Co-Develop Projects for Refining Nickel and Manufacturing Precursors"
+                                       target="_blank">
+                                        <div class="img"><img width="300" height="175"
+                                                              src="https://img.energytrend.com/wp-content/uploads/2019/06/%E6%8B%8D%E4%BF%A1%E7%B4%A0%E6%9D%90-51699393-xl-624x624.jpeg"
+                                                              class="attachment-medium size-medium wp-post-image" alt=""
+                                                              style=""></div>
+                                    </a>
+                                </div>
+                                                        <div class="rightifo">
+                                <a href="https://www.energytrend.com/news/20230629-32622.html" title="CNGR and POSCO Plan to Co-Develop Projects for Refining Nickel and Manufacturing Precursors"
+                                   target="_blank">
+                                    <h3 class="line-topic-h3">CNGR and POSCO Plan to Co-Develop Projects for Refining Nickel and Manufacturing Precursors</h3>
+                                </a>
+                                <p class="line-topic-p">
+                                    published: 2023-06-29 9:30&nbsp;
+                                                                            |&nbsp; tags: <a href="https://www.energytrend.com/taxonomy/term/battery/" rel="tag">battery</a>,  <a href="https://www.energytrend.com/taxonomy/term/li-ion-battery/" rel="tag">Li-ion battery</a>                                                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="content img_line">
+                        <div class="entry-content_line ">
+                                                            <div class="img_frame">
+                                    <a href="https://www.energytrend.com/news/20230621-32517.html" title="DFP Commences Construction on Phase 2 of Its Battery Separator Project in Jiangsu"
+                                       target="_blank">
+                                        <div class="img"><img width="300" height="175"
+                                                              src="https://img.energytrend.com/wp-content/uploads/2023/06/%E4%B8%9C%E9%A3%8E%E8%82%A1%E4%BB%BD%E9%94%82%E7%94%B5%E6%B1%A0%E9%9A%94%E8%86%9C%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%B7%A5-624x314.png"
+                                                              class="attachment-medium size-medium wp-post-image" alt=""
+                                                              style=""></div>
+                                    </a>
+                                </div>
+                                                        <div class="rightifo">
+                                <a href="https://www.energytrend.com/news/20230621-32517.html" title="DFP Commences Construction on Phase 2 of Its Battery Separator Project in Jiangsu"
+                                   target="_blank">
+                                    <h3 class="line-topic-h3">DFP Commences Construction on Phase 2 of Its Battery Separator Project in Jiangsu</h3>
+                                </a>
+                                <p class="line-topic-p">
+                                    published: 2023-06-21 9:30&nbsp;
+                                                                            |&nbsp; tags: <a href="https://www.energytrend.com/taxonomy/term/li-ion-battery/" rel="tag">Li-ion battery</a>                                                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                                            </div>
+
+            <!-- 相关推荐_Donna_20221124 -END-->
+        </div><!-- #content -->
+    </div><!-- #primary -->
+    <style>
+	.widget_views li{
+	    margin: 0;
+	    list-style: none;
+	    position: relative;
+	    padding: 8px 5px;
+	    border-bottom: dotted 1px #ccc;
+	}
+	.widget_views .pop-cl{
+		clear: both;
+	    display: block;
+	}
+	.widget_views ul li img {
+	    margin: 0;
+	    float: left;
+	    height: auto;
+	    max-width: 65px;
+	    margin-right: 10px;
+	}
+	.widget_views li:hover{
+		background-color: #F5F5F5;
+	}
+	.widget-area .widget {
+	    margin-top: 0;
+	    padding: 0;
+	}
+
+	div.textwidget div.content {
+		background: url(https://www.energytrend.com/wp-content/themes/twentytwelve/images/sideright_bg.gif) repeat-x top;
+	    margin-bottom: 15px;
+	    margin-top: 10px;
+	}
+	div.textwidget div.content div.title {
+	    line-height: 32px;
+	    height: 32px;
+	    color: #000;
+	    font-size: 14px;
+	    font-weight: bold;
+	    margin-left: 8px;
+	    margin-bottom: 8px;
+	}
+	div.textwidget div.content div.morelink {
+	    float: right;
+	    font-size: 12px;
+	    font-weight: 100;
+	    margin: 0px 3px 0 0;
+	}
+	div.textwidget div.content div.img {
+	    margin: 0px 10px 0px 0;
+	    float: left;
+	}
+	div.textwidget div.content span {
+    	font-size: 14px;
+    	font-weight: bold;
+	}
+	div.textwidget div.content p {
+    	font-size: 12px;
+	}
+</style>
+
+	<div id="secondary" class="widget-area" role="complementary">
+		<aside id="text-9" class="widget widget_text">			<div class="textwidget"><!-- /23101350658/ET_EN_PC_All_H2_300x250 -->
+<div id='div-gpt-ad-1713167315193-0' style='min-width: 300px; min-height: 250px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1713167315193-0'); });
+</script>
+</div></div>
+		</aside><aside id="text-10" class="widget widget_text">			<div class="textwidget"><div class="banner"><a href="/solar-price.html" target="_blank" rel="noopener"><img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/price_solar.jpg" alt="PV SPOT PRICE" title="PV SPOT PRICE"></a></div></div>
+		</aside><aside id="text-11" class="widget widget_text">			<div class="textwidget"><div class="banner"><a href="/battery-price.html" target="_blank" rel="noopener"><img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/price_battery.jpg" alt="BATTERY PRICE" title="BATTERY PRICE"></a></div></div>
+		</aside><aside id="text-23" class="widget widget_text">			<div class="textwidget"><!--儲能電子報banner-->
+<!--<div class="banner"><a href="/newsletter/2397" target="_blank" rel="noopener"><img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/ET_Market-Report_BESS_EN_20200311.jpg"></a></div>--></div>
+		</aside><aside id="text-12" class="widget widget_text">			<div class="textwidget"><!--鋰電池電子報banner-->
+<!--<div class="banner"><a href="/newsletter/2301" target="_blank" rel="noopener"><img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/ET_Market-Report_EV_EN_20200311.jpg"></a></div>--></div>
+		</aside><aside id="text-13" class="widget widget_text">			<div class="textwidget">
+<div class="content">
+    <div class="title">MARKET STATUS
+        <div class="morelink">‧<a href="/pricequotes/">more</a></div>
+    </div>
+    <div class="img">
+        <a href="https://www.energytrend.com/pricequotes/20260724-51816.html" title="Cell Production Cuts Begin to Take Effect; Market Focus Shifts to Market Demand Recovery and Inventory Destocking" target="_blank" rel="noopener">
+            <img width="69" height="69" src="https://img.energytrend.com/wp-content/uploads/2024/04/%E6%8B%8D%E4%BF%A1%E7%B4%A0%E6%9D%90-12621402-l-150x150.jpeg" class="attachment-110x69 size-110x69 wp-post-image" alt="" decoding="async" loading="lazy" />        </a>
+    </div>
+    <h3>
+        <a href="https://www.energytrend.com/pricequotes/20260724-51816.html" title="Cell Production Cuts Begin to Take Effect; Market Focus Shifts to Market Demand Recovery and Inventory Destocking" target="_blank" rel="noopener"> Cell Production Cuts Begin to Take Effect; Market Focus Shifts to Market Demand Recovery and Inventory Destocking</a>
+    </h3>
+    <p>Polysilicon
+Polysilicon inventories currently remain at approximately 520,000 metric...<a class="detail" href="https://www.energytrend.com/pricequotes/20260724-51816.html" target="_blank" rel="noopener">more...</a></p>
+</div></div>
+		</aside><aside id="text-14" class="widget widget_text">			<div class="textwidget">
+<div class="content">
+    <div class="title">RESEARCH
+        <div class="morelink">‧<a href="/research/">more</a></div>
+    </div>
+    <div class="img">
+        <a href="https://www.energytrend.com/research/20251110-50375.html" title="Over 3GW PV Module Bid Results Released in October; TOPCon Average Bid Price Slightly Rises" target="_blank" rel="noopener">
+            <img width="69" height="69" src="https://img.energytrend.com/wp-content/uploads/2024/05/%E6%8B%8D%E4%BF%A1%E7%B4%A0%E6%9D%90-198769258-xl-150x150.jpg" class="attachment-110x69 size-110x69 wp-post-image" alt="" decoding="async" loading="lazy" />        </a>
+    </div>
+    <h3>
+        <a href="https://www.energytrend.com/research/20251110-50375.html" title="Over 3GW PV Module Bid Results Released in October; TOPCon Average Bid Price Slightly Rises" target="_blank" rel="noopener"> Over 3GW PV Module Bid Results Released in October; TOPCon Average Bid Price Slightly Rises </a>
+    </h3>
+    <p>In October 2025, the volume of winning bids for solar modules in China (including sho...<a class="detail" href="https://www.energytrend.com/research/20251110-50375.html" target="_blank" rel="noopener">more...</a></p>
+</div></div>
+		</aside><aside id="text-15" class="widget widget_text">			<div class="textwidget"><p><a href="/announcements" target="_blank" rel="noopener"><img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/btn_announcements.png" width="298" height="36" alt="sumit press release" title="sumit press release"></a></p>
+
+<p><a href="/miservice/" target="_blank" rel="noopener"><img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/report_solar.png" width="145" height="37" alt="Solar Reports" title="Solar Reports"></a>            <a href="/miservice/" target="_blank" rel="noopener"><img src="https://www.energytrend.com/wp-content/themes/twentytwelve/images/report_battery.png" width="145" height="37" alt="Battery / EV" title="Battery / EV"></a></p></div>
+		</aside><aside id="text-16" class="widget widget_text">			<div class="textwidget"><div id="hostArticles" class="content"><div class="title">WEEKLY TOP NEWS</div><div><ul class="weeklist"><li class='li0'><span>1</span><a href='https://www.energytrend.com/news/20260727-51818.html' title='CATL: Energy Storage Revenue S...' target='_blank' rel="noopener">CATL: Energy Storage Revenue S...</a></li><li class='li1'><span>2</span><a href='https://www.energytrend.com/news/20260727-51820.html' title='JA Solar & TCL Zhonghuan Drive...' target='_blank' rel="noopener">JA Solar & TCL Zhonghuan Drive...</a></li><li class='li2'><span>3</span><a href='https://www.energytrend.com/news/20260727-51822.html' title='RMB 805 Million Capital Increa...' target='_blank' rel="noopener">RMB 805 Million Capital Increa...</a></li><li class='li3'><span>4</span><a href='https://www.energytrend.com/news/20260728-51827.html' title='Astronergy, LONGi, and Other C...' target='_blank' rel="noopener">Astronergy, LONGi, and Other C...</a></li><li class='li4'><span>5</span><a href='https://www.energytrend.com/news/20240516-47031.html' title='Brazil's Distributed PV Instal...' target='_blank'>Brazil's Distributed PV Instal...</a></li><li class='li5'><span>6</span><a href='https://www.energytrend.com/news/20260728-51829.html' title='Pengcheng Wuxian Signs 25 GWh ...' target='_blank' rel="noopener">Pengcheng Wuxian Signs 25 GWh ...</a></li><li class='li6'><span>7</span><a href='https://www.energytrend.com/news/20240716-47888.html' title='20 companies’ solid-state batt...' target='_blank' rel="noopener">20 companies’ solid-state batt...</a></li><li class='li7'><span>8</span><a href='https://www.energytrend.com/news/20260727-51824.html' title='New Energy Storage Order Updat...' target='_blank' rel="noopener">New Energy Storage Order Updat...</a></li><li class='li8'><span>9</span><a href='https://www.energytrend.com/news/20260728-51831.html' title='Progress Updates on 7 Lithium ...' target='_blank' rel="noopener">Progress Updates on 7 Lithium ...</a></li><li class='li9'><span>10</span><a href='https://www.energytrend.com/event/20250801-49972.html' title='SNEC 19th (2026) International...' target='_blank' rel="noopener">SNEC 19th (2026) International...</a></li></ul></div></div></div>
+		</aside>	</div><!-- #secondary -->
+</div>
+
+<style>
+	#site-generator a{
+		color: #FFF;
+	}
+	#footer {
+		float:initial;
+		margin: 24px auto 0 auto;
+		width: 100%;
+	    border-top: 1px solid #ededed;
+	    clear: both;
+	    font-size: 12px;
+	    font-size: 0.857142857rem;
+	    line-height: 2;
+	    padding: 24px 0 0 0;
+	    background-color: #f5f6f8;
+	    border-top: 1px solid #c4cfd5;
+	}
+</style>
+
+				</div><!-- logobar -->
+			</div><!-- #main .wrapper -->
+
+			<footer id="footer" role="contentinfo">
+			    <!-- 相關連結 -->
+			    <div style="background-color:#505050; clear:both;">
+					<div class="logobar footerLinks" id="site-generator" style="text-align:center;">
+			    		<p>
+						    <span class="footer_link" ><a href="/aboutus" target="_blank" rel="nofollow">About us</a></span>
+						    <span class="footer_link"><a href="/contact" target="_blank" rel="nofollow">Contact us</a></span>
+						    <span class="footer_link"><a href="/editor" target="_blank" rel="nofollow">Editorial Team</a></span>
+						    <!--span class="footer_link"><a href="//www.trendforce.com/about/career" target="_blank" rel="nofollow">Career</a></span-->
+						    <span class="footer_link"><a href="//www.trendforce.com/presscenter" target="_blank" rel="nofollow">Press Center</a></span>
+						    <span class="footer_link"><a href="/advertise" target="_blank" rel="nofollow">Advertise</a></span>
+						    <!-- <span class="footer_link"><a href="/magazine" rel="nofollow">Magazine</a></span> -->
+						    <span class="footer_link"><a href="/FAQ" target="_blank" rel="nofollow">FAQ</a></span>
+						    <span class="footer_link"><a href="/terms" target="_blank" rel="nofollow">Terms</a></span>
+						    <span class="footer_link"><a href="/privacy_policy" target="_blank" rel="nofollow">Privacy Policy</a></span>
+						    <span class="footer_link"><a href="/gm_agreement" target="_blank" rel="nofollow">Membership Agreement</a></span>
+			        	</p>
+			        	<div>
+			        		© 2026 EnergyTrend, a Business Division of <a href="//www.trendforce.com" style="color:#4e8b00" target="_blank" rel="nofollow">TrendForce Corp.</a> All rights reserved
+			        	</div>
+			        	<div style="bottom:40px; width:1080px;margin: 0 auto; left:5px; position: left; clear:both;text-align: center; padding-top: 15px;">
+						    <a href="//www.trendforce.com" target="_blank" class="header_link" rel="nofollow">TrendForce：</a>
+						    <a href="//www.dramexchange.com" target="_blank" class="footer_link" rel="nofollow">DRAMeXchange</a>
+						    <a href="//www.witsview.com" target="_blank" class="footer_link" rel="nofollow">WitsView</a>
+						    <a href="//www.ledinside.com" target="_blank" class="footer_link" rel="nofollow">LEDinside</a>
+						    <a href="/" target="_blank" class="footer_link">EnergyTrend</a>
+						</div>
+			   		</div>
+			    </div> <!-- END site-generator -->
+			</footer><!-- #footer -->
+
+		</div><!-- #page -->
+		<!-- 必加, 否則 admin bar 不會顯示 -->
+				<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Y81EJ4PV6"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-7Y81EJ4PV6');
+		</script>
+	</body>
+</html>
+
+<!-- 廣告繪製 -->
+<script src="https://www.energytrend.com/wp-content/themes/twentytwelve/ad/comad.js?ver=20220922"></script>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced 
+
+Served from: energytrend.com @ 2026-07-29 03:21:39 by W3 Total Cache
+-->

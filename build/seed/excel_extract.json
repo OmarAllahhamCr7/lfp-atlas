@@ -1,0 +1,4164 @@
+{
+ "Read Me": [
+  {
+   "B2": {
+    "v": "LFP / LMFP Cathode Synthesis Methods & Global CAM Producers"
+   }
+  },
+  {
+   "B3": {
+    "v": "Companion dataset for LFP synthesis diagrams (mirrors the NMC synthesis-category approach). Compiled 19 Jul 2026."
+   }
+  },
+  {
+   "B5": {
+    "v": "Scope"
+   },
+   "C5": {
+    "v": "Synthesis routes for LiFePO4 (LFP) and LiMnxFe(1-x)PO4 (LMFP) cathode active material (CAM = the cathode powder). Company list = CAM producers worldwide (not cell makers, unless they also make their own CAM). Materials, company scope, and method depth per user request (LFP+LMFP; CAM producers; major methods + key sub-variants)."
+   }
+  },
+  {
+   "B6": {
+    "v": "Sheets"
+   },
+   "C6": {
+    "v": "1) Read Me  |  2) Synthesis Methods (28 routes)  |  3) Big Categories (the taxonomy, w/ NMC analogy)  |  4) CAM Producers (global, by region)  |  5) Patent & Licensing History  |  6) Key References."
+   }
+  },
+  {
+   "B7": {
+    "v": "How to read"
+   },
+   "C7": {
+    "v": "Each method and company row carries a Confidence rating and a clickable Source. Scale (Lab/Pilot/Commercial) and Status are colour-coded (see legend). Cells left blank or marked 'not disclosed' / 'not verified' mean no reliable public source was found — not zero."
+   }
+  },
+  {
+   "B8": {
+    "v": "Evidence policy"
+   },
+   "C8": {
+    "v": "No sources, companies, patents, or numbers were fabricated. The EXISTENCE and description of each method/company is sourced; the Lab/Pilot/Commercial SCALE ratings are our synthesis of the literature (confidence noted). Distinguish: evidence (sourced) vs. interpretation (scale ratings, categories)."
+   }
+  },
+  {
+   "B10": {
+    "v": "Key findings"
+   }
+  },
+  {
+   "C11": {
+    "v": "•  ONE route dominates ~all commercial LFP tonnage: high-temperature solid-state CARBOTHERMAL REDUCTION fed by a (co-precipitated) FePO4 precursor  ->  spray-dried with Li source + carbon  ->  calcined under inert gas. These are linked STAGES of one workflow, not competing methods."
+   }
+  },
+  {
+   "C12": {
+    "v": "•  The only other route at meaningful commercial tonnage is Shenzhen Dynanonic's proprietary LIQUID-PHASE process (SELPS, auto-thermal evaporative; patent US20140239235A1)."
+   }
+  },
+  {
+   "C13": {
+    "v": "•  HYDROTHERMAL is a smaller/legacy commercial route (historically Sud-Chemie; today premium LMFP e.g. Taiheiyo 'Nanolitia'). Everything else is lab-scale, with melt-casting and spray pyrolysis demonstrated at pilot."
+   }
+  },
+  {
+   "C14": {
+    "v": "•  China makes ~95-98% of global LFP CAM. 2024 leader: Hunan Yuneng (~28.8% share); 2025 Yuneng shipments >1 Mt. LMFP is ramping, led by Hengchuang Nano + Ronbay."
+   }
+  },
+  {
+   "C15": {
+    "v": "•  Correction to a common assumption: Aleees (Taiwan) uses an in-house iron-phosphate PRECURSOR route (+ solid-state), NOT hydrothermal."
+   }
+  },
+  {
+   "C16": {
+    "v": "•  Western/Indian production became possible largely after key foundational LFP patents expired (~2022-2023). Many Western projects are announced/pre-production and volatile (e.g. ICL's US plant was cancelled in Nov 2025)."
+   }
+  },
+  {
+   "B18": {
+    "v": "Colour legend"
+   }
+  },
+  {
+   "C19": {
+    "v": "Commercial / Active-Producing"
+   }
+  },
+  {
+   "C20": {
+    "v": "Pilot / Ramping / Announced / Construction / R&D"
+   }
+  },
+  {
+   "C21": {
+    "v": "Lab-scale"
+   }
+  },
+  {
+   "C22": {
+    "v": "Exited / Defunct / Precursor-only / Not a CAM maker"
+   }
+  }
+ ],
+ "Synthesis Methods": [
+  {
+   "A1": {
+    "v": "Synthesis methods for LFP / LMFP cathode active material"
+   }
+  },
+  {
+   "A2": {
+    "v": "Grouped into 5 big categories (see 'Big Categories' sheet). Scale ratings are our interpretation of the sources; existence/description is sourced."
+   }
+  },
+  {
+   "A4": {
+    "v": "#",
+    "fill": "FF1F4E78"
+   },
+   "B4": {
+    "v": "Method",
+    "fill": "FF1F4E78"
+   },
+   "C4": {
+    "v": "Big Category",
+    "fill": "FF1F4E78"
+   },
+   "D4": {
+    "v": "Applies to",
+    "fill": "FF1F4E78"
+   },
+   "E4": {
+    "v": "Typical scale today",
+    "fill": "FF1F4E78"
+   },
+   "F4": {
+    "v": "How it works (1-line)",
+    "fill": "FF1F4E78"
+   },
+   "G4": {
+    "v": "Advantages",
+    "fill": "FF1F4E78"
+   },
+   "H4": {
+    "v": "Disadvantages",
+    "fill": "FF1F4E78"
+   },
+   "I4": {
+    "v": "Representative producers / users",
+    "fill": "FF1F4E78"
+   },
+   "J4": {
+    "v": "Main reference (real)",
+    "fill": "FF1F4E78"
+   },
+   "K4": {
+    "v": "Source link",
+    "fill": "FF1F4E78"
+   },
+   "L4": {
+    "v": "Conf.",
+    "fill": "FF1F4E78"
+   }
+  },
+  {
+   "A5": {
+    "v": 1
+   },
+   "B5": {
+    "v": "Conventional solid-state reaction"
+   },
+   "C5": {
+    "v": "A. Solid-State (dry)"
+   },
+   "D5": {
+    "v": "Both"
+   },
+   "E5": {
+    "v": "Commercial",
+    "fill": "FFC6EFCE"
+   },
+   "F5": {
+    "v": "Dry-mix Li/Fe/P powders, grind, calcine 600-800C under inert gas"
+   },
+   "G5": {
+    "v": "Simple, cheap, scalable, crystalline product"
+   },
+   "H5": {
+    "v": "Large/irregular particles, long firing, poor morphology control"
+   },
+   "I5": {
+    "v": "Most Chinese producers; Altmin (India)"
+   },
+   "J5": {
+    "v": "Padhi, Nanjundaswamy & Goodenough 1997, J. Electrochem. Soc. 144:1188"
+   },
+   "K5": {
+    "v": "doi:10.1149/1.1837571",
+    "link": "https://doi.org/10.1149/1.1837571"
+   },
+   "L5": {
+    "v": "High"
+   }
+  },
+  {
+   "A6": {
+    "v": 2
+   },
+   "B6": {
+    "v": "Carbothermal reduction (CTR)"
+   },
+   "C6": {
+    "v": "A. Solid-State (dry)"
+   },
+   "D6": {
+    "v": "Both"
+   },
+   "E6": {
+    "v": "Commercial - DOMINANT",
+    "fill": "FFC6EFCE"
+   },
+   "F6": {
+    "v": "Solid-state variant; carbon reduces Fe3+->Fe2+ (C->CO) during firing + in-situ carbon coat"
+   },
+   "G6": {
+    "v": "Uses cheap Fe3+ (FePO4/Fe2O3); reduction + coating in one step; industrial workhorse"
+   },
+   "H6": {
+    "v": "High T; atmosphere & carbon control; grain growth"
+   },
+   "I6": {
+    "v": "Hunan Yuneng, Hubei Wanrun, BYD, Gotion, most producers"
+   },
+   "J6": {
+    "v": "Lu & Zhu 2024, MRS Communications 14:888; Wang et al. 2008 J. Power Sources"
+   },
+   "K6": {
+    "v": "doi:10.1557/s43579-024-00644-2",
+    "link": "https://doi.org/10.1557/s43579-024-00644-2"
+   },
+   "L6": {
+    "v": "High"
+   }
+  },
+  {
+   "A7": {
+    "v": 3
+   },
+   "B7": {
+    "v": "Mechanochemical / high-energy ball milling"
+   },
+   "C7": {
+    "v": "A. Solid-State (dry)"
+   },
+   "D7": {
+    "v": "Both"
+   },
+   "E7": {
+    "v": "Lab (milling step is Commercial)",
+    "fill": "FFC6EFCE"
+   },
+   "F7": {
+    "v": "High-energy milling activates/reacts precursors near RT; usually + calcination"
+   },
+   "G7": {
+    "v": "Fine mixing, small particles, defect activation"
+   },
+   "H7": {
+    "v": "Media contamination, energy-intensive; rarely full synthesis alone"
+   },
+   "I7": {
+    "v": "Universal as a commercial MIXING step"
+   },
+   "J7": {
+    "v": "Kim et al. 2007, J. Power Sources 166:211"
+   },
+   "K7": {
+    "v": "doi:10.1016/j.jpowsour.2006.12.089",
+    "link": "https://doi.org/10.1016/j.jpowsour.2006.12.089"
+   },
+   "L7": {
+    "v": "High"
+   }
+  },
+  {
+   "A8": {
+    "v": 4
+   },
+   "B8": {
+    "v": "Microwave-assisted solid-state"
+   },
+   "C8": {
+    "v": "A. Solid-State (dry)"
+   },
+   "D8": {
+    "v": "LFP (LMFP shown)"
+   },
+   "E8": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F8": {
+    "v": "Microwave heating of dry precursors for rapid calcination"
+   },
+   "G8": {
+    "v": "Minutes vs hours; energy saving"
+   },
+   "H8": {
+    "v": "Uneven heating/hot-spots; scale-up hard"
+   },
+   "I8": {
+    "v": "Research only"
+   },
+   "J8": {
+    "v": "Guo, Zhan & Zhou 2009, Solid State Ionics 180:386"
+   },
+   "K8": {
+    "v": "doi:10.1016/j.ssi.2008.11.021",
+    "link": "https://doi.org/10.1016/j.ssi.2008.11.021"
+   },
+   "L8": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A9": {
+    "v": 5
+   },
+   "B9": {
+    "v": "Molten-salt (flux) synthesis"
+   },
+   "C9": {
+    "v": "A. Solid-State (dry)"
+   },
+   "D9": {
+    "v": "LFP (LMFP shown)"
+   },
+   "E9": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F9": {
+    "v": "React precursors inside a low-melting salt flux (KCl/LiCl); salt washed out"
+   },
+   "G9": {
+    "v": "Lower T; size/tap-density control"
+   },
+   "H9": {
+    "v": "Extra washing + salt waste; batch"
+   },
+   "I9": {
+    "v": "Research only"
+   },
+   "J9": {
+    "v": "Zhu et al. 2012, Electrochimica Acta (KCl flux LFP/C)"
+   },
+   "K9": {
+    "v": "ScienceDirect (verified)",
+    "link": "https://www.sciencedirect.com/science/article/abs/pii/S0013468612011255"
+   },
+   "L9": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A10": {
+    "v": 6
+   },
+   "B10": {
+    "v": "Molten-state synthesis (melt casting)"
+   },
+   "C10": {
+    "v": "B. Melt / Molten-State"
+   },
+   "D10": {
+    "v": "Both"
+   },
+   "E10": {
+    "v": "Pilot (historical-commercial)",
+    "fill": "FFC6EFCE"
+   },
+   "F10": {
+    "v": "Melt precursors (~1000-1150C) to an ingot, crush/mill, carbon-coat"
+   },
+   "G10": {
+    "v": "Cheapest coarse Fe; melts in minutes; no liquid waste; big batches"
+   },
+   "H10": {
+    "v": "Very high T; hard to nano-size; energy-heavy grinding"
+   },
+   "I10": {
+    "v": "Phostech (historical pilot); JM/CanmetMATERIALS pilot"
+   },
+   "J10": {
+    "v": "Patience et al. 2019, Can. J. Chem. Eng. (melt-synthesis pilot)"
+   },
+   "K10": {
+    "v": "doi:10.1002/cjce.23479",
+    "link": "https://doi.org/10.1002/cjce.23479"
+   },
+   "L10": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A11": {
+    "v": 7
+   },
+   "B11": {
+    "v": "FePO4-precursor route (precipitation -> carbothermal)"
+   },
+   "C11": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D11": {
+    "v": "Both"
+   },
+   "E11": {
+    "v": "Commercial - DOMINANT",
+    "fill": "FFC6EFCE"
+   },
+   "F11": {
+    "v": "Precipitate FePO4.xH2O (FeSO4 + phosphate), mix w/ Li + carbon, carbothermal calcine"
+   },
+   "G11": {
+    "v": "Cheapest Fe (FeSO4 by-product); atomic Fe:P mixing; THE Chinese industrial route"
+   },
+   "H11": {
+    "v": "Moisture/impurity control; wastewater"
+   },
+   "I11": {
+    "v": "Hunan Yuneng, Wanrun, Lopal, Aleees, most Chinese CAM"
+   },
+   "J11": {
+    "v": "Lu & Zhu 2024, MRS Communications 14:888; Nekahi et al. 2024, Mater. Sci. Eng. R 159:100797"
+   },
+   "K11": {
+    "v": "doi:10.1016/j.mser.2024.100797",
+    "link": "https://doi.org/10.1016/j.mser.2024.100797"
+   },
+   "L11": {
+    "v": "High"
+   }
+  },
+  {
+   "A12": {
+    "v": 8
+   },
+   "B12": {
+    "v": "Co-precipitation"
+   },
+   "C12": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D12": {
+    "v": "Both"
+   },
+   "E12": {
+    "v": "Commercial (esp. LMFP)",
+    "fill": "FFC6EFCE"
+   },
+   "F12": {
+    "v": "Precipitate mixed metal-phosphate/oxalate from solution, pH-adjust, dry, calcine"
+   },
+   "G12": {
+    "v": "Atomic mixing; uniform composition; key LMFP route; scalable"
+   },
+   "H12": {
+    "v": "pH & wastewater control; needs calcination"
+   },
+   "I12": {
+    "v": "Mitra Chem (LFP+LMFP); most LMFP producers"
+   },
+   "J12": {
+    "v": "Omidi, Babaei & Ataie 2020, Mater. Res. Bull. 125:110807 (via Lu & Zhu 2024 review; link -> review)"
+   },
+   "K12": {
+    "v": "doi:10.1557/s43579-024-00644-2",
+    "link": "https://doi.org/10.1557/s43579-024-00644-2"
+   },
+   "L12": {
+    "v": "High"
+   }
+  },
+  {
+   "A13": {
+    "v": 9
+   },
+   "B13": {
+    "v": "Liquid-phase auto-thermal evaporative (SELPS)"
+   },
+   "C13": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D13": {
+    "v": "LFP"
+   },
+   "E13": {
+    "v": "Commercial",
+    "fill": "FFC6EFCE"
+   },
+   "F13": {
+    "v": "Accelerant drives a self-heating (auto-thermal) reaction that evaporates solvent to a solid precursor"
+   },
+   "G13": {
+    "v": "Proprietary; #2 commercial route by tonnage; nano product"
+   },
+   "H13": {
+    "v": "Company-specific; details proprietary"
+   },
+   "I13": {
+    "v": "Shenzhen Dynanonic (Defang), ~260-345 kt/yr"
+   },
+   "J13": {
+    "v": "Patent US20140239235A1 (assignee: Shenzhen Dynanonic)"
+   },
+   "K13": {
+    "v": "Google Patents (verified)",
+    "link": "https://patents.google.com/patent/US20140239235A1/en"
+   },
+   "L13": {
+    "v": "High"
+   }
+  },
+  {
+   "A14": {
+    "v": 10
+   },
+   "B14": {
+    "v": "Sol-gel"
+   },
+   "C14": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D14": {
+    "v": "Both"
+   },
+   "E14": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F14": {
+    "v": "Chelate precursors (e.g. citric acid) -> gel, dry, calcine"
+   },
+   "G14": {
+    "v": "Molecular mixing; small pure particles; no autoclave"
+   },
+   "H14": {
+    "v": "Chelator cost; shrinkage; batch"
+   },
+   "I14": {
+    "v": "Research; Dynanonic uses sol-gel for some LMFP"
+   },
+   "J14": {
+    "v": "Hu, Doeff et al. 2004, J. Electrochem. Soc. 151:A1279"
+   },
+   "K14": {
+    "v": "doi:10.1149/1.1768546",
+    "link": "https://doi.org/10.1149/1.1768546"
+   },
+   "L14": {
+    "v": "High"
+   }
+  },
+  {
+   "A15": {
+    "v": 11
+   },
+   "B15": {
+    "v": "Hydrothermal"
+   },
+   "C15": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D15": {
+    "v": "Both"
+   },
+   "E15": {
+    "v": "Commercial (secondary / premium LMFP)",
+    "fill": "FFC6EFCE"
+   },
+   "F15": {
+    "v": "Crystallize LFP directly from aqueous solution in autoclave, 120-220C"
+   },
+   "G15": {
+    "v": "Small crystals; facet/morphology control; lower-T"
+   },
+   "H15": {
+    "v": "Fe antisite defects (<150C); autoclaves; wastewater; costlier than solid-state"
+   },
+   "I15": {
+    "v": "Sud-Chemie (historical); Taiheiyo Cement (LMFP); Epsilon (Moosburg pilot)"
+   },
+   "J15": {
+    "v": "Yang, Zavalij & Whittingham 2001, Electrochem. Commun. 3:505"
+   },
+   "K15": {
+    "v": "doi:10.1016/S1388-2481(01)00200-4",
+    "link": "https://doi.org/10.1016/S1388-2481(01)00200-4"
+   },
+   "L15": {
+    "v": "High"
+   }
+  },
+  {
+   "A16": {
+    "v": 12
+   },
+   "B16": {
+    "v": "Solvothermal"
+   },
+   "C16": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D16": {
+    "v": "Both"
+   },
+   "E16": {
+    "v": "Lab / Pilot",
+    "fill": "FFFFEB9C"
+   },
+   "F16": {
+    "v": "As hydrothermal but organic solvent (e.g. ethylene glycol) as medium/reductant"
+   },
+   "G16": {
+    "v": "Excellent size/shape control; thin platelets"
+   },
+   "H16": {
+    "v": "Solvent cost/recovery; safety; waste"
+   },
+   "I16": {
+    "v": "Research (favoured for LMFP nano-sizing)"
+   },
+   "J16": {
+    "v": "Li et al. 2021, Small Methods (solvothermal LFP)"
+   },
+   "K16": {
+    "v": "doi:10.1002/smtd.202100193",
+    "link": "https://doi.org/10.1002/smtd.202100193"
+   },
+   "L16": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A17": {
+    "v": 13
+   },
+   "B17": {
+    "v": "Supercritical-fluid (supercritical hydrothermal)"
+   },
+   "C17": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D17": {
+    "v": "LFP (LMFP shown)"
+   },
+   "E17": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F17": {
+    "v": "Nucleate LFP in supercritical water (>374C, >22 MPa), often continuous"
+   },
+   "G17": {
+    "v": "Ultrafast; continuous; ultrafine"
+   },
+   "H17": {
+    "v": "High-pressure kit; capital cost"
+   },
+   "I17": {
+    "v": "Research only"
+   },
+   "J17": {
+    "v": "Zhang et al. 2020 review, Ceram. Int. (cites Xu, Lee & Teja 2008, J. Supercrit. Fluids 44:92)"
+   },
+   "K17": {
+    "v": "doi:10.1016/j.ceramint.2020.08.105",
+    "link": "https://doi.org/10.1016/j.ceramint.2020.08.105"
+   },
+   "L17": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A18": {
+    "v": 14
+   },
+   "B18": {
+    "v": "Polyol"
+   },
+   "C18": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D18": {
+    "v": "LFP (LMFP shown)"
+   },
+   "E18": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F18": {
+    "v": "Reflux precursors in polyol (~320C) acting as solvent + reductant"
+   },
+   "G18": {
+    "v": "No autoclave; no inert gas needed; nano particles"
+   },
+   "H18": {
+    "v": "High-boiling solvent recovery; batch"
+   },
+   "I18": {
+    "v": "Research only"
+   },
+   "J18": {
+    "v": "Kim et al. 2012, J. Power Sources (polyol LFP)"
+   },
+   "K18": {
+    "v": "ScienceDirect (verified)",
+    "link": "https://www.sciencedirect.com/science/article/abs/pii/S0378775312009755"
+   },
+   "L18": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A19": {
+    "v": 15
+   },
+   "B19": {
+    "v": "Emulsion drying"
+   },
+   "C19": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D19": {
+    "v": "Both"
+   },
+   "E19": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F19": {
+    "v": "Emulsify aqueous precursors in oil, dry, calcine -> C-LFP"
+   },
+   "G19": {
+    "v": "Fine uniform C-LFP; good rate"
+   },
+   "H19": {
+    "v": "Surfactant/oil cost; waste; calcination"
+   },
+   "I19": {
+    "v": "Research only"
+   },
+   "J19": {
+    "v": "Cho & Chung 2004, J. Power Sources 133:272"
+   },
+   "K19": {
+    "v": "doi:10.1016/j.jpowsour.2004.02.015",
+    "link": "https://doi.org/10.1016/j.jpowsour.2004.02.015"
+   },
+   "L19": {
+    "v": "High"
+   }
+  },
+  {
+   "A20": {
+    "v": 16
+   },
+   "B20": {
+    "v": "Freeze drying (lyophilization)"
+   },
+   "C20": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D20": {
+    "v": "Both"
+   },
+   "E20": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F20": {
+    "v": "Freeze precursor solution, sublimate -> porous precursor, calcine"
+   },
+   "G20": {
+    "v": "Homogeneous; high SSA/porosity"
+   },
+   "H20": {
+    "v": "Slow; energy-intensive; batch"
+   },
+   "I20": {
+    "v": "Research only"
+   },
+   "J20": {
+    "v": "Zhang et al. 2024, Batteries 10:114 (freeze-dry LMFP)"
+   },
+   "K20": {
+    "v": "doi:10.3390/batteries10040114",
+    "link": "https://doi.org/10.3390/batteries10040114"
+   },
+   "L20": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A21": {
+    "v": 17
+   },
+   "B21": {
+    "v": "Combustion / self-propagating (solution combustion)"
+   },
+   "C21": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D21": {
+    "v": "Both"
+   },
+   "E21": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F21": {
+    "v": "Ignite fuel (glycine/urea) + nitrate solution; self-sustaining exothermic reaction"
+   },
+   "G21": {
+    "v": "Fast; energy-efficient; nanoporous high-SSA"
+   },
+   "H21": {
+    "v": "Gas release; phase-purity control; usually post-calcine"
+   },
+   "I21": {
+    "v": "Research only"
+   },
+   "J21": {
+    "v": "Hsieh et al. 2009, J. Power Sources (glycine combustion LFP/C)"
+   },
+   "K21": {
+    "v": "ScienceDirect (verified)",
+    "link": "https://www.sciencedirect.com/science/article/abs/pii/S037877530902062X"
+   },
+   "L21": {
+    "v": "High"
+   }
+  },
+  {
+   "A22": {
+    "v": 18
+   },
+   "B22": {
+    "v": "Rheological-phase"
+   },
+   "C22": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D22": {
+    "v": "LFP (LMFP shown)"
+   },
+   "E22": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F22": {
+    "v": "React a solid-liquid paste (rheological body) of precursors, then calcine"
+   },
+   "G22": {
+    "v": "Homogeneous solid-liquid contact; fine particles"
+   },
+   "H22": {
+    "v": "Niche; little scale-up data"
+   },
+   "I22": {
+    "v": "Research only"
+   },
+   "J22": {
+    "v": "Xie et al. 2009, Electrochimica Acta (rheological-phase LFP/C)"
+   },
+   "K22": {
+    "v": "ScienceDirect (verified)",
+    "link": "https://www.sciencedirect.com/science/article/abs/pii/S0013468609011293"
+   },
+   "L22": {
+    "v": "Low-Med"
+   }
+  },
+  {
+   "A23": {
+    "v": 19
+   },
+   "B23": {
+    "v": "Ionothermal"
+   },
+   "C23": {
+    "v": "C. Wet-Chemistry / Solution"
+   },
+   "D23": {
+    "v": "Both"
+   },
+   "E23": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F23": {
+    "v": "Synthesize in an ionic liquid as solvent/template (lower T, ~ambient P)"
+   },
+   "G23": {
+    "v": "Morphology tuning; negligible vapour pressure"
+   },
+   "H23": {
+    "v": "IL cost/recovery; lab-only"
+   },
+   "I23": {
+    "v": "Research only"
+   },
+   "J23": {
+    "v": "Recham, Armand, Tarascon et al. 2009, Chem. Mater. 21:1096"
+   },
+   "K23": {
+    "v": "doi:10.1021/cm803259x",
+    "link": "https://doi.org/10.1021/cm803259x"
+   },
+   "L23": {
+    "v": "High"
+   }
+  },
+  {
+   "A24": {
+    "v": 20
+   },
+   "B24": {
+    "v": "Spray pyrolysis"
+   },
+   "C24": {
+    "v": "D. Aerosol / Spray"
+   },
+   "D24": {
+    "v": "Both"
+   },
+   "E24": {
+    "v": "Lab / Pilot",
+    "fill": "FFFFEB9C"
+   },
+   "F24": {
+    "v": "Atomize precursor into hot zone; droplet -> spherical particle in seconds; + heat-treat"
+   },
+   "G24": {
+    "v": "Continuous; spherical; scalable"
+   },
+   "H24": {
+    "v": "High T; equipment; often needs post-anneal"
+   },
+   "I24": {
+    "v": "Scale-up demonstrated; not a commercial tonnage route"
+   },
+   "J24": {
+    "v": "Akao, Yamada, Ogihara & Kodera 2010, Int. J. Chem. Eng. 2010:175914"
+   },
+   "K24": {
+    "v": "doi:10.1155/2010/175914",
+    "link": "https://doi.org/10.1155/2010/175914"
+   },
+   "L24": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A25": {
+    "v": 21
+   },
+   "B25": {
+    "v": "Spray drying (+ calcination)"
+   },
+   "C25": {
+    "v": "D. Aerosol / Spray"
+   },
+   "D25": {
+    "v": "Both"
+   },
+   "E25": {
+    "v": "Commercial (granulation step)",
+    "fill": "FFC6EFCE"
+   },
+   "F25": {
+    "v": "Atomize ball-milled slurry -> spherical secondary particles; then calcine"
+   },
+   "G25": {
+    "v": "Excellent tap density/flow; spherical secondaries; industry-standard granulation"
+   },
+   "H25": {
+    "v": "Needs upstream milling + downstream firing"
+   },
+   "I25": {
+    "v": "Standard step on commercial LFP/LMFP lines"
+   },
+   "J25": {
+    "v": "Lu & Zhu 2024, MRS Communications 14:888; Chen et al. 2015, Electrochim. Acta 186:117"
+   },
+   "K25": {
+    "v": "doi:10.1557/s43579-024-00644-2",
+    "link": "https://doi.org/10.1557/s43579-024-00644-2"
+   },
+   "L25": {
+    "v": "High"
+   }
+  },
+  {
+   "A26": {
+    "v": 22
+   },
+   "B26": {
+    "v": "Ultrasonic spray pyrolysis"
+   },
+   "C26": {
+    "v": "D. Aerosol / Spray"
+   },
+   "D26": {
+    "v": "Both"
+   },
+   "E26": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F26": {
+    "v": "Ultrasonic atomization -> finer uniform droplets -> nano C-LFP"
+   },
+   "G26": {
+    "v": "Finer/uniform particles; in-situ carbon"
+   },
+   "H26": {
+    "v": "Low throughput"
+   },
+   "I26": {
+    "v": "Research only"
+   },
+   "J26": {
+    "v": "Yang, Teng & Wu 2006, J. Power Sources 159:307"
+   },
+   "K26": {
+    "v": "doi:10.1016/j.jpowsour.2006.04.113",
+    "link": "https://doi.org/10.1016/j.jpowsour.2006.04.113"
+   },
+   "L26": {
+    "v": "High"
+   }
+  },
+  {
+   "A27": {
+    "v": 23
+   },
+   "B27": {
+    "v": "Flame spray pyrolysis (FSP)"
+   },
+   "C27": {
+    "v": "D. Aerosol / Spray"
+   },
+   "D27": {
+    "v": "LFP"
+   },
+   "E27": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F27": {
+    "v": "Combust atomized precursor in a flame -> phosphate nanoparticles"
+   },
+   "G27": {
+    "v": "Very fine; continuous; one-step"
+   },
+   "H27": {
+    "v": "Reducing-atmosphere control for Fe2+ hard; phase purity"
+   },
+   "I27": {
+    "v": "Research only"
+   },
+   "J27": {
+    "v": "Rudin, Wegner & Pratsinis 2011, J. Nanopart. Res. 13:2715"
+   },
+   "K27": {
+    "v": "doi:10.1007/s11051-010-0206-x",
+    "link": "https://doi.org/10.1007/s11051-010-0206-x"
+   },
+   "L27": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A28": {
+    "v": 24
+   },
+   "B28": {
+    "v": "Template-assisted"
+   },
+   "C28": {
+    "v": "E. Novel / Hybrid"
+   },
+   "D28": {
+    "v": "Both"
+   },
+   "E28": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F28": {
+    "v": "Hard/soft templates impose porosity/morphology; template removed"
+   },
+   "G28": {
+    "v": "Tailored mesoporosity / high SSA"
+   },
+   "H28": {
+    "v": "Template cost/removal; not scalable"
+   },
+   "I28": {
+    "v": "Research only"
+   },
+   "J28": {
+    "v": "Yu et al. 2009, J. Power Sources (template mesoporous LFP/C)"
+   },
+   "K28": {
+    "v": "ScienceDirect (verified)",
+    "link": "https://www.sciencedirect.com/science/article/abs/pii/S0378775308015590"
+   },
+   "L28": {
+    "v": "High"
+   }
+  },
+  {
+   "A29": {
+    "v": 25
+   },
+   "B29": {
+    "v": "Microwave-hydrothermal"
+   },
+   "C29": {
+    "v": "E. Novel / Hybrid"
+   },
+   "D29": {
+    "v": "Both"
+   },
+   "E29": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F29": {
+    "v": "Hydrothermal crystallization driven by microwave heating (minutes)"
+   },
+   "G29": {
+    "v": "Very fast; low-T; phase-pure nanoplates"
+   },
+   "H29": {
+    "v": "Penetration/scale limits; batch"
+   },
+   "I29": {
+    "v": "Research only"
+   },
+   "J29": {
+    "v": "Zhu et al. 2021, J. Mater. Sci. (microwave-hydrothermal LFP)"
+   },
+   "K29": {
+    "v": "doi:10.1007/s10853-021-05914-1",
+    "link": "https://doi.org/10.1007/s10853-021-05914-1"
+   },
+   "L29": {
+    "v": "High"
+   }
+  },
+  {
+   "A30": {
+    "v": 26
+   },
+   "B30": {
+    "v": "Electrospinning"
+   },
+   "C30": {
+    "v": "E. Novel / Hybrid"
+   },
+   "D30": {
+    "v": "Both"
+   },
+   "E30": {
+    "v": "Lab",
+    "fill": "FFDDEBF7"
+   },
+   "F30": {
+    "v": "Electrospin polymer + precursor into nanofibers; pyrolyze -> LFP/C fiber mats"
+   },
+   "G30": {
+    "v": "1D nano; self-standing/flexible electrodes; in-situ C"
+   },
+   "H30": {
+    "v": "Very low throughput; polymer cost"
+   },
+   "I30": {
+    "v": "Research only"
+   },
+   "J30": {
+    "v": "Zhu et al. 2012, J. Solid State Electrochem. (LFP nanofibers)"
+   },
+   "K30": {
+    "v": "doi:10.1007/s10008-012-1790-8",
+    "link": "https://doi.org/10.1007/s10008-012-1790-8"
+   },
+   "L30": {
+    "v": "High"
+   }
+  },
+  {
+   "A31": {
+    "v": 27
+   },
+   "B31": {
+    "v": "Plasma (RF-ICP / microwave-plasma)"
+   },
+   "C31": {
+    "v": "E. Novel / Hybrid"
+   },
+   "D31": {
+    "v": "LFP"
+   },
+   "E31": {
+    "v": "Lab (1 commercial-scale plant in construction)",
+    "fill": "FFC6EFCE"
+   },
+   "F31": {
+    "v": "Vaporize/quench precursors in thermal plasma -> nanospheres; can C-coat in one step"
+   },
+   "G31": {
+    "v": "Single-step nano + carbon; fast"
+   },
+   "H31": {
+    "v": "Capital/energy; niche"
+   },
+   "I31": {
+    "v": "6K Energy 'UniMelt' microwave-plasma (13 kt plant under construction, TN)"
+   },
+   "J31": {
+    "v": "6K Energy (PlusCAM, DOE grant) + Univ. de Sherbrooke thesis (RF-ICP LFP)"
+   },
+   "K31": {
+    "v": "6kinc.com (verified)",
+    "link": "https://www.6kinc.com/news/press-release/6k-energy-announces-ira-compliant-lfp-and-nmc-cathode-active-material-cam/"
+   },
+   "L31": {
+    "v": "Low-Med"
+   }
+  },
+  {
+   "A32": {
+    "v": 28
+   },
+   "B32": {
+    "v": "One-Pot (Nano One proprietary)"
+   },
+   "C32": {
+    "v": "E. Novel / Hybrid"
+   },
+   "D32": {
+    "v": "LFP (NMC/LNMO in R&D)"
+   },
+   "E32": {
+    "v": "Pilot",
+    "fill": "FFFFEB9C"
+   },
+   "F32": {
+    "v": "Single reactor: low-cost iron oxide/powder + phosphoric acid + Li; carbothermal; no separate sulfate/pCAM step; no wastewater"
+   },
+   "G32": {
+    "v": "Fewer steps; no sodium-sulfate wastewater; cheap Fe feedstock"
+   },
+   "H32": {
+    "v": "Scaling from pilot; proprietary"
+   },
+   "I32": {
+    "v": "Nano One Materials (Candiac, Quebec, ~2,400 tpa nameplate)"
+   },
+   "J32": {
+    "v": "Nano One / Natural Resources Canada (One-Pot LFP)"
+   },
+   "K32": {
+    "v": "natural-resources.canada.ca (verified)",
+    "link": "https://natural-resources.canada.ca/funding-partnerships/commercialization-nano-one-s-one-pot-process-lithium-iron-phosphate-lfp-production"
+   },
+   "L32": {
+    "v": "High"
+   }
+  }
+ ],
+ "Big Categories": [
+  {
+   "A1": {
+    "v": "Big categories of LFP / LMFP synthesis (the taxonomy)"
+   }
+  },
+  {
+   "A2": {
+    "v": "Analogous to the NMC scheme (solid-state / wet-chemistry co-precipitation / spray pyrolysis) and extended for olivine. Alt. framings: Nekahi 2024 uses 3 families (liquid/solid/molten); Lu & Zhu 2024 use 2 (solid-state vs solution)."
+   }
+  },
+  {
+   "A4": {
+    "v": "Cat.",
+    "fill": "FF1F4E78"
+   },
+   "B4": {
+    "v": "Category name",
+    "fill": "FF1F4E78"
+   },
+   "C4": {
+    "v": "What defines it",
+    "fill": "FF1F4E78"
+   },
+   "D4": {
+    "v": "Methods included",
+    "fill": "FF1F4E78"
+   },
+   "E4": {
+    "v": "Commercial relevance",
+    "fill": "FF1F4E78"
+   },
+   "F4": {
+    "v": "NMC analogy",
+    "fill": "FF1F4E78"
+   }
+  },
+  {
+   "A5": {
+    "v": "A",
+    "fill": "FFD9E1F2"
+   },
+   "B5": {
+    "v": "Solid-State (dry) family",
+    "fill": "FFD9E1F2"
+   },
+   "C5": {
+    "v": "Dry powders reacted by calcination; no bulk solvent"
+   },
+   "D5": {
+    "v": "Conventional solid-state; carbothermal reduction (CTR); mechanochemical / ball-milling; microwave solid-state; molten-salt (flux)"
+   },
+   "E5": {
+    "v": "DOMINANT. CTR (via FePO4 precursor) = ~90% of global LFP tonnage."
+   },
+   "F5": {
+    "v": "Solid-state (same family)"
+   }
+  },
+  {
+   "A6": {
+    "v": "B",
+    "fill": "FFD9E1F2"
+   },
+   "B6": {
+    "v": "Melt / Molten-State family",
+    "fill": "FFD9E1F2"
+   },
+   "C6": {
+    "v": "Precursors melted to an ingot, then crushed"
+   },
+   "D6": {
+    "v": "Molten-state synthesis (melt casting)"
+   },
+   "E6": {
+    "v": "Pilot / historical-commercial (Phostech; JM pilot). Largely superseded."
+   },
+   "F6": {
+    "v": "No direct NMC equivalent"
+   }
+  },
+  {
+   "A7": {
+    "v": "C",
+    "fill": "FFD9E1F2"
+   },
+   "B7": {
+    "v": "Wet-Chemistry / Solution family",
+    "fill": "FFD9E1F2"
+   },
+   "C7": {
+    "v": "Reaction in a liquid medium (aqueous / organic / ionic liquid)"
+   },
+   "D7": {
+    "v": "FePO4-precursor precipitation; co-precipitation; liquid-phase SELPS; sol-gel; hydrothermal; solvothermal; supercritical; polyol; emulsion drying; freeze drying; combustion; rheological-phase; ionothermal"
+   },
+   "E7": {
+    "v": "Commercial for the FePO4 precursor + LMFP co-precip + Dynanonic SELPS + hydrothermal (minor). Rest are lab."
+   },
+   "F7": {
+    "v": "Wet-chemistry co-precipitation (same family)"
+   }
+  },
+  {
+   "A8": {
+    "v": "D",
+    "fill": "FFD9E1F2"
+   },
+   "B8": {
+    "v": "Aerosol / Spray family",
+    "fill": "FFD9E1F2"
+   },
+   "C8": {
+    "v": "Precursor aerosolized into droplets -> particles"
+   },
+   "D8": {
+    "v": "Spray pyrolysis; spray drying (+ calcination); ultrasonic spray; flame spray"
+   },
+   "E8": {
+    "v": "Spray DRYING is a standard commercial granulation step. Spray pyrolysis is lab/pilot."
+   },
+   "F8": {
+    "v": "Spray pyrolysis (same family)"
+   }
+  },
+  {
+   "A9": {
+    "v": "E",
+    "fill": "FFD9E1F2"
+   },
+   "B9": {
+    "v": "Novel / Hybrid family",
+    "fill": "FFD9E1F2"
+   },
+   "C9": {
+    "v": "Combine/modify the above, or use exotic energy"
+   },
+   "D9": {
+    "v": "Template-assisted; microwave-hydrothermal; electrospinning; plasma (incl. 6K UniMelt); One-Pot (Nano One)"
+   },
+   "E9": {
+    "v": "Mostly lab. Emerging pilots: Nano One One-Pot; 6K plasma (plant under construction)."
+   },
+   "F9": {
+    "v": "Emerging / novel routes"
+   }
+  },
+  {
+   "B11": {
+    "v": "Bottom line: the commercial LFP workflow is a CHAIN across categories -> C (precipitate FePO4 precursor) -> D (spray-dry with Li + carbon) -> A (carbothermal solid-state calcination). For LMFP, the workhorse is co-precipitation of a Mn-Fe precursor -> spray-dry -> solid-state calcination."
+   }
+  }
+ ],
+ "CAM Producers": [
+  {
+   "A1": {
+    "v": "Global LFP / LMFP cathode-active-material (CAM) producers"
+   }
+  },
+  {
+   "A2": {
+    "v": "Producers of the cathode POWDER. Cell makers appear only if they make their own CAM. Precursor-only / exited / non-CAM firms are listed (shaded) to prevent confusion. Blank method = not publicly disclosed."
+   }
+  },
+  {
+   "A4": {
+    "v": "#",
+    "fill": "FF1F4E78"
+   },
+   "B4": {
+    "v": "Company",
+    "fill": "FF1F4E78"
+   },
+   "C4": {
+    "v": "Country / region",
+    "fill": "FF1F4E78"
+   },
+   "D4": {
+    "v": "Makes",
+    "fill": "FF1F4E78"
+   },
+   "E4": {
+    "v": "Synthesis method (if public)",
+    "fill": "FF1F4E78"
+   },
+   "F4": {
+    "v": "Capacity / market position",
+    "fill": "FF1F4E78"
+   },
+   "G4": {
+    "v": "Status",
+    "fill": "FF1F4E78"
+   },
+   "H4": {
+    "v": "Notes",
+    "fill": "FF1F4E78"
+   },
+   "I4": {
+    "v": "Source",
+    "fill": "FF1F4E78"
+   },
+   "J4": {
+    "v": "Conf.",
+    "fill": "FF1F4E78"
+   }
+  },
+  {
+   "A5": {
+    "v": "CHINA — active / ramping producers",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A6": {
+    "v": 1
+   },
+   "B6": {
+    "v": "Hunan Yuneng New Energy (湖南裕能)"
+   },
+   "C6": {
+    "v": "China"
+   },
+   "D6": {
+    "v": "LFP (+LMFP dev)"
+   },
+   "E6": {
+    "v": "Solid-state carbothermal (FePO4 route)"
+   },
+   "F6": {
+    "v": "#1 globally ~5 yrs; ~700 kt shipped 2024 (28.8% share); >1 Mt 2025; Spain + Malaysia plants announced"
+   },
+   "G6": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H6": {
+    "v": "Chief suppliers = CATL & BYD; CATL held ~7% stake"
+   },
+   "I6": {
+    "v": "www.adamasintel.com",
+    "link": "https://www.adamasintel.com/hunan-yuneng-to-biuld-50-ktpa-lfp-cam-plant-spain/"
+   },
+   "J6": {
+    "v": "High"
+   }
+  },
+  {
+   "A7": {
+    "v": 2
+   },
+   "B7": {
+    "v": "Hubei Wanrun New Energy (湖北万润)"
+   },
+   "C7": {
+    "v": "China"
+   },
+   "D7": {
+    "v": "LFP (+LMFP)"
+   },
+   "E7": {
+    "v": "Solid-state"
+   },
+   "F7": {
+    "v": "#2 in 2025 (~375 kt); #3 in 2024; STAR-listed"
+   },
+   "G7": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "I7": {
+    "v": "en.hbwanrun.com",
+    "link": "https://en.hbwanrun.com/"
+   },
+   "J7": {
+    "v": "High"
+   }
+  },
+  {
+   "A8": {
+    "v": 3
+   },
+   "B8": {
+    "v": "Shenzhen Dynanonic / Defang (德方纳米)"
+   },
+   "C8": {
+    "v": "China"
+   },
+   "D8": {
+    "v": "LFP + LMFP"
+   },
+   "E8": {
+    "v": "Liquid-phase SELPS (LFP); sol-gel (LMFP)"
+   },
+   "F8": {
+    "v": "#3; nano-LFP pioneer; world-first >100 kt LMFP plant (110 kt Qujing 2022); LFP ~345 kt by 2025"
+   },
+   "G8": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H8": {
+    "v": "Only major producer NOT using solid-state; patent US20140239235A1"
+   },
+   "I8": {
+    "v": "www.dynanonic.com",
+    "link": "https://www.dynanonic.com/enabout.aspx?id=90"
+   },
+   "J8": {
+    "v": "High"
+   }
+  },
+  {
+   "A9": {
+    "v": 4
+   },
+   "B9": {
+    "v": "Jiangsu Lopal / Changzhou Liyuan LBM (龙蟠·常州锂源)"
+   },
+   "C9": {
+    "v": "China"
+   },
+   "D9": {
+    "v": "LFP (+LMFP dev)"
+   },
+   "E9": {
+    "v": "Solid-state"
+   },
+   "F9": {
+    "v": "Top-5; ~310 kt (target 600 kt); acquired BTR's LFP business; Indonesia plant"
+   },
+   "G9": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H9": {
+    "v": "First Chinese LFP-CAM maker to build overseas"
+   },
+   "I9": {
+    "v": "en.liyuanen.com",
+    "link": "https://en.liyuanen.com/"
+   },
+   "J9": {
+    "v": "High"
+   }
+  },
+  {
+   "A10": {
+    "v": 5
+   },
+   "B10": {
+    "v": "Guizhou Anda Technology (贵州安达)"
+   },
+   "C10": {
+    "v": "China"
+   },
+   "D10": {
+    "v": "LFP"
+   },
+   "E10": {
+    "v": "Solid-state (nano)"
+   },
+   "F10": {
+    "v": "~150 kt LFP + iron-phosphate; BSE-listed (2023)"
+   },
+   "G10": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H10": {
+    "v": "Clients: BYD, CATL, CALB"
+   },
+   "I10": {
+    "v": "www.energytrend.com",
+    "link": "https://www.energytrend.com/news/20230329-31590.html"
+   },
+   "J10": {
+    "v": "High"
+   }
+  },
+  {
+   "A11": {
+    "v": 6
+   },
+   "B11": {
+    "v": "Fulin Precision / Jiangxi Shenghua (富临精工·升华)"
+   },
+   "C11": {
+    "v": "China"
+   },
+   "D11": {
+    "v": "LFP (+LMFP dev)"
+   },
+   "E11": {
+    "v": "High-tap-density LFP (solid-state)"
+   },
+   "F11": {
+    "v": "~300 kt; 128 kt output 2024; CATL-backed (raising stake toward 51%)"
+   },
+   "G11": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "I11": {
+    "v": "www.yicaiglobal.com",
+    "link": "https://www.yicaiglobal.com/news/catl-backed-shenghua-to-build-two-high-tap-density-lfp-plants-for-usd8448-million"
+   },
+   "J11": {
+    "v": "High"
+   }
+  },
+  {
+   "A12": {
+    "v": 7
+   },
+   "B12": {
+    "v": "Rongtong Hi-Tech (融通高科)"
+   },
+   "C12": {
+    "v": "China"
+   },
+   "D12": {
+    "v": "LFP (+LMFP planned)"
+   },
+   "E12": {
+    "v": "Solid-state"
+   },
+   "F12": {
+    "v": "Top-10 (10th 2024); ~100-145 kt; Reliance-India JV"
+   },
+   "G12": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "I12": {
+    "v": "news.metal.com",
+    "link": "https://news.metal.com/newscontent/102781565"
+   },
+   "J12": {
+    "v": "High"
+   }
+  },
+  {
+   "A13": {
+    "v": 8
+   },
+   "B13": {
+    "v": "Pulead Technology / Beida Pioneer (北大先行)"
+   },
+   "C13": {
+    "v": "China"
+   },
+   "D13": {
+    "v": "LFP (+LCO/NCM)"
+   },
+   "F13": {
+    "v": "Entered top-10 in 2024; early LFP maker (est. 1999, Peking Univ.)"
+   },
+   "G13": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H13": {
+    "v": "Clients: CATL, ATL; Nano One JDA; Prayon JV"
+   },
+   "I13": {
+    "v": "www.energytrend.com",
+    "link": "https://www.energytrend.com/news/20230628-32610.html"
+   },
+   "J13": {
+    "v": "High"
+   }
+  },
+  {
+   "A14": {
+    "v": 9
+   },
+   "B14": {
+    "v": "Beijing Easpring / Dangsheng (当升科技)"
+   },
+   "C14": {
+    "v": "China"
+   },
+   "D14": {
+    "v": "LFP + LMFP"
+   },
+   "F14": {
+    "v": "300 kt L(M)FP JV w/ Sichuan Shudao (announced); a 'first-four' LMFP investor"
+   },
+   "G14": {
+    "v": "Ramping/announced",
+    "fill": "FFFCE4D6"
+   },
+   "H14": {
+    "v": "Core business = NCM"
+   },
+   "I14": {
+    "v": "http:",
+    "link": "http://www.easpring.com.cn/english/"
+   },
+   "J14": {
+    "v": "High"
+   }
+  },
+  {
+   "A15": {
+    "v": 10
+   },
+   "B15": {
+    "v": "Ronbay Technology (容百科技)"
+   },
+   "C15": {
+    "v": "China"
+   },
+   "D15": {
+    "v": "LMFP (leader) + LFP"
+   },
+   "F15": {
+    "v": "LMFP co-leader (~80% of H1-2025 shipments w/ Hengchuang); Korea plant (20 kt LMFP)"
+   },
+   "G15": {
+    "v": "Active (LMFP)",
+    "fill": "FFC6EFCE"
+   },
+   "H15": {
+    "v": "Core business = high-nickel NCM"
+   },
+   "I15": {
+    "v": "en.wikipedia.org",
+    "link": "https://en.wikipedia.org/wiki/Ronbay_Technology"
+   },
+   "J15": {
+    "v": "High"
+   }
+  },
+  {
+   "A16": {
+    "v": 11
+   },
+   "B16": {
+    "v": "XTC New Energy / Xiamen Tungsten (厦钨新能)"
+   },
+   "C16": {
+    "v": "China"
+   },
+   "D16": {
+    "v": "LFP + LMFP"
+   },
+   "F16": {
+    "v": "Ya'an LFP/LMFP project (~80 kt planned)"
+   },
+   "G16": {
+    "v": "Ramping",
+    "fill": "FFFCE4D6"
+   },
+   "H16": {
+    "v": "Core = LCO/NCM"
+   },
+   "I16": {
+    "v": "www.cbinsights.com",
+    "link": "https://www.cbinsights.com/company/xtc-new-energy"
+   },
+   "J16": {
+    "v": "High"
+   }
+  },
+  {
+   "A17": {
+    "v": 12
+   },
+   "B17": {
+    "v": "Gotion High-tech (国轩高科)"
+   },
+   "C17": {
+    "v": "China"
+   },
+   "D17": {
+    "v": "LFP + LMFP (in-house CAM)"
+   },
+   "E17": {
+    "v": "4th-gen LFP line (route not disclosed)"
+   },
+   "F17": {
+    "v": "Own CAM 50 kt -> 200 kt (Hefei/Lujiang); LMFP in Astroinno L600"
+   },
+   "G17": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H17": {
+    "v": "Also a cell maker; own CAM since 2007"
+   },
+   "I17": {
+    "v": "www.electrive.com",
+    "link": "https://www.electrive.com/2022/06/09/gotion-launches-production-of-lfp-cathode-materials/"
+   },
+   "J17": {
+    "v": "High"
+   }
+  },
+  {
+   "A18": {
+    "v": 13
+   },
+   "B18": {
+    "v": "Chongqing Terui (重庆特瑞)"
+   },
+   "C18": {
+    "v": "China"
+   },
+   "D18": {
+    "v": "LFP (+NCM)"
+   },
+   "F18": {
+    "v": "~60 kt (48 lines); CATL supplier since 2021; top-10"
+   },
+   "G18": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "I18": {
+    "v": "http:",
+    "link": "http://en.cqterui.cn/company_1.html"
+   },
+   "J18": {
+    "v": "High"
+   }
+  },
+  {
+   "A19": {
+    "v": 14
+   },
+   "B19": {
+    "v": "Wanhua Chemical (万华化学)"
+   },
+   "C19": {
+    "v": "China"
+   },
+   "D19": {
+    "v": "LFP"
+   },
+   "E19": {
+    "v": "Self-developed sintering"
+   },
+   "F19": {
+    "v": "Sichuan +120 kt; Shandong 100 kt (~2026); IBU-tec Europe JV"
+   },
+   "G19": {
+    "v": "Ramping",
+    "fill": "FFFCE4D6"
+   },
+   "I19": {
+    "v": "en.whchem.com",
+    "link": "https://en.whchem.com/cmscontent/832.html"
+   },
+   "J19": {
+    "v": "High"
+   }
+  },
+  {
+   "A20": {
+    "v": 15
+   },
+   "B20": {
+    "v": "LB Group / Lomon Billions (龙佰集团)"
+   },
+   "C20": {
+    "v": "China"
+   },
+   "D20": {
+    "v": "LFP"
+   },
+   "E20": {
+    "v": "TiO2 by-product (ferrous sulfate) integrated"
+   },
+   "F20": {
+    "v": "~200 kt added 2022"
+   },
+   "G20": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H20": {
+    "v": "World's largest TiO2 maker diversifying"
+   },
+   "I20": {
+    "v": "www.lomonbillions.com",
+    "link": "https://www.lomonbillions.com/"
+   },
+   "J20": {
+    "v": "High"
+   }
+  },
+  {
+   "A21": {
+    "v": 16
+   },
+   "B21": {
+    "v": "CNNC Huayuan Titanium Dioxide (中核钛白)"
+   },
+   "C21": {
+    "v": "China"
+   },
+   "D21": {
+    "v": "LFP"
+   },
+   "E21": {
+    "v": "TiO2 by-product integrated"
+   },
+   "F21": {
+    "v": "500 kt planned (3 phases, ~$1.9 B); acquired Zhaoqing Helin Liye"
+   },
+   "G21": {
+    "v": "Ramping/announced",
+    "fill": "FFFCE4D6"
+   },
+   "I21": {
+    "v": "www.yicaiglobal.com",
+    "link": "https://www.yicaiglobal.com/news/china-huayuan-titanium-to-build-usd19-billion-lithium-iron-phosphate-plant"
+   },
+   "J21": {
+    "v": "High"
+   }
+  },
+  {
+   "A22": {
+    "v": 17
+   },
+   "B22": {
+    "v": "Hengchuang Nano (恒创纳米)"
+   },
+   "C22": {
+    "v": "China"
+   },
+   "D22": {
+    "v": "LMFP (pure-play)"
+   },
+   "E22": {
+    "v": "Nano, carbon-coat, ion-doping"
+   },
+   "F22": {
+    "v": "New entrant (2022); LMFP co-leader ~80% H1-2025; 130 kt planned (Ningxia)"
+   },
+   "G22": {
+    "v": "Ramping",
+    "fill": "FFFCE4D6"
+   },
+   "H22": {
+    "v": "Bought Dow's LMFP patents"
+   },
+   "I22": {
+    "v": "eu.36kr.com",
+    "link": "https://eu.36kr.com/en/p/3746236378202631"
+   },
+   "J22": {
+    "v": "High"
+   }
+  },
+  {
+   "A23": {
+    "v": 18
+   },
+   "B23": {
+    "v": "Youshan Technology (优山 — Huayou Cobalt sub.)"
+   },
+   "C23": {
+    "v": "China"
+   },
+   "D23": {
+    "v": "LFP"
+   },
+   "F23": {
+    "v": "In EVTank 2024 top-10; supplies LG Chem's Morocco LFP JV"
+   },
+   "G23": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "I23": {
+    "v": "www.lgcorp.com",
+    "link": "https://www.lgcorp.com/media/release/26808"
+   },
+   "J23": {
+    "v": "Med-High"
+   }
+  },
+  {
+   "A24": {
+    "v": 19
+   },
+   "B24": {
+    "v": "Hunan Changyuan Lico (长远锂科)"
+   },
+   "C24": {
+    "v": "China"
+   },
+   "D24": {
+    "v": "LFP (ramping) + ternary"
+   },
+   "F24": {
+    "v": "~120 kt ternary; LFP line since 2023 (~20-30 kt initial)"
+   },
+   "G24": {
+    "v": "Ramping (LFP)",
+    "fill": "FFFCE4D6"
+   },
+   "I24": {
+    "v": "news.metal.com",
+    "link": "https://news.metal.com/newscontent/102057055"
+   },
+   "J24": {
+    "v": "Med-High"
+   }
+  },
+  {
+   "A25": {
+    "v": 20
+   },
+   "B25": {
+    "v": "Yunnan Yuntianhua (云天化)"
+   },
+   "C25": {
+    "v": "China"
+   },
+   "D25": {
+    "v": "LFP"
+   },
+   "E25": {
+    "v": "Phosphate-rock integrated"
+   },
+   "F25": {
+    "v": "Lists LiFePO4 CAM (CAS 15365-14-7)"
+   },
+   "G25": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "I25": {
+    "v": "www.yunnan-yuntianhua.com",
+    "link": "https://www.yunnan-yuntianhua.com/products/fine-chemicals-series/yunnan-yuntianhua-co-ltd-lithium-iron-phosphate-cas-15365-14-7.html"
+   },
+   "J25": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A26": {
+    "v": 21
+   },
+   "B26": {
+    "v": "Yantai Zhuoneng (烟台卓能)"
+   },
+   "C26": {
+    "v": "China"
+   },
+   "D26": {
+    "v": "LFP"
+   },
+   "F26": {
+    "v": "Cost-focused ESS/grid LFP"
+   },
+   "G26": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H26": {
+    "v": "Cited in peer-reviewed review of Chinese LFP makers"
+   },
+   "I26": {
+    "v": "link.springer.com",
+    "link": "https://link.springer.com/article/10.1557/s43579-024-00644-2"
+   },
+   "J26": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A27": {
+    "v": "CHINA — precursor-only / exited / not a CAM maker (flagged)",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A28": {
+    "v": 22
+   },
+   "B28": {
+    "v": "BTR New Material (贝特瑞)"
+   },
+   "C28": {
+    "v": "China"
+   },
+   "D28": {
+    "v": "(exited LFP)"
+   },
+   "F28": {
+    "v": "Sold Tianjin & Jiangsu LFP business to Lopal (2022)"
+   },
+   "G28": {
+    "v": "Exited LFP",
+    "fill": "FFF2DCDB"
+   },
+   "H28": {
+    "v": "Now world #1 anode maker + high-nickel NCA"
+   },
+   "I28": {
+    "v": "www.btrchina.com",
+    "link": "https://www.btrchina.com/en/"
+   },
+   "J28": {
+    "v": "High"
+   }
+  },
+  {
+   "A29": {
+    "v": 23
+   },
+   "B29": {
+    "v": "Ningbo Shanshan (杉杉股份)"
+   },
+   "C29": {
+    "v": "China"
+   },
+   "D29": {
+    "v": "Not LFP/LMFP"
+   },
+   "F29": {
+    "v": "Cathode = LCO/NCM/LMO via BASF-Shanshan JV"
+   },
+   "G29": {
+    "v": "Non-LFP",
+    "fill": "FFF2DCDB"
+   },
+   "H29": {
+    "v": "Also top anode maker"
+   },
+   "I29": {
+    "v": "www.ssgf.net",
+    "link": "https://www.ssgf.net/index/en/business3.html"
+   },
+   "J29": {
+    "v": "High"
+   }
+  },
+  {
+   "A30": {
+    "v": 24
+   },
+   "B30": {
+    "v": "CNGR Advanced Material (中伟股份)"
+   },
+   "C30": {
+    "v": "China"
+   },
+   "D30": {
+    "v": "Precursor only"
+   },
+   "F30": {
+    "v": "Iron-phosphate precursor (~200 kt) + NCM/NCA precursors"
+   },
+   "G30": {
+    "v": "Precursor",
+    "fill": "FFF2DCDB"
+   },
+   "H30": {
+    "v": "Finished LFP CAM only in customer qualification"
+   },
+   "I30": {
+    "v": "www.cngrgf.com.cn",
+    "link": "https://www.cngrgf.com.cn/en-US/rrtbl.html"
+   },
+   "J30": {
+    "v": "High"
+   }
+  },
+  {
+   "A31": {
+    "v": 25
+   },
+   "B31": {
+    "v": "Guizhou Chuanheng (川恒股份)"
+   },
+   "C31": {
+    "v": "China"
+   },
+   "D31": {
+    "v": "Precursor only"
+   },
+   "F31": {
+    "v": "Iron-phosphate precursor (CATL JV)"
+   },
+   "G31": {
+    "v": "Precursor",
+    "fill": "FFF2DCDB"
+   },
+   "H31": {
+    "v": "Phosphate-chemical firm"
+   },
+   "I31": {
+    "v": "news.metal.com",
+    "link": "https://news.metal.com/newscontent/101706049"
+   },
+   "J31": {
+    "v": "High"
+   }
+  },
+  {
+   "A32": {
+    "v": 26
+   },
+   "B32": {
+    "v": "Xinyangfeng (新洋丰)"
+   },
+   "C32": {
+    "v": "China"
+   },
+   "D32": {
+    "v": "Precursor only"
+   },
+   "F32": {
+    "v": "Iron-phosphate precursor (EVE, Gotion, SVOLT deals)"
+   },
+   "G32": {
+    "v": "Precursor",
+    "fill": "FFF2DCDB"
+   },
+   "I32": {
+    "v": "faxiangongchang.com",
+    "link": "https://faxiangongchang.com/en/reports/china-phosphate-chemical-2026"
+   },
+   "J32": {
+    "v": "High"
+   }
+  },
+  {
+   "A33": {
+    "v": "CHINA — cell makers (own CAM?)",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A34": {
+    "v": 27
+   },
+   "B34": {
+    "v": "CATL (宁德时代)"
+   },
+   "C34": {
+    "v": "China"
+   },
+   "D34": {
+    "v": "Mostly buys (+ equity + JV)"
+   },
+   "F34": {
+    "v": "Buys chiefly from Yuneng & Dynanonic; 2021 JV w/ Dynanonic for captive LFP"
+   },
+   "G34": {
+    "v": "Buys / JV"
+   },
+   "H34": {
+    "v": "World's largest LFP cell maker"
+   },
+   "I34": {
+    "v": "www.greencarcongress.com",
+    "link": "https://www.greencarcongress.com/2021/01/catl-to-build-new-280m-80-tpy-lfp-cathode-materials-plant-in-china.html"
+   },
+   "J34": {
+    "v": "High"
+   }
+  },
+  {
+   "A35": {
+    "v": 28
+   },
+   "B35": {
+    "v": "BYD (比亚迪)"
+   },
+   "C35": {
+    "v": "China"
+   },
+   "D35": {
+    "v": "Substantial in-house + buys"
+   },
+   "E35": {
+    "v": "Solid-state (per BYD patents)"
+   },
+   "F35": {
+    "v": "FinDreams units make LFP in-house for Blade batteries"
+   },
+   "G35": {
+    "v": "In-house + buys"
+   },
+   "H35": {
+    "v": "Also top shareholder/customer of Yuneng"
+   },
+   "I35": {
+    "v": "en.wikipedia.org",
+    "link": "https://en.wikipedia.org/wiki/BYD_Blade_battery"
+   },
+   "J35": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A36": {
+    "v": 29
+   },
+   "B36": {
+    "v": "EVE Energy (亿纬锂能)"
+   },
+   "C36": {
+    "v": "China"
+   },
+   "D36": {
+    "v": "Partial (JV)"
+   },
+   "F36": {
+    "v": "JV w/ Hunan Zhongke for cathode (~100 kt); largely buys"
+   },
+   "G36": {
+    "v": "JV / buys"
+   },
+   "I36": {
+    "v": "link.springer.com",
+    "link": "https://link.springer.com/article/10.1557/s43579-024-00644-2"
+   },
+   "J36": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A37": {
+    "v": 30
+   },
+   "B37": {
+    "v": "CALB (中创新航)"
+   },
+   "C37": {
+    "v": "China"
+   },
+   "D37": {
+    "v": "No verified in-house CAM"
+   },
+   "F37": {
+    "v": "Cell maker; buys"
+   },
+   "G37": {
+    "v": "Buys"
+   },
+   "I37": {
+    "v": "link.springer.com",
+    "link": "https://link.springer.com/article/10.1557/s43579-024-00644-2"
+   },
+   "J37": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A38": {
+    "v": "TAIWAN",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A39": {
+    "v": 31
+   },
+   "B39": {
+    "v": "Aleees / Advanced Lithium Electrochemistry (立凱電能)"
+   },
+   "C39": {
+    "v": "Taiwan"
+   },
+   "D39": {
+    "v": "LFP (+LMFP dev)"
+   },
+   "E39": {
+    "v": "In-house FePO4 precursor route + solid-state (NOT hydrothermal)"
+   },
+   "F39": {
+    "v": "~30 kt cumulative shipped; producer + major IP LICENSOR"
+   },
+   "G39": {
+    "v": "Active",
+    "fill": "FFC6EFCE"
+   },
+   "H39": {
+    "v": "Licenses process (FREYR; Avenira; IFFCO MOU); ICL license discontinued Nov 2025"
+   },
+   "I39": {
+    "v": "www.aleees.com",
+    "link": "https://www.aleees.com/en/products-services/cam-material/"
+   },
+   "J39": {
+    "v": "High"
+   }
+  },
+  {
+   "A40": {
+    "v": 32
+   },
+   "B40": {
+    "v": "Formosa Lithium Iron Oxide (FEMTC, 台塑鋰鐵)"
+   },
+   "C40": {
+    "v": "Taiwan"
+   },
+   "D40": {
+    "v": "LFP"
+   },
+   "F40": {
+    "v": "~4,800 t/yr; JV of Formosa Plastics + Changs Ascending"
+   },
+   "G40": {
+    "v": "Active (modest)",
+    "fill": "FFC6EFCE"
+   },
+   "H40": {
+    "v": "Customers incl. Gotion"
+   },
+   "I40": {
+    "v": "http:",
+    "link": "http://www.caec.com.tw/company.php"
+   },
+   "J40": {
+    "v": "High"
+   }
+  },
+  {
+   "A41": {
+    "v": 33
+   },
+   "B41": {
+    "v": "Changs Ascending Enterprise (長園科技)"
+   },
+   "C41": {
+    "v": "Taiwan"
+   },
+   "D41": {
+    "v": "LFP"
+   },
+   "E41": {
+    "v": "Proprietary 'Li-Fe-P-oxide'"
+   },
+   "F41": {
+    "v": "First LFP maker in Taiwan (2001); niche (ESS/UPS)"
+   },
+   "G41": {
+    "v": "Active (small)",
+    "fill": "FFC6EFCE"
+   },
+   "H41": {
+    "v": "Licenses tech to FEMTC"
+   },
+   "I41": {
+    "v": "www.airitilibrary.com",
+    "link": "https://www.airitilibrary.com/Article/Detail/10219447-201604-201606210017-201606210017-19-20"
+   },
+   "J41": {
+    "v": "High"
+   }
+  },
+  {
+   "A42": {
+    "v": 34
+   },
+   "B42": {
+    "v": "Tatung Fine Chemicals (TFC)"
+   },
+   "C42": {
+    "v": "Taiwan"
+   },
+   "D42": {
+    "v": "LFP"
+   },
+   "E42": {
+    "v": "Was LiFePO4+C licensee (terminated 2017)"
+   },
+   "F42": {
+    "v": "Entered Japan ESS market 2012; low-profile since"
+   },
+   "G42": {
+    "v": "Uncertain"
+   },
+   "I42": {
+    "v": "www.greencarcongress.com",
+    "link": "https://www.greencarcongress.com/2017/07/20170710-tfc.html"
+   },
+   "J42": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A43": {
+    "v": "JAPAN",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A44": {
+    "v": 35
+   },
+   "B44": {
+    "v": "Sumitomo Osaka Cement (住友大阪セメント)"
+   },
+   "C44": {
+    "v": "Japan"
+   },
+   "D44": {
+    "v": "LFP (historic)"
+   },
+   "E44": {
+    "v": "Olivine + carbon-coating (nanoparticle synthesis)"
+   },
+   "F44": {
+    "v": "EXITED — LFP business + Vietnam plant transferred to SMM (Feb/May 2022)"
+   },
+   "G44": {
+    "v": "Exited",
+    "fill": "FFF2DCDB"
+   },
+   "H44": {
+    "v": "Carbon-coating pioneer"
+   },
+   "I44": {
+    "v": "www.smm.co.jp",
+    "link": "https://www.smm.co.jp/en/news/release/2022/02/001542.html"
+   },
+   "J44": {
+    "v": "High"
+   }
+  },
+  {
+   "A45": {
+    "v": 36
+   },
+   "B45": {
+    "v": "Sumitomo Metal Mining / SMM (住友金属鉱山)"
+   },
+   "C45": {
+    "v": "Japan"
+   },
+   "D45": {
+    "v": "LFP"
+   },
+   "E45": {
+    "v": "Inherited ex-SOC olivine tech"
+   },
+   "F45": {
+    "v": "Holds ex-SOC LFP business; large-scale commercial not confirmed"
+   },
+   "G45": {
+    "v": "Developing / limited",
+    "fill": "FFFCE4D6"
+   },
+   "H45": {
+    "v": "Core = NCA/NMC; R&D with Nano One"
+   },
+   "I45": {
+    "v": "www.smm.co.jp",
+    "link": "https://www.smm.co.jp/en/news/release/uploaded_files/20220222_EN.pdf"
+   },
+   "J45": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A46": {
+    "v": 37
+   },
+   "B46": {
+    "v": "Nichia (日亜化学工業)"
+   },
+   "C46": {
+    "v": "Japan"
+   },
+   "D46": {
+    "v": "LFP (minor)"
+   },
+   "E46": {
+    "v": "'Original synthetic process'"
+   },
+   "F46": {
+    "v": "LiFePO4 is a listed catalog cathode; scale small"
+   },
+   "G46": {
+    "v": "Active (listed)",
+    "fill": "FFC6EFCE"
+   },
+   "H46": {
+    "v": "Core = NCA/NMC/LCO"
+   },
+   "I46": {
+    "v": "www.nichia.co.jp",
+    "link": "https://www.nichia.co.jp/en/product/battery.html"
+   },
+   "J46": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A47": {
+    "v": 38
+   },
+   "B47": {
+    "v": "Toda Kogyo (戸田工業)"
+   },
+   "C47": {
+    "v": "Japan"
+   },
+   "D47": {
+    "v": "Precursor only"
+   },
+   "E47": {
+    "v": "Iron oxide (for LFP)"
+   },
+   "F47": {
+    "v": "Sells iron oxide precursor, not finished LFP/LMFP CAM"
+   },
+   "G47": {
+    "v": "Precursor",
+    "fill": "FFF2DCDB"
+   },
+   "I47": {
+    "v": "www.todakogyo.co.jp",
+    "link": "https://www.todakogyo.co.jp/english/product/battery.html"
+   },
+   "J47": {
+    "v": "High"
+   }
+  },
+  {
+   "A48": {
+    "v": 39
+   },
+   "B48": {
+    "v": "Taiheiyo Cement (太平洋セメント)"
+   },
+   "C48": {
+    "v": "Japan"
+   },
+   "D48": {
+    "v": "LMFP"
+   },
+   "E48": {
+    "v": "Proprietary hydrothermal ('Nanolitia') + nano + carbon-coat"
+   },
+   "F48": {
+    "v": "Targeted mass production 2025 (start not confirmed)"
+   },
+   "G48": {
+    "v": "Ramping/announced",
+    "fill": "FFFCE4D6"
+   },
+   "I48": {
+    "v": "www.mitsui.com",
+    "link": "https://www.mitsui.com/mgssi/en/report/detail/__icsFiles/afieldfile/2023/09/19/2308t_zhao_e.pdf"
+   },
+   "J48": {
+    "v": "Med-High"
+   }
+  },
+  {
+   "A49": {
+    "v": 40
+   },
+   "B49": {
+    "v": "Mitsui E&S (三井E&S)"
+   },
+   "C49": {
+    "v": "Japan"
+   },
+   "D49": {
+    "v": "LFP (historic license)"
+   },
+   "F49": {
+    "v": "Historical LiFePO4+C license holder; not a current producer"
+   },
+   "G49": {
+    "v": "Historical",
+    "fill": "FFF2DCDB"
+   },
+   "I49": {
+    "v": "www.greencarcongress.com",
+    "link": "https://www.greencarcongress.com/2011/07/lfp-20110704.html"
+   },
+   "J49": {
+    "v": "Low"
+   }
+  },
+  {
+   "A50": {
+    "v": "SOUTH KOREA — mostly announced / ramping",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A51": {
+    "v": 41
+   },
+   "B51": {
+    "v": "L&F (via L&F Plus, 엘앤에프)"
+   },
+   "C51": {
+    "v": "South Korea"
+   },
+   "D51": {
+    "v": "LFP (3rd-gen); LMFP planned"
+   },
+   "F51": {
+    "v": "Korea's first/only mass producer; Daegu 30 -> 60 kt (2027); US plant w/ Mitra Chem (MP 2028)"
+   },
+   "G51": {
+    "v": "Ramping (MP ~Q4 2026)",
+    "fill": "FFFCE4D6"
+   },
+   "H51": {
+    "v": "Samsung SDI 1.6 T KRW deal; SK On supply MOU"
+   },
+   "I51": {
+    "v": "www.koreatimes.co.kr",
+    "link": "https://www.koreatimes.co.kr/business/companies/20260710/lfs-lfp-push-aims-to-break-chinas-grip-on-battery-supply-chain"
+   },
+   "J51": {
+    "v": "High"
+   }
+  },
+  {
+   "A52": {
+    "v": 42
+   },
+   "B52": {
+    "v": "POSCO Future M (포스코퓨처엠)"
+   },
+   "C52": {
+    "v": "South Korea"
+   },
+   "D52": {
+    "v": "LFP; LMFP/LMR dev"
+   },
+   "F52": {
+    "v": "JV w/ CNGR + FINO — Pohang up to 50 kt, MP 2027"
+   },
+   "G52": {
+    "v": "Announced",
+    "fill": "FFFCE4D6"
+   },
+   "I52": {
+    "v": "newsroom.posco.com",
+    "link": "https://newsroom.posco.com/en/posco-future-m-signs-joint-venture-agreement-with-cngr-and-fino-for-lfp-cathode-materials/"
+   },
+   "J52": {
+    "v": "High"
+   }
+  },
+  {
+   "A53": {
+    "v": 43
+   },
+   "B53": {
+    "v": "LG Chem (LG화학)"
+   },
+   "C53": {
+    "v": "South Korea"
+   },
+   "D53": {
+    "v": "LFP; LMFP planned"
+   },
+   "F53": {
+    "v": "Morocco 50 kt (w/ Youshan/Huayou), MP target 2026"
+   },
+   "G53": {
+    "v": "Announced",
+    "fill": "FFFCE4D6"
+   },
+   "H53": {
+    "v": "Tennessee plant is NCMA, not LFP"
+   },
+   "I53": {
+    "v": "www.lgcorp.com",
+    "link": "https://www.lgcorp.com/media/release/26808"
+   },
+   "J53": {
+    "v": "High"
+   }
+  },
+  {
+   "A54": {
+    "v": 44
+   },
+   "B54": {
+    "v": "EcoPro BM (에코프로비엠)"
+   },
+   "C54": {
+    "v": "South Korea"
+   },
+   "D54": {
+    "v": "LFP (pilot)"
+   },
+   "E54": {
+    "v": "Precursor-free direct-synthesis R&D"
+   },
+   "F54": {
+    "v": "Pilot line ~3 kt; samples from Q2 2025"
+   },
+   "G54": {
+    "v": "Pilot / R&D",
+    "fill": "FFFCE4D6"
+   },
+   "H54": {
+    "v": "With Hyundai/Kia/Hyundai Steel"
+   },
+   "I54": {
+    "v": "www.marklines.com",
+    "link": "https://www.marklines.com/en/news/321811"
+   },
+   "J54": {
+    "v": "Med-High"
+   }
+  },
+  {
+   "A55": {
+    "v": "NORTH AMERICA",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A56": {
+    "v": 45
+   },
+   "B56": {
+    "v": "Nano One Materials"
+   },
+   "C56": {
+    "v": "Canada (Candiac, QC)"
+   },
+   "D56": {
+    "v": "LFP (+NMC/LNMO R&D)"
+   },
+   "E56": {
+    "v": "Proprietary 'One-Pot' (single-reactor, carbothermal, no wastewater)"
+   },
+   "F56": {
+    "v": "Pilot ~200 tpa; demo target ~800 tpa H1-2027; site nameplate ~2,400 tpa"
+   },
+   "G56": {
+    "v": "Pilot + small commercial",
+    "fill": "FFFCE4D6"
+   },
+   "H56": {
+    "v": "Operates ex-Johnson Matthey Candiac plant"
+   },
+   "I56": {
+    "v": "nanoone.ca",
+    "link": "https://nanoone.ca/news/nano-one-advances-candiac-lfp-production-capacity-expansion-project-detailed-engineering-equipment-procurement/"
+   },
+   "J56": {
+    "v": "High"
+   }
+  },
+  {
+   "A57": {
+    "v": 46
+   },
+   "B57": {
+    "v": "Mitra Chem"
+   },
+   "C57": {
+    "v": "USA (Mountain View, CA; planned Muskegon, MI)"
+   },
+   "D57": {
+    "v": "LFP + LMFP"
+   },
+   "E57": {
+    "v": "Co-precipitation (AI-driven; low-wastewater)"
+   },
+   "F57": {
+    "v": "Multi-ton samples; planned MI plant ~15,000 -> 30,000 tpa"
+   },
+   "G57": {
+    "v": "Pilot + commercial announced",
+    "fill": "FFFCE4D6"
+   },
+   "H57": {
+    "v": "$125M DOE+Michigan; Saint-Gobain / Sun Chemical partners"
+   },
+   "I57": {
+    "v": "www.prnewswire.com",
+    "link": "https://www.prnewswire.com/news-releases/us-department-of-energy-selects-mitra-chem-for-100-million-award-for-domestic-battery-manufacturing-302253860.html"
+   },
+   "J57": {
+    "v": "High"
+   }
+  },
+  {
+   "A58": {
+    "v": 47
+   },
+   "B58": {
+    "v": "6K Energy"
+   },
+   "C58": {
+    "v": "USA (Jackson, TN)"
+   },
+   "D58": {
+    "v": "LFP + NMC"
+   },
+   "E58": {
+    "v": "UniMelt microwave-plasma"
+   },
+   "F58": {
+    "v": "R&D ~400 tpa; 'PlusCAM' 13,000 tpa under construction ($50M DOE)"
+   },
+   "G58": {
+    "v": "Construction (pilot producing)",
+    "fill": "FFFCE4D6"
+   },
+   "I58": {
+    "v": "www.6kinc.com",
+    "link": "https://www.6kinc.com/news/press-release/the-us-department-of-energy-and-6k-energy-execute-agreement-for-the-50m-grant-for-the-pluscam-battery-material-production-plant-in-jackson-tn/"
+   },
+   "J58": {
+    "v": "High"
+   }
+  },
+  {
+   "A59": {
+    "v": 48
+   },
+   "B59": {
+    "v": "First Phosphate"
+   },
+   "C59": {
+    "v": "Canada (Saguenay, QC)"
+   },
+   "D59": {
+    "v": "LFP CAM (+ upstream phosphate)"
+   },
+   "E59": {
+    "v": "Not fully public"
+   },
+   "F59": {
+    "v": "Pilot; produced LFP CAM & cells from N. American minerals (2025); commercial ~2027"
+   },
+   "G59": {
+    "v": "Pilot / pre-production",
+    "fill": "FFFCE4D6"
+   },
+   "H59": {
+    "v": "Vertically integrated from igneous phosphate"
+   },
+   "I59": {
+    "v": "firstphosphate.com",
+    "link": "https://firstphosphate.com/projects/lfp-cam-lfp-battery-cell-pilot-production-plant/"
+   },
+   "J59": {
+    "v": "Med-High"
+   }
+  },
+  {
+   "A60": {
+    "v": 49
+   },
+   "B60": {
+    "v": "Wildcat Discovery Technologies"
+   },
+   "C60": {
+    "v": "USA (San Diego; planned Hooks, TX)"
+   },
+   "D60": {
+    "v": "LFP (+ high-cap CAM)"
+   },
+   "E60": {
+    "v": "High-throughput combinatorial R&D platform"
+   },
+   "F60": {
+    "v": "Produced 1 MT LFP w/ offtakes; 15,000 tpa TX plant (JV w/ EnergyX) announced Jun 2026"
+   },
+   "G60": {
+    "v": "Pilot + commercial JV announced",
+    "fill": "FFFCE4D6"
+   },
+   "I60": {
+    "v": "www.wildcatdiscovery.com",
+    "link": "https://www.wildcatdiscovery.com/2026/06/04/wildcat-discovery-technologies-and-energyx-announce-joint-venture-for-15000-ton-commercial-lfp-cathode-manufacturing-facility-in-texas/"
+   },
+   "J60": {
+    "v": "Med-High"
+   }
+  },
+  {
+   "A61": {
+    "v": 50
+   },
+   "B61": {
+    "v": "ICL Group"
+   },
+   "C61": {
+    "v": "USA (St. Louis, MO)"
+   },
+   "D61": {
+    "v": "LFP"
+   },
+   "E61": {
+    "v": "Licensed Aleees process"
+   },
+   "F61": {
+    "v": "Was $400M, 30,000 tpa"
+   },
+   "G61": {
+    "v": "DEFUNCT / cancelled",
+    "fill": "FFF2DCDB"
+   },
+   "H61": {
+    "v": "Discontinued Nov 2025 after DOE pulled $197M; also killed Spain JV w/ Dynanonic"
+   },
+   "I61": {
+    "v": "www.sec.gov",
+    "link": "https://www.sec.gov/Archives/edgar/data/941221/000117891325003729/zk2533974.htm"
+   },
+   "J61": {
+    "v": "High"
+   }
+  },
+  {
+   "A62": {
+    "v": 51
+   },
+   "B62": {
+    "v": "LG Chem — Clarksville, TN"
+   },
+   "C62": {
+    "v": "USA"
+   },
+   "D62": {
+    "v": "NCMA (NOT LFP)"
+   },
+   "F62": {
+    "v": "Cathode plant, but nickel-based, not LFP"
+   },
+   "G62": {
+    "v": "Not LFP"
+   },
+   "H62": {
+    "v": "Listed to prevent confusion"
+   },
+   "I62": {
+    "v": "www.prnewswire.com",
+    "link": "https://www.prnewswire.com/news-releases/lg-chem-takes-leap-as-top-cathode-supplier-in-the-us-with-groundbreaking-of-tennessee-plant-302019565.html"
+   },
+   "J62": {
+    "v": "High"
+   }
+  },
+  {
+   "A63": {
+    "v": 52
+   },
+   "B63": {
+    "v": "Lithium Werks"
+   },
+   "C63": {
+    "v": "USA/China (defunct in West)"
+   },
+   "D63": {
+    "v": "(historic LFP)"
+   },
+   "E63": {
+    "v": "Carbothermal (ex-A123 'Nanophosphate')"
+   },
+   "F63": {
+    "v": "Successor to A123 industrial + Valence; assets sold to Reliance (2022)"
+   },
+   "G63": {
+    "v": "Historical",
+    "fill": "FFF2DCDB"
+   },
+   "H63": {
+    "v": "No current Western CAM"
+   },
+   "I63": {
+    "v": "lithiumwerks.com",
+    "link": "https://lithiumwerks.com/about/history/"
+   },
+   "J63": {
+    "v": "High"
+   }
+  },
+  {
+   "A64": {
+    "v": "EUROPE",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A65": {
+    "v": 53
+   },
+   "B65": {
+    "v": "IBU-tec"
+   },
+   "C65": {
+    "v": "Germany (Weimar; Bitterfeld-Wolfen)"
+   },
+   "D65": {
+    "v": "LFP (LMFP in dev)"
+   },
+   "E65": {
+    "v": "Proprietary spray-calcination / rotary kiln"
+   },
+   "F65": {
+    "v": "Weimar >3,000 tpa now; Bitterfeld 15,000 tpa (PowerCo 10-yr offtake), ops ~2028"
+   },
+   "G65": {
+    "v": "Producing + construction",
+    "fill": "FFFCE4D6"
+   },
+   "H65": {
+    "v": "'No Chinese tech', ~half the energy"
+   },
+   "I65": {
+    "v": "www.chemeurope.com",
+    "link": "https://www.chemeurope.com/en/news/1188510/ibu-tec-is-setting-up-lfp-production-without-chinese-technology.html"
+   },
+   "J65": {
+    "v": "High"
+   }
+  },
+  {
+   "A66": {
+    "v": 54
+   },
+   "B66": {
+    "v": "Integrals Power"
+   },
+   "C66": {
+    "v": "UK (Milton Keynes)"
+   },
+   "D66": {
+    "v": "LFP + LMFP (high-Mn ~80%)"
+   },
+   "E66": {
+    "v": "Proprietary patented (precursor-free)"
+   },
+   "F66": {
+    "v": "Pilot 20 tpa; scaling to 100 tpa demo; engineering for 1,000 tpa (DRIVE35)"
+   },
+   "G66": {
+    "v": "Pilot producing",
+    "fill": "FFFCE4D6"
+   },
+   "I66": {
+    "v": "batterytechassociation.org",
+    "link": "https://batterytechassociation.org/integrals-power-launches-uks-first-zero-emission-pilot-plant-to-accelerate-lfp-battery-manufacturing-industry/"
+   },
+   "J66": {
+    "v": "High"
+   }
+  },
+  {
+   "A67": {
+    "v": 55
+   },
+   "B67": {
+    "v": "Epsilon Advanced Materials"
+   },
+   "C67": {
+    "v": "Germany (Moosburg, ex-JM)"
+   },
+   "D67": {
+    "v": "LFP + LMFP"
+   },
+   "E67": {
+    "v": "Hydrothermal (Moosburg pilot line)"
+   },
+   "F67": {
+    "v": "Germany pilot/qualification"
+   },
+   "G67": {
+    "v": "Pilot (Germany)",
+    "fill": "FFFCE4D6"
+   },
+   "H67": {
+    "v": "Bought Moosburg tech center from Johnson Matthey (2024)"
+   },
+   "I67": {
+    "v": "www.businesswire.com",
+    "link": "https://www.businesswire.com/news/home/20240201488246/en/"
+   },
+   "J67": {
+    "v": "High"
+   }
+  },
+  {
+   "A68": {
+    "v": 56
+   },
+   "B68": {
+    "v": "BASF"
+   },
+   "C68": {
+    "v": "Germany (Weimar, toll-made by IBU-tec)"
+   },
+   "D68": {
+    "v": "LFP ('HED')"
+   },
+   "E68": {
+    "v": "Proprietary (licensed LiFePO4+C)"
+   },
+   "F68": {
+    "v": "~3,000 tpa Weimar plant (launched 2014)"
+   },
+   "G68": {
+    "v": "Historical / limited",
+    "fill": "FFF2DCDB"
+   },
+   "H68": {
+    "v": "Strategic focus shifted to NCM; current LFP output unclear"
+   },
+   "I68": {
+    "v": "www.basf.com",
+    "link": "https://www.basf.com/us/en/media/news-releases/2014/05/p-13-578"
+   },
+   "J68": {
+    "v": "Low-Med"
+   }
+  },
+  {
+   "A69": {
+    "v": 57
+   },
+   "B69": {
+    "v": "Prayon"
+   },
+   "C69": {
+    "v": "Belgium (Engis)"
+   },
+   "D69": {
+    "v": "LFP"
+   },
+   "E69": {
+    "v": "Sublicensed process; JV w/ Pulead"
+   },
+   "F69": {
+    "v": "Small; JV-based"
+   },
+   "G69": {
+    "v": "Producing (small) / uncertain",
+    "fill": "FFC6EFCE"
+   },
+   "I69": {
+    "v": "www.prayon.com",
+    "link": "https://www.prayon.com/en/our-activities/products/batteries.php"
+   },
+   "J69": {
+    "v": "Low-Med"
+   }
+  },
+  {
+   "A70": {
+    "v": 58
+   },
+   "B70": {
+    "v": "Johnson Matthey"
+   },
+   "C70": {
+    "v": "UK/Canada/Germany"
+   },
+   "D70": {
+    "v": "(exited LFP)"
+   },
+   "E70": {
+    "v": "Ran solid-state + hydrothermal at Candiac"
+   },
+   "F70": {
+    "v": "EXITED battery materials (announced Nov 2021)"
+   },
+   "G70": {
+    "v": "Exited",
+    "fill": "FFF2DCDB"
+   },
+   "H70": {
+    "v": "Candiac -> Nano One; Moosburg -> Epsilon"
+   },
+   "I70": {
+    "v": "matthey.com",
+    "link": "https://matthey.com/news/2021/battery-materials-announcement"
+   },
+   "J70": {
+    "v": "High"
+   }
+  },
+  {
+   "A71": {
+    "v": "INDIA",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A72": {
+    "v": 59
+   },
+   "B72": {
+    "v": "Epsilon Advanced Materials (India)"
+   },
+   "C72": {
+    "v": "India (Karnataka)"
+   },
+   "D72": {
+    "v": "LFP + LMFP"
+   },
+   "E72": {
+    "v": "Hydrothermal"
+   },
+   "F72": {
+    "v": "India plant planned 30,000 tpa by 2027 -> 100,000 by 2030"
+   },
+   "G72": {
+    "v": "Commercial announced",
+    "fill": "FFFCE4D6"
+   },
+   "H72": {
+    "v": "Same group as Moosburg (Germany) tech center"
+   },
+   "I72": {
+    "v": "www.pv-magazine-india.com",
+    "link": "https://www.pv-magazine-india.com/2025/02/12/epsilon-group-commits-inr-15350-crore-for-ev-battery-materials-testing-facility-in-karnataka/"
+   },
+   "J72": {
+    "v": "High"
+   }
+  },
+  {
+   "A73": {
+    "v": 60
+   },
+   "B73": {
+    "v": "Altmin"
+   },
+   "C73": {
+    "v": "India (Hyderabad; Divitipalli, Telangana)"
+   },
+   "D73": {
+    "v": "LFP CAM"
+   },
+   "E73": {
+    "v": "Solid-state (ARCI collaboration)"
+   },
+   "F73": {
+    "v": "Pilot ~100 kg/day producing; giga-factory 20,000+ tpa announced"
+   },
+   "G73": {
+    "v": "Pilot + commercial announced",
+    "fill": "FFFCE4D6"
+   },
+   "I73": {
+    "v": "evreporter.com",
+    "link": "https://evreporter.com/altmin-and-arci-partner-to-begin-cathode-material-production-in-india/"
+   },
+   "J73": {
+    "v": "High"
+   }
+  },
+  {
+   "A74": {
+    "v": 61
+   },
+   "B74": {
+    "v": "Reliance New Energy"
+   },
+   "C74": {
+    "v": "India (Jamnagar)"
+   },
+   "D74": {
+    "v": "LFP (via acquired IP)"
+   },
+   "E74": {
+    "v": "Carbothermal (ex-Lithium Werks method)"
+   },
+   "F74": {
+    "v": "Bought Lithium Werks assets (2022): 219 LFP patents + China plant"
+   },
+   "G74": {
+    "v": "Announced / building",
+    "fill": "FFFCE4D6"
+   },
+   "H74": {
+    "v": "Own merchant LFP-CAM output not yet confirmed"
+   },
+   "I74": {
+    "v": "lithiumwerks.com",
+    "link": "https://lithiumwerks.com/reliance-new-energy-limited-acquires-assets-of-lithium-werks/"
+   },
+   "J74": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A75": {
+    "v": "AUSTRALIA & REST OF WORLD",
+    "fill": "FFD9E1F2"
+   }
+  },
+  {
+   "A76": {
+    "v": 62
+   },
+   "B76": {
+    "v": "VSPC (Livium; ex-Lithium Australia)"
+   },
+   "C76": {
+    "v": "Australia (Brisbane)"
+   },
+   "D76": {
+    "v": "LFP + LMFP"
+   },
+   "E76": {
+    "v": "Proprietary hybrid solid-state + solution-phase"
+   },
+   "F76": {
+    "v": "Pilot producing; 250 tpa demo plant ($30M ARENA grant)"
+   },
+   "G76": {
+    "v": "Pilot + demo announced",
+    "fill": "FFFCE4D6"
+   },
+   "I76": {
+    "v": "arena.gov.au",
+    "link": "https://arena.gov.au/projects/vspc-advanced-cathode-powder-manufacturing-demonstration-project/"
+   },
+   "J76": {
+    "v": "High"
+   }
+  },
+  {
+   "A77": {
+    "v": 63
+   },
+   "B77": {
+    "v": "Avenira"
+   },
+   "C77": {
+    "v": "Australia (Darwin, NT)"
+   },
+   "D77": {
+    "v": "LFP CAM"
+   },
+   "E77": {
+    "v": "Licensed Aleees process"
+   },
+   "F77": {
+    "v": "Phase 1 ~10,000 tpa (-> 30k -> 100k); integrated w/ Wonarah phosphate"
+   },
+   "G77": {
+    "v": "Announced",
+    "fill": "FFFCE4D6"
+   },
+   "H77": {
+    "v": "Timelines extended"
+   },
+   "I77": {
+    "v": "avenira.com",
+    "link": "https://avenira.com/lfp-project/"
+   },
+   "J77": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A78": {
+    "v": 64
+   },
+   "B78": {
+    "v": "FREYR / T1 Energy"
+   },
+   "C78": {
+    "v": "Finland (Vaasa, planned)"
+   },
+   "D78": {
+    "v": "LFP CAM"
+   },
+   "E78": {
+    "v": "Licensed Aleees process"
+   },
+   "F78": {
+    "v": "Finland CAM 30,000 tpa (EUR 122M EU grant)"
+   },
+   "G78": {
+    "v": "Announced (US defunct)",
+    "fill": "FFF2DCDB"
+   },
+   "H78": {
+    "v": "US Georgia plant abandoned (solar pivot, Feb 2025)"
+   },
+   "I78": {
+    "v": "battery-news.de",
+    "link": "https://battery-news.de/en/2024/10/30/eu-supports-freyr-lfp-cathode-material-project/"
+   },
+   "J78": {
+    "v": "Medium"
+   }
+  },
+  {
+   "A79": {
+    "v": 65
+   },
+   "B79": {
+    "v": "Morocco LFP cluster (Chinese-invested)"
+   },
+   "C79": {
+    "v": "Morocco"
+   },
+   "D79": {
+    "v": "LFP"
+   },
+   "F79": {
+    "v": "LG Chem-Youshan/Huayou JV ~50,000 tpa by 2026; BTR & others; >$700M pledged"
+   },
+   "G79": {
+    "v": "Construction",
+    "fill": "FFFCE4D6"
+   },
+   "H79": {
+    "v": "Geographically ex-East-Asia but Chinese-owned"
+   },
+   "I79": {
+    "v": "www.greencarcongress.com",
+    "link": "https://www.greencarcongress.com/2024/01/20240106-morocco-1.html"
+   },
+   "J79": {
+    "v": "Med-High"
+   }
+  }
+ ],
+ "Patent & Licensing": [
+  {
+   "A1": {
+    "v": "LFP patent & licensing history (context for who could make LFP, when)"
+   }
+  },
+  {
+   "A2": {
+    "v": "Explains the 2022-2023 'patent cliff' that opened royalty-free LFP production in the West."
+   }
+  },
+  {
+   "A4": {
+    "v": "#",
+    "fill": "FF1F4E78"
+   },
+   "B4": {
+    "v": "Date",
+    "fill": "FF1F4E78"
+   },
+   "C4": {
+    "v": "Event",
+    "fill": "FF1F4E78"
+   },
+   "D4": {
+    "v": "Entities",
+    "fill": "FF1F4E78"
+   },
+   "E4": {
+    "v": "Source",
+    "fill": "FF1F4E78"
+   }
+  },
+  {
+   "A5": {
+    "v": 1
+   },
+   "B5": {
+    "v": "1996-97"
+   },
+   "C5": {
+    "v": "Discovery of LiFePO4 olivine cathode (Padhi, Nanjundaswamy & Goodenough)"
+   },
+   "D5": {
+    "v": "Univ. of Texas at Austin"
+   },
+   "E5": {
+    "v": "iopscience.iop.org",
+    "link": "https://iopscience.iop.org/article/10.1149/1.1837571"
+   }
+  },
+  {
+   "A6": {
+    "v": 2
+   },
+   "B6": {
+    "v": "1997+"
+   },
+   "C6": {
+    "v": "Foundational LFP composition/use patents US 5,910,382 & US 6,514,640"
+   },
+   "D6": {
+    "v": "Board of Regents, Univ. of Texas System"
+   },
+   "E6": {
+    "v": "patents.google.com",
+    "link": "https://patents.google.com/patent/US5910382A/en"
+   }
+  },
+  {
+   "A7": {
+    "v": 3
+   },
+   "B7": {
+    "v": "Late 1990s-2001"
+   },
+   "C7": {
+    "v": "Carbon-coating (LiFePO4+C) breakthrough — made LFP commercially viable"
+   },
+   "D7": {
+    "v": "Michel Armand (CNRS), Hydro-Quebec (IREQ), Univ. de Montreal"
+   },
+   "E7": {
+    "v": "patents.google.com",
+    "link": "https://patents.google.com/patent/US7457018B2/en"
+   }
+  },
+  {
+   "A8": {
+    "v": 4
+   },
+   "B8": {
+    "v": "2001->2008"
+   },
+   "C8": {
+    "v": "UT/Hydro-Quebec v. NTT trade-secret suit; settled — NTT paid US$30M, cross-license"
+   },
+   "D8": {
+    "v": "UT Austin, Hydro-Quebec, NTT"
+   },
+   "E8": {
+    "v": "www.sec.gov",
+    "link": "https://www.sec.gov/Archives/edgar/data/0000769594/000119312508206257/d6k.htm"
+   }
+  },
+  {
+   "A9": {
+    "v": 5
+   },
+   "B9": {
+    "v": "2001-03"
+   },
+   "C9": {
+    "v": "Phostech Lithium founded (UdeM scientists); first commercial LFP license (2003)"
+   },
+   "D9": {
+    "v": "Phostech / UdeM / Hydro-Quebec"
+   },
+   "E9": {
+    "v": "chemanager-online.com",
+    "link": "https://chemanager-online.com/en/news/phostech-lithium-plant-officially-opens"
+   }
+  },
+  {
+   "A10": {
+    "v": 6
+   },
+   "B10": {
+    "v": "2005"
+   },
+   "C10": {
+    "v": "Sud-Chemie acquires majority of Phostech; builds 2,400 tpa Candiac plant"
+   },
+   "D10": {
+    "v": "Sud-Chemie / Phostech"
+   },
+   "E10": {
+    "v": "cen.acs.org",
+    "link": "https://cen.acs.org/energy/energy-storage-/Lithium-iron-phosphate-comes-to-America/101/i4"
+   }
+  },
+  {
+   "A11": {
+    "v": 7
+   },
+   "B11": {
+    "v": "Jul 2011"
+   },
+   "C11": {
+    "v": "LiFePO4+C Licensing AG patent pool created (Switzerland) to issue sublicenses"
+   },
+   "D11": {
+    "v": "Hydro-Quebec, UdeM, CNRS + Sud-Chemie"
+   },
+   "E11": {
+    "v": "www.greencarcongress.com",
+    "link": "https://www.greencarcongress.com/2011/07/lfp-20110704.html"
+   }
+  },
+  {
+   "A12": {
+    "v": 8
+   },
+   "B12": {
+    "v": "2011 (sublicensees)"
+   },
+   "C12": {
+    "v": "Early sublicensees: Sumitomo Osaka Cement, Mitsui E&S, Tatung, Aleees, BASF, Prayon"
+   },
+   "D12": {
+    "v": "LiFePO4+C Licensing AG"
+   },
+   "E12": {
+    "v": "www.greencarcongress.com",
+    "link": "https://www.greencarcongress.com/2011/07/lfp-20110704.html"
+   }
+  },
+  {
+   "A13": {
+    "v": 9
+   },
+   "B13": {
+    "v": "Oct 2011"
+   },
+   "C13": {
+    "v": "A123 Systems settles with Hydro-Quebec & UT (cross-license)"
+   },
+   "D13": {
+    "v": "A123, Hydro-Quebec, UT"
+   },
+   "E13": {
+    "v": "www.greencarcongress.com",
+    "link": "https://www.greencarcongress.com/2011/10/a123-20111031.html"
+   }
+  },
+  {
+   "A14": {
+    "v": 10
+   },
+   "B14": {
+    "v": "Jun-Jul 2012"
+   },
+   "C14": {
+    "v": "Valence Technology settles (no payment), then files Chapter 11"
+   },
+   "D14": {
+    "v": "Valence, Hydro-Quebec, UT"
+   },
+   "E14": {
+    "v": "en.wikipedia.org",
+    "link": "https://en.wikipedia.org/wiki/Valence_Technology"
+   }
+  },
+  {
+   "A15": {
+    "v": 11
+   },
+   "B15": {
+    "v": "2012"
+   },
+   "C15": {
+    "v": "Clariant acquires Sud-Chemie"
+   },
+   "D15": {
+    "v": "Clariant / Sud-Chemie"
+   },
+   "E15": {
+    "v": "cen.acs.org",
+    "link": "https://cen.acs.org/energy/energy-storage-/Lithium-iron-phosphate-comes-to-America/101/i4"
+   }
+  },
+  {
+   "A16": {
+    "v": 12
+   },
+   "B16": {
+    "v": "Oct 2012 -> Jan 2013"
+   },
+   "C16": {
+    "v": "A123 Systems bankruptcy; assets bought by Wanxiang (US$256.6M)"
+   },
+   "D16": {
+    "v": "A123, Wanxiang"
+   },
+   "E16": {
+    "v": "en.wikipedia.org",
+    "link": "https://en.wikipedia.org/wiki/A123_Systems"
+   }
+  },
+  {
+   "A17": {
+    "v": 13
+   },
+   "B17": {
+    "v": "2014-15"
+   },
+   "C17": {
+    "v": "Johnson Matthey buys Clariant's LFP business (~US$75M): Candiac + Moosburg + IP"
+   },
+   "D17": {
+    "v": "Johnson Matthey <- Clariant"
+   },
+   "E17": {
+    "v": "www.greencarcongress.com",
+    "link": "https://www.greencarcongress.com/2014/10/20141029-jm.html"
+   }
+  },
+  {
+   "A18": {
+    "v": 14
+   },
+   "B18": {
+    "v": "2018"
+   },
+   "C18": {
+    "v": "Lithium Werks formed; acquires Valence + A123 industrial (incl. Changzhou, China)"
+   },
+   "D18": {
+    "v": "Lithium Werks"
+   },
+   "E18": {
+    "v": "lithiumwerks.com",
+    "link": "https://lithiumwerks.com/about/history/"
+   }
+  },
+  {
+   "A19": {
+    "v": 15
+   },
+   "B19": {
+    "v": "Nov 2021-2022"
+   },
+   "C19": {
+    "v": "Johnson Matthey exits battery materials; LFP Candiac -> Nano One"
+   },
+   "D19": {
+    "v": "Johnson Matthey"
+   },
+   "E19": {
+    "v": "matthey.com",
+    "link": "https://matthey.com/news/2021/battery-materials-announcement"
+   }
+  },
+  {
+   "A20": {
+    "v": 16
+   },
+   "B20": {
+    "v": "Mar 2022"
+   },
+   "C20": {
+    "v": "Reliance New Energy acquires Lithium Werks assets (US$61M): 219 LFP patents + China plant"
+   },
+   "D20": {
+    "v": "Reliance <- Lithium Werks"
+   },
+   "E20": {
+    "v": "lithiumwerks.com",
+    "link": "https://lithiumwerks.com/reliance-new-energy-limited-acquires-assets-of-lithium-werks/"
+   }
+  },
+  {
+   "A21": {
+    "v": 17,
+    "fill": "FFFFEB9C"
+   },
+   "B21": {
+    "v": "~end 2022",
+    "fill": "FFFFEB9C"
+   },
+   "C21": {
+    "v": "'LFP PATENT CLIFF' — key foundational LFP patents expire, opening royalty-free Western production",
+    "fill": "FFFFEB9C"
+   },
+   "D21": {
+    "v": "(patent pool)",
+    "fill": "FFFFEB9C"
+   },
+   "E21": {
+    "v": "www.shoosmiths.com",
+    "link": "https://www.shoosmiths.com/perspectives/stories/articles/lfp-patents-expired-whats-next-for-evs",
+    "fill": "FFFFEB9C"
+   }
+  },
+  {
+   "A22": {
+    "v": 18
+   },
+   "B22": {
+    "v": "Feb 2024"
+   },
+   "C22": {
+    "v": "Epsilon (EAM) buys the Moosburg, Germany LFP/LMFP tech center from Johnson Matthey"
+   },
+   "D22": {
+    "v": "Epsilon <- Johnson Matthey"
+   },
+   "E22": {
+    "v": "www.businesswire.com",
+    "link": "https://www.businesswire.com/news/home/20240201488246/en/"
+   }
+  }
+ ],
+ "Key References": [
+  {
+   "A1": {
+    "v": "Key references (backbone reviews + foundational papers)"
+   }
+  },
+  {
+   "A2": {
+    "v": "Full method-specific citations are on the 'Synthesis Methods' sheet. The three reviews below are the backbone (open access where noted)."
+   }
+  },
+  {
+   "A4": {
+    "v": "#",
+    "fill": "FF1F4E78"
+   },
+   "B4": {
+    "v": "Type",
+    "fill": "FF1F4E78"
+   },
+   "C4": {
+    "v": "Citation",
+    "fill": "FF1F4E78"
+   },
+   "D4": {
+    "v": "Link",
+    "fill": "FF1F4E78"
+   }
+  },
+  {
+   "A5": {
+    "v": 1
+   },
+   "B5": {
+    "v": "Review (backbone)"
+   },
+   "C5": {
+    "v": "Nekahi, Kumar M.R., Xia, Deng & Zaghib (2024). Sustainable LiFePO4 and LiMnxFe1-xPO4 cathode materials... from mine to chassis. Materials Science & Engineering R: Reports 159:100797. (open access)"
+   },
+   "D5": {
+    "v": "doi:10.1016/j.mser.2024.100797",
+    "link": "https://doi.org/10.1016/j.mser.2024.100797"
+   }
+  },
+  {
+   "A6": {
+    "v": 2
+   },
+   "B6": {
+    "v": "Review (backbone)"
+   },
+   "C6": {
+    "v": "Lu & Zhu (2024). Status and prospects of lithium iron phosphate manufacturing in the lithium battery industry. MRS Communications 14:888-899. (open access)"
+   },
+   "D6": {
+    "v": "doi:10.1557/s43579-024-00644-2",
+    "link": "https://doi.org/10.1557/s43579-024-00644-2"
+   }
+  },
+  {
+   "A7": {
+    "v": 3
+   },
+   "B7": {
+    "v": "Review (backbone)"
+   },
+   "C7": {
+    "v": "Wijareni, Karunawan, Ichlas, Sumboja & Mubarok (2025). Recent advances in synthesis and fabrication of LiFePO4 cathode materials: a comprehensive review. Ionics."
+   },
+   "D7": {
+    "v": "doi:10.1007/s11581-025-06460-5",
+    "link": "https://doi.org/10.1007/s11581-025-06460-5"
+   }
+  },
+  {
+   "A8": {
+    "v": 4
+   },
+   "B8": {
+    "v": "Review (industry)"
+   },
+   "C8": {
+    "v": "MDPI Batteries (2024). Recent Advances in Lithium Iron Phosphate Battery Technology. Batteries 10(12):424."
+   },
+   "D8": {
+    "v": "www.mdpi.com/2313-0105/10/12/424",
+    "link": "https://www.mdpi.com/2313-0105/10/12/424"
+   }
+  },
+  {
+   "A9": {
+    "v": 5
+   },
+   "B9": {
+    "v": "Foundational"
+   },
+   "C9": {
+    "v": "Padhi, Nanjundaswamy & Goodenough (1997). Phospho-olivines as positive-electrode materials. J. Electrochem. Soc. 144:1188."
+   },
+   "D9": {
+    "v": "doi:10.1149/1.1837571",
+    "link": "https://doi.org/10.1149/1.1837571"
+   }
+  },
+  {
+   "A10": {
+    "v": 6
+   },
+   "B10": {
+    "v": "Foundational"
+   },
+   "C10": {
+    "v": "Yang, Zavalij & Whittingham (2001). Hydrothermal synthesis of lithium iron phosphate. Electrochem. Commun. 3:505."
+   },
+   "D10": {
+    "v": "doi:10.1016/S1388-2481(01)00200-4",
+    "link": "https://doi.org/10.1016/S1388-2481(01)00200-4"
+   }
+  },
+  {
+   "A11": {
+    "v": 7
+   },
+   "B11": {
+    "v": "LMFP scale-up"
+   },
+   "C11": {
+    "v": "Ling et al. (2025). From Lab to Plant: Technical Barriers in Scaling Up LiMnyFe1-yPO4 Production. Adv. Energy Mater. (existence verified; paywalled)."
+   },
+   "D11": {
+    "v": "doi:10.1002/aenm.202502720",
+    "link": "https://doi.org/10.1002/aenm.202502720"
+   }
+  },
+  {
+   "A12": {
+    "v": 8
+   },
+   "B12": {
+    "v": "Commercial context"
+   },
+   "C12": {
+    "v": "Blois (2023). Lithium iron phosphate comes to America. C&EN 101(4). (Phostech/Sud-Chemie/JM/Nano One/Aleees history)"
+   },
+   "D12": {
+    "v": "cen.acs.org/energy/energy-storage-/Lithi",
+    "link": "https://cen.acs.org/energy/energy-storage-/Lithium-iron-phosphate-comes-to-America/101/i4"
+   }
+  },
+  {
+   "A13": {
+    "v": 9
+   },
+   "B13": {
+    "v": "Commercial context"
+   },
+   "C13": {
+    "v": "Mitsui MGSSI (2023). LMFP report — confirms Taiheiyo hydrothermal 'Nanolitia' & solid-phase dominance (Dynanonic liquid-phase exception)."
+   },
+   "D13": {
+    "v": "www.mitsui.com/mgssi/en/report/detail/__",
+    "link": "https://www.mitsui.com/mgssi/en/report/detail/__icsFiles/afieldfile/2023/09/19/2308t_zhao_e.pdf"
+   }
+  },
+  {
+   "A14": {
+    "v": 10
+   },
+   "B14": {
+    "v": "Market data"
+   },
+   "C14": {
+    "v": "EVTank / SMM (2024-2025). China LFP cathode shipments & producer rankings."
+   },
+   "D14": {
+    "v": "news.metal.com/newscontent/103135433",
+    "link": "https://news.metal.com/newscontent/103135433"
+   }
+  }
+ ]
+}

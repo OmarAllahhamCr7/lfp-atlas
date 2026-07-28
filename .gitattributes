@@ -1,0 +1,4 @@
+# No line-ending conversion, ever. Generated artifacts (data.js/json, standalone,
+# claims CSV) are byte-locked by `python build/build_v1.py --check`; CRLF rewriting
+# on checkout would break the byte-identity gate on other machines.
+* -text

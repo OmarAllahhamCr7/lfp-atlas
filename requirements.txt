@@ -1,0 +1,2 @@
+# build-time only; the site itself has zero runtime dependencies
+openpyxl>=3.1     # build/seed_from_excel.py (one-time seed provenance)
