@@ -31,7 +31,7 @@ assert pkg["version"] == v, "package.json version drift"
 if os.path.exists(os.path.join(OUT, "node_modules")):
     run(["node", "test.mjs"])
 else:
-    print("· node_modules missing — run `npm install && npm test` to complete the gate")
+    sys.exit("GATE FAILED: node_modules missing — run `npm install` before the release gate")
 
 print("RELEASE GATE PASSED — v%s, %d plants, %d sources" %
       (v, len(can["plants"]), len(can["sources"])))
