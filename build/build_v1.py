@@ -306,12 +306,16 @@ for c in pub["customers"]:
 links = []
 for q in plants_pub:
     for l in q["links"]:
-        # resolve target: customer list first, else plant by fuzzy company match
+        # resolve target: exact name first, else a UNIQUE substring alias
         tgt = None
-        if l["to"] in name_pos: tgt = name_pos[l["to"]]
+        if l["to"] in name_pos:
+            tgt = name_pos[l["to"]]
         else:
-            for nm, v in name_pos.items():
-                if l["to"].lower() in nm.lower(): tgt = v; break
+            matches = [v for nm, v in name_pos.items() if l["to"].lower() in nm.lower()]
+            assert len(matches) <= 1, \
+                "ambiguous link target: %s -> %s (%d matches)" % (q["id"], l["to"], len(matches))
+            if matches:
+                tgt = matches[0]
         assert tgt, "link target unresolved: %s -> %s" % (q["id"], l["to"])
         links.append({"from": q["id"], "fromName": q["company"], "to": l["to"],
                       "x1": q["x"], "y1": q["y"], "x2": tgt[0], "y2": tgt[1],
