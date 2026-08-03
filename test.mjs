@@ -12,6 +12,7 @@ const D = JSON.parse(dataJs.replace(/^window\.DATA=/, "").replace(/;\s*$/, ""));
 
 /* ---- structural integrity ---- */
 ok(D.meta && D.plants && D.methods && D.families && D.patent_events && D.geo && D.gaps, "payload has all blocks");
+eq(D.meta.version, "0.3.5", "dataset version");
 eq(D.plants.length, 65, "65 producer rows");
 eq(D.methods.length, 28, "28 methods");
 eq(D.families.length, 5, "5 families");
@@ -24,7 +25,11 @@ eq(new Set(cids).size, cids.length, "claim ids unique");
 
 /* ---- every displayed figure is cited ---- */
 for (const p of D.plants) for (const c of p.cap_claims)
-  if (c.value_ty != null) ok(c.src_url && c.src_url.startsWith("http"), "figure cited: " + c.id);
+  if (c.value_ty != null) {
+    ok(c.src_url && c.src_url.startsWith("http"), "figure cited: " + c.id);
+    ok(c.sources?.length >= 1, "figure has source bundle: " + c.id);
+    ok(c.sources.every(s => s.url?.startsWith("http")), "source bundle URLs valid: " + c.id);
+  }
 
 /* ---- counting rule re-derived independently from claim attributes ---- */
 const reBand = (p, c) =>
@@ -66,6 +71,75 @@ ok(easp.sgroup === "operating" && easp.op_ty === 120000, "Easpring Panzhihua ph-
 ok(easp.sites.find(s => s.primary).key === "panzhihua", "Easpring primary site is Panzhihua");
 const wanrun = D.plants.find(p => p.id === "p002");
 ok(wanrun.cap_claims.some(c => c.counted_operating && c.src_tier === "company" && c.value_ty === 468000), "Wanrun 468k on company tier");
+/* v0.3.1 Morocco status correction */
+const morocco = D.plants.find(p => p.id === "p065");
+const moroccoOld = morocco.cap_claims.find(c => c.id === "p065.c1");
+const moroccoCurrent = morocco.cap_claims.find(c => c.id === "p065.c3");
+ok(morocco.sgroup === "announced", "Morocco project is announced, not construction");
+ok(moroccoOld.superseded_by === "p065.c3" && !moroccoOld.counted_pipeline, "old Morocco construction claim is superseded");
+ok(moroccoCurrent.basis === "announced" && moroccoCurrent.counted_pipeline, "corrected Morocco claim remains in pipeline");
+ok(moroccoCurrent.target_date === "2026" && moroccoCurrent.note.includes("unconfirmed"), "Morocco 2026 target is qualified");
+/* v0.3.2 Rongtong chemistry-scope correction */
+const rongtong = D.plants.find(p => p.id === "p007");
+const rongtongOld = rongtong.cap_claims.find(c => c.id === "p007.c2");
+const rongtongUnsplit = rongtong.cap_claims.find(c => c.id === "p007.c4");
+ok(rongtongOld.superseded_by === "p007.c4" && !rongtongOld.counted_operating, "old Rongtong LFP tag is superseded");
+ok(rongtongUnsplit.chem === "L(M)FP-unsplit", "historical Rongtong aggregate preserves its corrected chemistry scope");
+/* v0.3.3 Gotion attribution + multi-source correction */
+const gotion = D.plants.find(p => p.id === "p012");
+const gotionOld = gotion.cap_claims.find(c => c.id === "p012.c3");
+const gotionCurrent = gotion.cap_claims.find(c => c.id === "p012.c5");
+ok(gotionOld.superseded_by === "p012.c5" && !gotionOld.counted_operating, "old Gotion attribution is superseded");
+ok(gotionCurrent.counted_operating && gotionCurrent.value_ty === 142000, "Gotion 142 kt remains counted");
+eq(gotionCurrent.components.map(c => c.value_ty), [42000, 100000], "Gotion component sum disclosed");
+eq(gotionCurrent.sources.map(s => s.id), [
+  "s_gotion_142k",
+  "s_gotion_42k_recruitment",
+  "s_gotion_42k_field_visit",
+  "s_gotion_kehong_100k",
+], "Gotion source bundle disclosed");
+eq(gotionCurrent.corroboration_sources, ["s_gotion_142k"], "Gotion aggregate corroboration is explicit");
+ok(gotionCurrent.public_confidence === "Medium", "Gotion public confidence improves to Medium");
+/* v0.3.4 weak-evidence hardening */
+const pulead = D.plants.find(p => p.id === "p008");
+const puleadCurrent = pulead.cap_claims.find(c => c.id === "p008.c2");
+ok(puleadCurrent.evidence_method === "durable-nameplate", "Pulead uses durable-nameplate evidence method");
+eq(puleadCurrent.components.map(c => c.value_ty), [25000, 160000], "Pulead exact component sum disclosed");
+eq(puleadCurrent.status_sources, ["s_rt_top10exit", "s_rt_h1_26"], "Pulead current-status evidence disclosed");
+ok(
+  puleadCurrent.sources.filter(s => s.role?.includes("does not restate capacity")).length === 2,
+  "Pulead current rankings are not presented as exact-capacity evidence",
+);
+const terui = D.plants.find(p => p.id === "p013");
+const teruiCurrent = terui.cap_claims.find(c => c.id === "p013.c3");
+ok(teruiCurrent.evidence_method === "component-sum", "Terui uses component-sum evidence method");
+eq(teruiCurrent.components.map(c => c.value_ty), [40000, 60000], "Terui 40 kt + 60 kt commissioning chain disclosed");
+eq(teruiCurrent.sources.map(s => s.id), [
+  "s_terui_reply",
+  "s_terui_termination",
+  "s_terui_zhongxian_design_2021",
+  "s_terui_zhongxian_env_2025",
+  "s_terui_zhongxian_jobs_2025",
+  "s_terui_zhongxian_innovation_2026",
+], "Terui historical evidence and current context are disclosed");
+ok(terui.sites.find(s => s.primary).key === "zhongxian", "Terui primary project site is Zhongxian");
+/* v0.3.5 Rongtong site-floor correction */
+const rongtongCurrent = rongtong.cap_claims.find(c => c.id === "p007.c5");
+const rongtongPipeline = rongtong.cap_claims.find(c => c.id === "p007.c6");
+const rongtongConflict = rongtong.cap_claims.find(c => c.id === "p007.c7");
+ok(rongtongUnsplit.superseded_by === "p007.c5" && !rongtongUnsplit.counted_operating, "opaque Rongtong aggregate is superseded");
+ok(rongtongCurrent.evidence_method === "site-floor" && rongtongCurrent.counted_operating, "Rongtong uses a counted site floor");
+ok(rongtongCurrent.chem === "LFP" && rongtong.op_lower === 180000 && rongtong.op_ty === 180000, "Rongtong floor counts in chemistry-stated scope");
+eq(rongtongCurrent.components.map(c => c.value_ty), [100000, 80000], "Rongtong site components sum to 180 kt");
+eq(rongtongCurrent.components[0].calculation, {
+  operation: "difference",
+  minuend_ty: 200000,
+  subtrahend_ty: 100000,
+}, "Rongtong Jiangyou arithmetic is machine-readable");
+eq(rongtongCurrent.status_sources, ["s_rt_jy_resume_2026", "s_rt_nj_digital_2025"], "Rongtong fresh site-status evidence disclosed");
+eq(rongtongCurrent.conflict_sources, ["s_rt_jy_formed_150k", "s_rt_nj_200k_eia"], "Rongtong conflicts are explicit and excluded");
+ok(rongtongPipeline.counted_pipeline && rongtong.pipe_ty === 180000, "Rongtong Jiangyou and India pipeline additions count separately");
+ok(!rongtongConflict.counted_operating && rongtongConflict.value_ty === 150000, "Rongtong 150 kt conflict remains visible but uncounted");
 ok(D.gaps.archive.total === D.sources_index.length, "archive coverage denominator matches sources");
 /* BASF exception: reBand would allow it but canonical carries counted=false — verify it shipped uncounted */
 const basf = D.plants.find(p => p.company === "BASF");
@@ -139,6 +213,18 @@ ok((doc.querySelector("#herotext").textContent || "").includes("documented floor
 doc.querySelector("#tbody tr").dispatchEvent(new dom.window.Event("click", { bubbles: true }));
 ok(doc.querySelector("#drawer").classList.contains("on"), "drawer opens from table");
 ok(doc.querySelectorAll("#drawer table.claims tr").length >= 2, "drawer shows claims table");
+doc.querySelector('#tbody tr[data-id="p012"]').dispatchEvent(new dom.window.Event("click", { bubbles: true }));
+eq(
+  [...doc.querySelectorAll('#drawer tr[data-claim-id="p012.c5"] .srcitem')].map(el => el.dataset.sourceId),
+  gotionCurrent.sources.map(s => s.id),
+  "Gotion drawer exposes every component source",
+);
+doc.querySelector('#tbody tr[data-id="p007"]').dispatchEvent(new dom.window.Event("click", { bubbles: true }));
+eq(
+  [...doc.querySelectorAll('#drawer tr[data-claim-id="p007.c5"] .srcrole')].map(el => el.textContent),
+  rongtongCurrent.sources.map(s => s.role),
+  "Rongtong drawer exposes every source role",
+);
 
 /* ---- standalone self-containment ---- */
 try {

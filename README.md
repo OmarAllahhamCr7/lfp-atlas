@@ -6,16 +6,17 @@ the patent history that shaped the industry, capacity claims and the sourcing sh
 Sibling of **NMC Atlas**; the two are schema-compatible by design and fold into **Cathodes ATLAS**.
 
 **65 producer rows · 28 synthesis routes in 5 families · 18 patent & licensing events ·
-138 discrete claims (103 with figures, 20 superseded) · 169 sources · v0.3.0 ·
-dataset date 28 July 2026.**
+146 discrete claims (110 with figures, 25 superseded) · 187 sources · v0.3.5 ·
+dataset date 2 August 2026.**
 
-Headline: **3.53 Mt/y of operating nameplate documented at producer level** (lower bound 1.97 —
-chemistry stated outright), a further **3.26 Mt/y announced or under construction**, and
+Headline: **3.41 Mt/y of operating nameplate documented at producer level** (primary chemistry-stated scope 1.85 —
+chemistry stated outright), a further **3.36 Mt/y announced or under construction**, and
 **0.89 Mt/y of documented FePO₄ precursor** — all kept strictly apart. The bands remain a
 **documented floor, not a market estimate**; the main uncertainty is the lower–headline gap:
-1.56 Mt/y (Yuneng 994.5k, Dynanonic 450k, Easpring 120k) is filed as phosphate-family totals
-with no LFP/LMFP split. China makes ~95–98% of global LFP CAM; ~90% of tonnage moves through
-one route (carbothermal reduction fed by a precipitated FePO₄ precursor).
+1.5645 Mt/y (Yuneng 994.5k, Dynanonic 450k, Easpring 120k) is disclosed as
+phosphate-family capacity with no LFP/LMFP split. China makes ~95–98% of global LFP CAM;
+~90% of tonnage moves through one route (carbothermal reduction fed by a precipitated
+FePO₄ precursor).
 
 ---
 
@@ -34,8 +35,7 @@ Notable corrections: Yuneng counted at last (994,500 t/y, resolving g01); Anda u
 (150 kt LFP + 150 kt FePO₄); LB Group is 50 kt not 200 kt; CNNC Huayuan's lithium project was
 TERMINATED in June 2025 (LFP stage never built); Ronbay's Korea LMFP is construction, not
 operating; IBU-tec's Weimar tonnage is undisclosed and was retired from the totals. What still
-rests on trade tier (Wanrun 468k, Rongtong 300k, Gotion 142k) and what is stale (Terui 2023,
-Pulead 2023) is flagged in the register (g07–g08).
+rests on trade tier or aging evidence is flagged in the register (g07–g08).
 
 **v0.3 (verified + geocoded)** added second sources for the trade-tier counted figures
 (Wanrun 468 kt now company-confirmed via a May-2026 exchange-disclosed IR record; Lopal's
@@ -46,6 +46,50 @@ producing), a documented-city geocoding pass (20 rows re-sited from province/cou
 centroids), the Wanrun–CATL ~1.32 Mt five-year supply agreement as a quantified link, and
 `build/archive_sources.py` — the SHA-256 snapshot archiver (run it on your machine; `--check`
 detects silent edits; the gaps register computes coverage from the canonical).
+
+**v0.3.1 (Morocco status correction)** reclassified the LG Chem-Huayou/Youshan
+50,000 t/y Morocco project from construction to announced/MOU-stage. The original
+claim remains visible as superseded history; LG Corp's primary release now supports
+the figure, a June-2025 Moroccan source corroborates that it was still announced,
+and the stated 2026 production target is explicitly unconfirmed. The pipeline total
+is unchanged.
+
+**v0.3.2 (Rongtong chemistry-scope correction)** preserves Rongtong's live,
+archived ~300,000 t/y trade-reported company total but moves it from LFP into
+L(M)FP-unsplit because the cited passage explicitly says the figure includes LMFP.
+The older LFP tag remains visible as superseded history. Primary chemistry-stated
+capacity falls to 1,665,470 t/y; headline, upper, pipeline, and precursor totals
+remain unchanged.
+
+**v0.3.3 (Gotion evidence correction)** preserves the 142,000 t/y operating
+figure but corrects its attribution. It is now published as an explicit,
+machine-readable component sum: 42,000 t/y at the legacy Lujiang materials base
+(a company recruitment brief, independently corroborated by an on-site field
+report) plus 100,000 t/y at Gotion Kehong (official Gotion commissioning release).
+The November-2024 trade article remains current corroboration; its quoted
+investor-platform reply confirms full self-supply, not the arithmetic. All four
+documents are archived and shown at the claim. The separate 200,000 t/y plan
+remains pipeline only, and every published total is unchanged.
+
+**v0.3.4 (weak-evidence hardening)** gives every supporting document an explicit
+role wherever context could be mistaken for exact-number proof. Pulead/Taifeng's
+185,000 t/y is now an archived 25,000 + 160,000 t/y primary component sum with
+separate 2025 and H1-2026 shipment-status corroboration; it is explicitly
+nameplate, not output. Terui's 100,000 t/y is now an archived 40,000 + 60,000 t/y
+commissioning chain, while current utilization remains unknown. Rongtong remains
+trade-tier: SPIR alone supports the exact 300,000 t/y, and its profile, programme
+and ranking-conflict sources are labelled as context only. Published totals do
+not change.
+
+**v0.3.5 (Rongtong site-floor correction)** supersedes that opaque 300,000 t/y
+LFP/LMFP company estimate with a conservative, primary-backed 180,000 t/y LFP
+floor: Jiangyou 100,000 t/y, disclosed as 200,000 expected total less a separate
+100,000 t/y workshop still under construction, plus Neijiang's directly stated
+80,000 t/y phase one in normal mass production. The conflicting Jiangyou
+150,000 t/y statement and overlapping Neijiang expansion plan remain visible but
+uncounted; Daye remains unquantified. Terui is now mapped to its official Zhongxian
+100,000 t/y project base, with fresh industrial-activity context kept separate from
+production evidence, so its historical built-nameplate claim remains C-grade.
 
 ## Two ways to run it
 
@@ -103,9 +147,21 @@ cumulative" ships as cumulative; neither enters any total.
 - [x] v0.3 — second sources for trade-tier counted figures (Wanrun resolved; Rongtong/Gotion
       conflict-flagged); XTC + Easpring status corrections; documented-city geocoding pass;
       `archive_sources.py` shipped (RUN IT LOCALLY to populate the snapshot archive)
+- [x] v0.3.1 — Morocco LG Chem-Huayou/Youshan status corrected to announced/MOU-stage;
+      primary and later corroborating sources archived; pipeline total unchanged
+- [x] v0.3.2 — Rongtong 300 kt chemistry scope corrected from LFP to
+      L(M)FP-unsplit; primary scope re-pinned; broader and pipeline totals unchanged
+- [x] v0.3.3 — Gotion 142 kt attribution corrected and rebuilt as an archived,
+      multi-source 42 kt + 100 kt component sum; totals unchanged
+- [x] v0.3.4 — Pulead, Terui, and Rongtong weak-evidence package hardened with
+      exact component sums, current-status corroboration, and explicit source roles;
+      totals unchanged
+- [x] v0.3.5 — Rongtong trade aggregate replaced by a primary-backed 180 kt/y
+      site floor; Jiangyou's 100 kt/y construction addition and 150 kt conflict
+      disclosed; Terui site/current-context record hardened without a grade upgrade
 - [ ] v0.4 — run the archiver + commit snapshots; supply links with tonnage; LMFP
       absolute-base resolution; charts pane; long-tail re-sourcing (Taiwan, Japan, Western
-      announced projects); Rongtong/Gotion second-source retry after their next disclosures
+      announced projects); Daye and Terui permit/court-record recovery
 - [ ] Cathodes ATLAS — merge with NMC Atlas (the OOP band engine already treats chemistry
       rules as configuration; this repo's canonical schema is compatible by construction)
 

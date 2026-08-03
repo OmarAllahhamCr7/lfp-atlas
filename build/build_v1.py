@@ -30,6 +30,51 @@ can = json.load(open(os.path.join(ROOT, "canonical.json"), encoding="utf-8"))
 geo = json.load(open(os.path.join(ROOT, "geo_projected.json"), encoding="utf-8"))
 SRC = {s["id"]: s for s in can["sources"]}
 
+def claim_source_ids(c):
+    extra = c.get("srcs") or []
+    assert isinstance(extra, list), "srcs must be a list on " + c["id"]
+    ids = []
+    for source_id in [c.get("src"), *extra]:
+        if source_id and source_id not in ids:
+            ids.append(source_id)
+    return ids
+
+def claim_sources(c):
+    return [SRC[source_id] for source_id in claim_source_ids(c)]
+
+def claim_source_roles(c):
+    roles = c.get("source_roles") or {}
+    assert isinstance(roles, dict), "source_roles must be an object on " + c["id"]
+    assert set(roles) <= set(claim_source_ids(c)), \
+        "source_roles references a source outside the claim bundle: " + c["id"]
+    assert all(isinstance(role, str) and role.strip() for role in roles.values()), \
+        "source_roles must contain non-empty strings on " + c["id"]
+    return roles
+
+def public_claim_source(c, source):
+    out = {key: source[key] for key in
+           ("id", "title", "publisher", "doc_type", "doc_date", "url", "tier")}
+    role = claim_source_roles(c).get(source["id"])
+    if role:
+        out["role"] = role
+    return out
+
+def months_old(doc_date, dataset_date):
+    def parse(value):
+        value = (value or "").strip()
+        if len(value) < 4 or not value[:4].isdigit():
+            return None
+        year = int(value[:4])
+        month = 1
+        if len(value) >= 7 and value[4] == "-" and value[5:7].isdigit():
+            month = int(value[5:7]) or 1
+        return year, month
+    document = parse(doc_date)
+    dataset = parse(dataset_date)
+    if document is None or dataset is None:
+        return None
+    return max((dataset[0] - document[0]) * 12 + dataset[1] - document[1], 0)
+
 # ---- projection: calibrated Natural Earth fit (identical approach to NMC build) --
 def _ne(lon, lat):
     l = lon * pi / 180; p = lat * pi / 180; p2 = p * p; p4 = p2 * p2
@@ -73,7 +118,102 @@ for p in can["plants"]:
         assert c["chem"] in CHEMS, "off-enum chem %r on %s" % (c["chem"], c["id"])
         assert not c.get("site_key") or c["site_key"] in keys, "claim site_key unresolved on " + c["id"]
         if c["value_ty"] is not None:
-            assert c.get("src") and c["src"] in SRC, "figure without resolvable source: " + c["id"]
+            source_ids = claim_source_ids(c)
+            assert source_ids, "figure without a source: " + c["id"]
+            assert all(source_id in SRC for source_id in source_ids), \
+                "figure with unresolved source: " + c["id"]
+            claim_source_roles(c)
+        evidence_method = c.get("evidence_method")
+        assert evidence_method in (None, "component-sum", "durable-nameplate", "site-floor"), \
+            "unknown evidence_method on " + c["id"]
+        if evidence_method in ("component-sum", "durable-nameplate", "site-floor"):
+            components = c.get("components") or []
+            assert components, "component-backed claim without components: " + c["id"]
+            assert sum(int(component.get("value_ty") or 0) for component in components) == c["value_ty"], \
+                "components do not equal claim value: " + c["id"]
+            source_ids = set(claim_source_ids(c))
+            component_source_ids = set()
+            for component in components:
+                component_sources = component.get("srcs") or []
+                assert component_sources, "component without sources: " + c["id"]
+                component_source_ids.update(component_sources)
+                assert set(component_sources) <= source_ids, \
+                    "component source missing from claim bundle: " + c["id"]
+                assert any(SRC[source_id]["tier"] in ("primary", "company")
+                           for source_id in component_sources), \
+                    "component lacks a direct source: " + c["id"]
+            corroboration_sources = c.get("corroboration_srcs") or []
+            assert isinstance(corroboration_sources, list), \
+                "corroboration_srcs must be a list on " + c["id"]
+            assert set(corroboration_sources) <= source_ids, \
+                "corroboration source missing from claim bundle: " + c["id"]
+            assert not (set(corroboration_sources) & component_source_ids), \
+                "corroboration sources must be separate from component evidence: " + c["id"]
+            if evidence_method == "durable-nameplate":
+                assert c["kind"] == "capacity" and c["basis"] in ("built", "reported"), \
+                    "durable-nameplate must describe built/reported capacity: " + c["id"]
+                assert c.get("as_of"), "durable-nameplate requires an as_of date: " + c["id"]
+                status_sources = c.get("status_srcs") or []
+                assert isinstance(status_sources, list) and status_sources, \
+                    "durable-nameplate requires status_srcs: " + c["id"]
+                assert set(status_sources) <= source_ids, \
+                    "status source missing from claim bundle: " + c["id"]
+                assert not (set(status_sources) & component_source_ids), \
+                    "status sources must be separate from exact component evidence: " + c["id"]
+                assert all(SRC[source_id]["tier"] in ("primary", "trade")
+                           and SRC[source_id].get("doc_date")
+                           for source_id in status_sources), \
+                    "status sources must be dated independent evidence: " + c["id"]
+            if evidence_method == "site-floor":
+                assert c["kind"] == "capacity" and c["basis"] in ("built", "reported"), \
+                    "site-floor must describe built/reported capacity: " + c["id"]
+                assert c.get("as_of"), "site-floor requires an as_of date: " + c["id"]
+                assert c.get("scope") == "company", \
+                    "site-floor must aggregate explicitly named company sites: " + c["id"]
+                for component in components:
+                    component_method = component.get("evidence_basis")
+                    assert component_method in ("direct", "arithmetic-difference"), \
+                        "site-floor component lacks a supported evidence method: " + c["id"]
+                    assert component.get("site_key") in keys, \
+                        "site-floor component site_key unresolved on " + c["id"]
+                    if component_method == "arithmetic-difference":
+                        calculation = component.get("calculation") or {}
+                        assert calculation.get("operation") == "difference", \
+                            "site-floor arithmetic must use explicit difference: " + c["id"]
+                        minuend = calculation.get("minuend_ty")
+                        subtrahend = calculation.get("subtrahend_ty")
+                        assert isinstance(minuend, int) and isinstance(subtrahend, int), \
+                            "site-floor difference lacks integer operands: " + c["id"]
+                        assert minuend - subtrahend == component["value_ty"], \
+                            "site-floor subtraction does not equal component: " + c["id"]
+                status_sources = c.get("status_srcs") or []
+                assert isinstance(status_sources, list) and status_sources, \
+                    "site-floor requires status_srcs: " + c["id"]
+                assert set(status_sources) <= source_ids, \
+                    "site-floor status source missing from claim bundle: " + c["id"]
+                assert not (set(status_sources) & component_source_ids), \
+                    "site-floor status sources must be separate from exact evidence: " + c["id"]
+                assert all(
+                    SRC[source_id]["tier"] in ("primary", "company")
+                    and (age := months_old(
+                        SRC[source_id].get("doc_date"), can["meta"].get("dataset_date")
+                    )) is not None
+                    and age <= 18
+                    for source_id in status_sources
+                ), "site-floor status sources must be current direct evidence: " + c["id"]
+                conflict_sources = c.get("conflict_srcs") or []
+                assert isinstance(conflict_sources, list) and conflict_sources, \
+                    "site-floor requires explicit conflict_srcs: " + c["id"]
+                assert set(conflict_sources) <= source_ids, \
+                    "site-floor conflict source missing from claim bundle: " + c["id"]
+                assert not (set(conflict_sources) & (component_source_ids | set(status_sources))), \
+                    "site-floor conflict sources must be excluded from the floor evidence: " + c["id"]
+                assert all(SRC[source_id]["tier"] in ("primary", "company")
+                           for source_id in conflict_sources), \
+                    "site-floor conflict lacks direct evidence: " + c["id"]
+                roles = claim_source_roles(c)
+                assert set(status_sources + conflict_sources) <= set(roles), \
+                    "site-floor status/conflict sources require explicit public roles: " + c["id"]
 assert len(ALL_CLAIM_IDS) == len(set(ALL_CLAIM_IDS)), "claim ids duplicated"
 _IDSET = set(ALL_CLAIM_IDS)
 for p in can["plants"]:
@@ -82,7 +222,7 @@ for p in can["plants"]:
             assert c["duplicate_of"] in _IDSET, "duplicate_of points nowhere: " + c["id"]
 
 # ---- caveat + confidence model (objective attributes only) ----------------------
-def caveats(c, s):
+def caveats(c, sources):
     cv = []
     if c.get("superseded_by"):
         cv.append("superseded by " + c["superseded_by"] + " — shown for history, counts toward no total")
@@ -96,15 +236,27 @@ def caveats(c, s):
     if "up to" in n or "ceiling" in n: cv.append("stated as a ceiling ('up to')")
     if c.get("bundle"): cv.append("bundle — non-CAM or mixed tonnage inside")
     if c.get("duplicate_of"): cv.append("same project as " + c["duplicate_of"] + " — counts once there")
+    if c.get("evidence_method") == "component-sum":
+        cv.append("derived component sum — all component sources listed")
+    if c.get("evidence_method") == "durable-nameplate":
+        cv.append("durable nameplate — exact primary components; current operation corroborated separately")
+        cv.append("nameplate capacity, not actual output")
+    if c.get("evidence_method") == "site-floor":
+        cv.append("evidenced site floor — exact site components only; excluded sites and conflicting totals do not count")
+        if any(component.get("evidence_basis") == "arithmetic-difference"
+               for component in c.get("components") or []):
+            cv.append("one or more site components are arithmetic differences with operands disclosed")
+        cv.append("nameplate capacity, not actual output")
     if c["basis"] == "target": cv.append("company target — counts toward no total")
     if c["kind"] in ("shipments", "output"): cv.append("market observation, not nameplate")
     if c["kind"] == "output_cumulative": cv.append("cumulative, not a rate")
     if c["kind"] == "output_rate": cv.append("rate in native units — never converted")
     return cv
 
-def pconf(c, s):
-    t = (s or {}).get("tier", "weak")
-    score = {"primary": 3, "company": 2, "trade": 1, "weak": 0}[t]
+def pconf(c, sources):
+    tiers = [(source or {}).get("tier", "weak") for source in sources] or ["weak"]
+    score = max({"primary": 3, "company": 2, "trade": 1, "weak": 0}[tier]
+                for tier in tiers)
     if c["kind"] == "capacity" and not c.get("as_of"): score -= 1
     if c.get("bundle"): score -= 1
     return "High" if score >= 3 else ("Medium" if score == 2 else "Low")
@@ -183,7 +335,8 @@ for p in can["plants"]:
     q["links"] = p["links"]
     q["cap_claims"] = []
     for c in p["claims"]:
-        s = SRC.get(c.get("src"))
+        sources = claim_sources(c)
+        s = sources[0] if sources else None
         row = {k: c.get(k) for k in ("id", "kind", "product", "value_ty", "value_native", "as_of",
                                       "basis", "scope", "chem", "note", "bundle", "duplicate_of",
                                       "supersedes", "superseded_by", "target_date", "scale", "site_key")}
@@ -195,9 +348,17 @@ for p in can["plants"]:
         row["src_type"] = s["doc_type"] if s else ""
         row["src_date"] = s["doc_date"] if s else ""
         row["src_url"] = s["url"] if s else ""
-        row["src_tier"] = s["tier"] if s else ""
-        row["public_confidence"] = pconf(c, s)
-        row["caveats"] = caveats(c, s)
+        tiers = list(dict.fromkeys(source["tier"] for source in sources))
+        row["src_tier"] = tiers[0] if len(tiers) == 1 else ("mixed" if tiers else "")
+        row["sources"] = [public_claim_source(c, source) for source in sources]
+        row["source_count"] = len(sources)
+        row["components"] = c.get("components") or []
+        row["evidence_method"] = c.get("evidence_method")
+        row["status_sources"] = c.get("status_srcs") or []
+        row["conflict_sources"] = c.get("conflict_srcs") or []
+        row["corroboration_sources"] = c.get("corroboration_srcs") or []
+        row["public_confidence"] = pconf(c, sources)
+        row["caveats"] = caveats(c, sources)
         q["cap_claims"].append(row)
     s = SRC.get(p["src"])
     q["row_src"] = {"title": s["title"], "publisher": s["publisher"], "doc_type": s["doc_type"],
@@ -211,6 +372,9 @@ for q in plants_pub:
             for k in ("src_title", "src_pub", "src_url"):
                 assert c[k], "DISPLAYED FIGURE WITHOUT %s: %s" % (k, c["id"])
             assert c["src_url"].startswith("http"), "malformed source url on " + c["id"]
+            assert c["sources"], "displayed figure without source bundle: " + c["id"]
+            assert all(source["url"].startswith("http") for source in c["sources"]), \
+                "malformed source bundle url on " + c["id"]
     if q["sgroup"] in ("dead", "context", "uncertain", "precursor"):
         assert q["op_ty"] == 0 and q["pipe_ty"] == 0, "non-live plant leaks tonnage: " + q["id"]
 _re_lo = sum(q["op_lower"] for q in plants_pub)
@@ -220,8 +384,10 @@ _re_pp = sum(q["pipe_ty"] for q in plants_pub)
 assert (_re_lo, _re_hd, _re_up, _re_pp) == (bands["lower"], bands["headline"], bands["upper"], bands["pipeline"]), \
     "bands not reproducible from public rows"
 # regression pins — update ONLY deliberately, with a changelog entry (NMC discipline)
-# v0.2.0 re-pin (2026-07-28): re-sourcing sprint — see changelog for the claim-by-claim basis.
-PINNED = (1965470, 3529970, 3529970, 3262250)
+# v0.3.5 re-pin (2026-08-02): Rongtong's unsplit 300 kt company estimate is
+# replaced by a primary-backed 180 kt/y LFP site floor; +100 kt/y Jiangyou
+# construction is added to pipeline.
+PINNED = (1845470, 3409970, 3409970, 3362250)
 assert (bands["lower"], bands["headline"], bands["upper"], bands["pipeline"]) == PINNED, \
     "BANDS MOVED: %r (pinned %r)" % ((bands["lower"], bands["headline"], bands["upper"], bands["pipeline"]), PINNED)
 assert precursor_ty == 890000, "precursor total moved: %d" % precursor_ty
@@ -244,9 +410,11 @@ undated = [{"company": q["company"], "claim": c["id"], "value_ty": c["value_ty"]
 row_sourced = sum(1 for q in plants_pub for c in q["cap_claims"]
                   if c["value_ty"] is not None and not c["superseded_by"]
                   and "row-level seed source — figure-level re-sourcing pending" in c["caveats"])
-weak_tier = [{"company": q["company"], "claim": c["id"], "value_ty": c["value_ty"], "tier": c["src_tier"]}
+weak_tier = [{"company": q["company"], "claim": c["id"], "value_ty": c["value_ty"],
+              "tier": c["src_tier"]}
              for q in plants_pub for c in q["cap_claims"]
-             if (c["counted_operating"] or c["counted_pipeline"]) and c["src_tier"] in ("trade", "weak")]
+             if (c["counted_operating"] or c["counted_pipeline"]) and c["sources"]
+             and all(source["tier"] in ("trade", "weak") for source in c["sources"])]
 loc_flags = [{"company": q["company"], "basis": q["sites"][0]["geo_basis"]}
              for q in plants_pub if not q["no_marker"] and q["sites"] and
              next(s for s in q["sites"] if s["primary"])["geo_basis"] in ("country-only", "region-only")]
@@ -331,7 +499,8 @@ w.writerow(["plant_id", "company", "country", "status", "claim_id", "kind", "pro
             "value_native", "as_of", "basis", "scope", "chem", "scale", "bundle", "duplicate_of",
             "supersedes", "superseded_by", "target_date", "counted_operating", "counted_pipeline",
             "counted_upper_only", "public_confidence", "caveats", "note", "source_tier",
-            "source_publisher", "source_type", "source_date", "source_url"])
+            "source_publisher", "source_type", "source_date", "source_url",
+            "source_count", "source_ids", "source_urls", "source_roles"])
 for q in plants_pub:
     for c in q["cap_claims"]:
         w.writerow([q["id"], q["company"], q["country"], q["status"], c["id"], c["kind"], c["product"],
@@ -342,7 +511,13 @@ for q in plants_pub:
                     "Y" if c["counted_operating"] else "", "Y" if c["counted_pipeline"] else "",
                     "Y" if c["counted_upper_only"] else "", c["public_confidence"],
                     "; ".join(c["caveats"]), c["note"], c["src_tier"], c["src_pub"], c["src_type"],
-                    c["src_date"], c["src_url"]])
+                    c["src_date"], c["src_url"], c["source_count"],
+                    "; ".join(source["id"] for source in c["sources"]),
+                    "; ".join(source["url"] for source in c["sources"]),
+                    "; ".join(
+                        source["id"] + ": " + source["role"]
+                        for source in c["sources"] if source.get("role")
+                    )])
 
 def emit(path, text):
     full = os.path.join(OUT, path)

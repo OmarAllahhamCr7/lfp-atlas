@@ -449,6 +449,21 @@ function table(F) {
 }
 
 /* ---------------- drawer ---------------- */
+function claimSourceStack(c) {
+  const sources = (c.sources || []).length ? c.sources : [{
+    id: "", title: c.src_title, publisher: c.src_pub, doc_type: c.src_type,
+    doc_date: c.src_date, url: c.src_url, tier: c.src_tier
+  }];
+  return `<div class="srcstack">${sources.map(s =>
+    `<div class="srcitem" data-source-id="${esc(s.id || "")}">
+      <a href="${esc(s.url)}" target="_blank" rel="noopener"
+         title="${esc(s.title || s.publisher || "Published source")} — ${esc(s.doc_type || "")}${s.doc_date ? ", " + esc(s.doc_date) : ""}">${esc(s.publisher || s.title || "source")}</a>
+      <span class="tierchip t-${esc(s.tier || "weak")}">${esc(s.tier || "weak")}</span>
+      ${s.doc_date ? `<span class="asof">${esc(s.doc_date)}</span>` : ""}
+      ${s.role ? `<span class="srcrole">${esc(s.role)}</span>` : ""}
+    </div>`).join("")}</div>`;
+}
+
 function openDrawer(p) {
   S.sel = p.id;
   if (location.hash !== "#p/" + p.id) history.replaceState(null, "", "#p/" + p.id);
@@ -492,13 +507,12 @@ function openDrawer(p) {
         ${p.sites.map(s => `<div class="dest" style="cursor:default"><span class="nm">${s.primary ? "&#9679; " : "&#9675; "}${esc(s.name)}</span><span class="v">${esc(s.geo_basis)}</span></div>`).join("")}</div>
       ${(p.cap_claims || []).length ? `<div class="f"><h5>Claims (${p.cap_claims.length})</h5>
         <div class="tblwrap"><table class="claims"><tr><th>Kind</th><th>Figure</th><th>As of</th><th>Basis</th><th>Scope</th><th>Chem</th><th>Source</th></tr>
-        ${p.cap_claims.map(c => `<tr${c.superseded_by ? ' class="supr" title="Superseded by ' + esc(c.superseded_by) + ' — shown for history, counts toward no total."' : (c.duplicate_of ? ' class="dupp" title="Same project as ' + esc(c.duplicate_of) + ' — counts once there."' : ((!c.counted_operating && !c.counted_pipeline && !c.counted_upper_only && c.value_ty != null) ? ' class="ncount"' : ""))}>
+        ${p.cap_claims.map(c => `<tr data-claim-id="${esc(c.id)}"${c.superseded_by ? ' class="supr" title="Superseded by ' + esc(c.superseded_by) + ' — shown for history, counts toward no total."' : (c.duplicate_of ? ' class="dupp" title="Same project as ' + esc(c.duplicate_of) + ' — counts once there."' : ((!c.counted_operating && !c.counted_pipeline && !c.counted_upper_only && c.value_ty != null) ? ' class="ncount"' : ""))}>
           <td>${esc(c.kind)}${c.superseded_by ? ' <span class="flagchip">superseded</span>' : ""}${c.supersedes ? ' <span class="flagchip" style="border-color:#4cc38a66;color:#4cc38a">supersedes ' + esc(c.supersedes) + '</span>' : ""}${c.bundle ? ' <span class="flagchip">bundle</span>' : ""}</td>
           <td class="tnum">${c.value_ty != null ? fmt(c.value_ty) + " t/y" : (c.value_native ? esc(c.value_native) : "—")}${countChip(c)}</td>
           <td>${esc(c.as_of || "—")}</td><td>${esc(c.basis)}${c.target_date ? `<span class="asof">→ ${esc(c.target_date)}</span>` : ""}</td>
           <td>${esc(c.scope)}</td><td>${esc(c.chem)}</td>
-          <td><a href="${esc(c.src_url)}" target="_blank" rel="noopener" title="${esc(c.src_pub)} — ${esc(c.src_type)}${c.src_date ? ", " + esc(c.src_date) : ""}">${esc(c.src_pub)}</a>
-              <span class="tierchip t-${esc(c.src_tier)}">${esc(c.src_tier)}</span>
+          <td>${claimSourceStack(c)}
               <span class="confchip cf-${esc(c.public_confidence)}">${esc(c.public_confidence)}</span>
               ${c.note ? `<div class="cav">${esc(c.note)}</div>` : ""}
               ${(c.caveats || []).length ? `<div class="cav">⚠ ${c.caveats.map(esc).join(" · ")}</div>` : ""}</td></tr>`).join("")}
@@ -668,8 +682,8 @@ function init() {
   $("#dl-json").onclick = () => { const { geo, ...rest } = D; dl("lfp_atlas_v" + D.meta.version + ".json", JSON.stringify(rest, null, 1), "application/json"); };
   $("#dl-claims").onclick = () => {
     const q = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
-    const rows = [["plant_id","company","country","status","claim_id","kind","product","value_t_per_year","value_native","as_of","basis","scope","chem","counted_operating","counted_pipeline","counted_upper_only","public_confidence","caveats","note","source_tier","source_publisher","source_url"].join(",")];
-    D.plants.forEach(p => (p.cap_claims || []).forEach(c => rows.push([p.id,p.company,p.country,p.status,c.id,c.kind,c.product,c.value_ty,c.value_native||"",c.as_of,c.basis,c.scope,c.chem,c.counted_operating?"Y":"",c.counted_pipeline?"Y":"",c.counted_upper_only?"Y":"",c.public_confidence,(c.caveats||[]).join("; "),c.note,c.src_tier,c.src_pub,c.src_url].map(q).join(","))));
+    const rows = [["plant_id","company","country","status","claim_id","kind","product","value_t_per_year","value_native","as_of","basis","scope","chem","counted_operating","counted_pipeline","counted_upper_only","public_confidence","caveats","note","source_tier","source_publisher","source_url","source_count","source_ids","source_urls","source_roles"].join(",")];
+    D.plants.forEach(p => (p.cap_claims || []).forEach(c => rows.push([p.id,p.company,p.country,p.status,c.id,c.kind,c.product,c.value_ty,c.value_native||"",c.as_of,c.basis,c.scope,c.chem,c.counted_operating?"Y":"",c.counted_pipeline?"Y":"",c.counted_upper_only?"Y":"",c.public_confidence,(c.caveats||[]).join("; "),c.note,c.src_tier,c.src_pub,c.src_url,c.source_count||0,(c.sources||[]).map(s=>s.id).join("; "),(c.sources||[]).map(s=>s.url).join("; "),(c.sources||[]).filter(s=>s.role).map(s=>s.id+": "+s.role).join("; ")].map(q).join(","))));
     dl("lfp_atlas_claims_v" + D.meta.version + ".csv", "﻿" + rows.join("\r\n"), "text/csv;charset=utf-8");
   };
   $("#dl-plants").onclick = () => csv(filtered());
