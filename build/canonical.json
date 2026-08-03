@@ -10252,7 +10252,7 @@
   },
   {
    "id": "g04",
-   "gap": "No SHA-256 source snapshot archive yet (archive_sources.py port pending); several filings are cited via mirror hosts (Xueqiu/10jqka/Sina/QQ/Eastmoney) because CNINFO's site blocks direct fetch — originals exist on CNINFO."
+   "gap": "The SHA-256 source archive currently covers 180 of 189 sources: 164 complete captures and 16 proxy/partial captures, with 9 still missing. Several filings are archived through mirror hosts (Xueqiu/10jqka/Sina/QQ/Eastmoney) because CNINFO blocks direct scripted fetches; the original CNINFO records remain identified in the source metadata."
   },
   {
    "id": "g05",
