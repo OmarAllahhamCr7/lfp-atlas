@@ -3,14 +3,14 @@
  "chemistry": "LFP/LMFP",
  "meta": {
   "name": "LFP Atlas",
-  "version": "0.3.0",
-  "dataset_date": "2026-07-28",
+  "version": "0.3.6",
+  "dataset_date": "2026-08-03",
   "seed_compiled": "2026-07-19",
-  "as_of": "28 July 2026",
-  "generated": "2026-07-28",
+  "as_of": "3 August 2026",
+  "generated": "2026-08-03",
   "plants": 65,
   "seed": "LFP_LMFP_Synthesis_Methods_and_Producers.xlsx (compiled 19 Jul 2026)",
-  "cite": "LFP Atlas v0.3.0 — global LFP/LMFP cathode synthesis-route and producer census. CC-BY 4.0, attribution 'LFP Atlas' + version. Companion to NMC Atlas; both fold into Cathodes ATLAS.",
+  "cite": "LFP Atlas v0.3.6 — global LFP/LMFP cathode synthesis-route and producer census. CC-BY 4.0, attribution 'LFP Atlas' + version. Companion to NMC Atlas; both fold into Cathodes ATLAS.",
   "license": "CC-BY 4.0",
   "key_findings": [
    "•  ONE route dominates ~all commercial LFP tonnage: high-temperature solid-state CARBOTHERMAL REDUCTION fed by a (co-precipitated) FePO4 precursor  ->  spray-dried with Li source + carbon  ->  calcined under inert gas. These are linked STAGES of one workflow, not competing methods.",
@@ -25,7 +25,7 @@
    "note": "China makes ~95–98% of global LFP CAM (seed workbook key finding; backbone reviews cited on the References pane). 2024 leader Hunan Yuneng ~28.8% share; 2025 Yuneng shipments >1 Mt.",
    "dominant_route": "High-temperature solid-state CARBOTHERMAL REDUCTION fed by a precipitated FePO4 precursor — ~90% of global LFP tonnage (seed workbook; Big Categories sheet)."
   },
-  "counting_rule": "The olivine rule (v0.2): a figure enters the operating bands only if the plant is operating at commercial scale, the claim is a CAPACITY (not shipments, output, cumulative or a rate), its basis is built/reported, it is not a bundle, not a duplicate of another row's project, and NOT SUPERSEDED — corrections are append-only supersession chains: the old figure stays visible, flagged, counting toward nothing. Lower = chemistry stated outright (LFP or LMFP). Headline = lower + L(M)FP-unsplit (phosphate-family totals that don't split LFP from LMFP — Yuneng and Dynanonic publish only these). Upper = headline + bundles and unsplit-cathode figures. Announced / planned / construction claims form a separate PIPELINE total; targets count toward nothing. Shipments and output are market context only."
+  "counting_rule": "The olivine rule (v0.2): a figure enters the operating bands only if the plant is operating at commercial scale, the claim is a CAPACITY (not shipments, output, cumulative or a rate), its basis is built/reported, it is not a bundle, not a duplicate of another row's project, and NOT SUPERSEDED — corrections are append-only supersession chains: the old figure stays visible, flagged, counting toward nothing. Lower = chemistry stated outright (LFP or LMFP). Headline = lower + L(M)FP-unsplit phosphate-family totals that don't split LFP from LMFP. Upper = headline + bundles and unsplit-cathode figures. Announced / planned / construction claims form a separate PIPELINE total; targets count toward nothing. Shipments and output are market context only."
  },
  "sources": [
   {
@@ -62,6 +62,23 @@
    "capture_quality": "complete"
   },
   {
+   "id": "s_pulead_inquiry",
+   "url": "https://static.cninfo.com.cn/finalpage/2023-06-21/1217106434.PDF",
+   "publisher": "Western Mining (SSE filing via CNINFO)",
+   "doc_type": "exchange inquiry reply",
+   "title": "Taifeng Xianxing: 25,000 t/y legacy + 160,000 t/y phase 1 in trial production",
+   "tier": "primary",
+   "doc_date": "2023-06-21",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_pulead_inquiry.pdf",
+   "hash": "5824cef1de253b729805be6f5c081eafc40fb3801162bd54c9a81d8fe2c08470",
+   "note": "Primary SSE inquiry reply independently reconstructing the 185,000 t/y nameplate as 25,000 t/y legacy capacity plus a 160,000 t/y phase-1 line that entered trial feed-in production in May 2023. Its valuation model separately shows a multi-year output ramp, so nameplate is not presented as actual production.",
+   "bytes": 540907,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
    "id": "s003",
    "url": "https://doi.org/10.1016/j.jpowsour.2006.12.089",
    "publisher": "DOI",
@@ -74,6 +91,91 @@
    "hash": "85bc4e9f6297905037e6d3f288393675b03a9cae9b70135836197a7e6516b38e",
    "note": "Seed source carried from the compilation workbook (19 Jul 2026); not yet snapshot-archived.",
    "bytes": 2711,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_terui_termination",
+   "url": "https://static.cninfo.com.cn/finalpage/2023-02-21/1215908341.PDF",
+   "publisher": "Chongqing Wanli New Energy (SSE filing via CNINFO)",
+   "doc_type": "exchange announcement",
+   "title": "Terui additional 60,000 t/y LFP capacity commissioned before merger termination",
+   "tier": "primary",
+   "doc_date": "2023-02-21",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_terui_termination.pdf",
+   "hash": "347e7990b5df2826bb27deee4278f0f6b9b130caa66a7fdea7ef63a78c7e7da2",
+   "note": "Primary listed-company announcement: the transaction counterparties said Terui's additional 60,000 t/y LFP capacity had entered production and operations were better than expected. The merger ended over valuation and performance-commitment terms, not because the line depended on the transaction financing.",
+   "bytes": 431967,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_terui_zhongxian_design_2021",
+   "url": "http://www.zhongxian.gov.cn/bm/zxghzrzyj/gggsghzrzyj/202111/t20211110_9944371.html",
+   "publisher": "Zhong County People's Government",
+   "doc_type": "official project-design notice",
+   "title": "Terui Zhongxian 100,000 t/y high-end LFP cathode project design notice",
+   "tier": "primary",
+   "doc_date": "2021-11-09",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_terui_zhongxian_design_2021.html",
+   "hash": "7db787a3afb9b64fdc69adc25dc63b3e133e579040586d2f4a4bbfb1bd4028f0",
+   "note": "Official county planning notice tying the 100,000 t/y LFP project to Chongqing Terui New Energy Materials in Zhongxian. This is project-design and entity/site evidence, not current-output evidence.",
+   "bytes": 131833,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_terui_zhongxian_env_2025",
+   "url": "http://www.zhongxian.gov.cn/bm/zxsthjj/gggssthjj/202504/t20250408_14499684.html",
+   "publisher": "Zhong County Ecology and Environment Bureau",
+   "doc_type": "official annual environmental-duty report",
+   "title": "Terui included in completed green/intelligent retrofits and carbon reporting",
+   "tier": "primary",
+   "doc_date": "2025-04-08",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_terui_zhongxian_env_2025.html",
+   "hash": "2372bb47e97859506385942b86215b6b1418d56f6c78e9545882153d96b427be",
+   "note": "Official 2024-duty report says Terui was among companies completing green/intelligent retrofit projects and participating in carbon-emissions reporting. This confirms recent industrial activity but does not restate capacity or prove current output.",
+   "bytes": 116325,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_terui_zhongxian_jobs_2025",
+   "url": "http://www.zhongxian.gov.cn/bm/zxrlsbj/zwgk_34581/jczwgk_132522/jycyly/gxbysjyfw/jyjxbtsl/qtxxgk/202511/t20251104_15138070.html",
+   "publisher": "Zhong County Human Resources and Social Security Bureau",
+   "doc_type": "official manufacturing-employment subsidy notice",
+   "title": "Terui Zhongxian employees listed for August 2025 manufacturing-employment subsidies",
+   "tier": "primary",
+   "doc_date": "2025-11-04",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_terui_zhongxian_jobs_2025.html",
+   "hash": "c46b2be6fc18e942091d02a6703ee6b4ff967ab778dc99f79fc89756cebcfa94",
+   "note": "Official notice lists newly insured employees at Chongqing Terui New Energy Materials in August 2025. It confirms manufacturing employment at the Zhongxian entity but does not establish LFP line utilization.",
+   "bytes": 115882,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_terui_zhongxian_innovation_2026",
+   "url": "http://www.zhongxian.gov.cn/bm/zxjjxxw/gsggjjxxw/202607/t20260729_15869332.html",
+   "publisher": "Zhong County Economy and Information Commission",
+   "doc_type": "official government reply",
+   "title": "Terui-Changan innovation consortium and 2026 battery R&D laboratory",
+   "tier": "primary",
+   "doc_date": "2026-07-29",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_terui_zhongxian_innovation_2026.html",
+   "hash": "88ad708c429ac8e4a1f662db43880f63e05cda0008df09d3013bde0cbf55e5a7",
+   "note": "Official county reply says Terui co-built an automotive and battery innovation consortium with Changan and added a battery R&D laboratory in 2026. This confirms current enterprise activity, not cathode production or utilization.",
+   "bytes": 71120,
+   "http_status": 200,
    "archive_error": null,
    "capture_quality": "complete"
   },
@@ -893,7 +995,7 @@
    "accessed": "2026-07-19",
    "archived_local": "archive/s054.html",
    "hash": "214425fee7c55ba2f6750a5b2667bddba07178b658c34d9a7af909253ecc130a",
-   "note": "Seed source carried from the compilation workbook (19 Jul 2026); not yet snapshot-archived.",
+   "note": "Seed source carried from the compilation workbook (19 Jul 2026); archived with SHA-256 verification.",
    "bytes": 306381,
    "archive_error": null,
    "capture_quality": "complete"
@@ -1063,15 +1165,15 @@
   {
    "id": "s065",
    "url": "https://www.lgcorp.com/media/release/26808",
-   "publisher": "www.lgcorp.com",
-   "doc_type": "company website",
+   "publisher": "LG Corp",
+   "doc_type": "company release",
    "tier": "company",
-   "title": "Youshan Technology (优山 — Huayou Cobalt sub.) — seed row source",
-   "doc_date": "",
-   "accessed": "2026-07-19",
+   "title": "LG Chem Teams Up with Huayou Group to Build LFP Cathode Plant in Morocco",
+   "doc_date": "2023-09-25",
+   "accessed": "2026-08-02",
    "archived_local": "archive/s065.html",
    "hash": "c11526266dbadf27504a88410db98a8f88e54e72fbc781caadc7f5b07c347f81",
-   "note": "Seed source carried from the compilation workbook (19 Jul 2026); not yet snapshot-archived.",
+   "note": "Primary disclosure: an MOU, 50,000 t/y planned capacity, and a 2026 mass-production target; no construction milestone stated.",
    "bytes": 30047,
    "archive_error": null,
    "capture_quality": "complete"
@@ -1685,6 +1787,23 @@
    "capture_quality": "missing"
   },
   {
+   "id": "s_leseco_morocco25",
+   "url": "https://leseco.ma/business/stockage-denergie-pourquoi-le-maroc-doit-accroitre-ses-investissements.html",
+   "publisher": "LesEco.ma",
+   "doc_type": "business press",
+   "tier": "trade",
+   "title": "Stockage d'énergie : pourquoi le Maroc doit accroître ses investissements",
+   "doc_date": "2025-06-04",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_leseco_morocco25.html",
+   "hash": "7dedb8e09a8280c0c11e7e2b4e3bfb6fe4a7ce09fae8df375c697e4cd5bcd83e",
+   "note": "Later Moroccan business-press corroboration still describes the 50,000 t/y LG Chem-Huayou project as announced.",
+   "bytes": 261143,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
    "id": "s_yuneng_ar25",
    "url": "https://static.cninfo.com.cn/finalpage/2026-04-23/1225155057.PDF",
    "publisher": "SZSE / CNINFO",
@@ -1959,13 +2078,13 @@
    "url": "https://finance.sina.com.cn/wm/2026-07-06/doc-inifxatp1743108.shtml",
    "publisher": "起点锂电 via Sina Finance",
    "doc_type": "trade press",
-   "title": "H1-2026 LFP producer review: Rongtong ~300 kt built, 525 kt planned",
+   "title": "H1-2026 producer review: Rongtong ~300 kt built/deployed; Taifeng Xianxing ranked #11",
    "tier": "trade",
    "doc_date": "2026-07-06",
    "accessed": "2026-07-28",
    "archived_local": "archive/s_rt_h1_26.html",
    "hash": "f398cd63a8b56b3d147b37ca3608f5134c20c6268591dde474d138879d7ecc8d",
-   "note": "v0.2 re-sourcing sprint (27-28 Jul 2026); fetched and quote-confirmed; snapshot archive still pending.",
+   "note": "Fetched, quote-confirmed, and archived with SHA-256 verification. Rongtong's company-total figure explicitly includes LMFP and has no site-level split. The same review ranks Taifeng Xianxing #11 in H1 2026 and Beida Pioneer #9 for full-year 2025.",
    "bytes": 115295,
    "http_status": 200,
    "archive_error": null,
@@ -1984,6 +2103,142 @@
    "hash": "2544fe18da707abe97d5b6d6736fc9943f788c91f0be62f3bcae058bf16ecc20",
    "note": "v0.2 re-sourcing sprint (27-28 Jul 2026); fetched and quote-confirmed; snapshot archive still pending.",
    "bytes": 83496,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_jy_150k_eia",
+   "url": "https://sthjj.my.gov.cn/myssthjj/c100964/202207/2b948b11a18443829d9df17187efd0e3.shtml",
+   "publisher": "Mianyang Ecology and Environment Bureau",
+   "doc_type": "official proposed EIA approval notice",
+   "title": "Jiangyou Rongtong 150,000 t/y LFP project proposed approval",
+   "tier": "primary",
+   "doc_date": "2022-07-13",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_rt_jy_150k_eia.html",
+   "hash": "e1d6ea47f8d77a5b33c744378622e0ea36f4cea138ed9eba078ae80fc88bf56a",
+   "note": "Official project-design record for 150,000 t/y LFP across two workshops. Approval/design evidence is context only and is not treated as built capacity.",
+   "bytes": 58692,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_jy_formed_150k",
+   "url": "http://www.jiangyou.gov.cn/jysrmzf/c104359/202410/b02b5bec7f314a2c9bb068b1808ba2b1.shtml",
+   "publisher": "Jiangyou People's Government",
+   "doc_type": "official investment-environment profile",
+   "title": "Jiangyou reports 150,000 t/y of formed LFP cathode capacity",
+   "tier": "primary",
+   "doc_date": "2025-09-25",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_rt_jy_formed_150k.html",
+   "hash": "42dcbd3bb9ed168ce09397bef85e44573032bb8edb0858ba1fc99b922a75f982",
+   "note": "General city profile states 150,000 t/y of LFP cathode capacity had been formed. The later, more detailed February-2026 production article instead implies 100,000 t/y operating plus 100,000 t/y under construction; the 150,000 figure is preserved as a conflict and excluded from the counted floor.",
+   "bytes": 58230,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_jy_orders_2026",
+   "url": "http://www.jiangyou.gov.cn/jysrmzf/BMDT/202602/d81e11c28d7f4652bbd56a61deea4983.shtml",
+   "publisher": "Jiangyou Industry and Information Technology Bureau",
+   "doc_type": "official production report",
+   "title": "Jiangyou Rongtong: 16 lines operating, 16 building, +100,000 t/y to 200,000 t/y total",
+   "tier": "primary",
+   "doc_date": "2026-02-06",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_rt_jy_orders_2026.html",
+   "hash": "8595742be4475427785e50a3c5c21310f1c2a9638f6997c93a69ef51da5c7ba1",
+   "note": "Official production report says workshop 106's 16 lines were fully operating, workshop 105's 16 lines were under construction, the addition would add 100,000 t/y, and expected total capacity would reach 200,000 t/y. The live 100,000 t/y component is transparently derived as 200,000 minus the 100,000 under-construction addition.",
+   "bytes": 13487,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_jy_resume_2026",
+   "url": "http://www.jiangyou.gov.cn/jysrmzf/c104308/202602/a58011ad050e418fa2ed22c7ac4db8d8.shtml",
+   "publisher": "Jiangyou People's Government",
+   "doc_type": "official production-status report",
+   "title": "Jiangyou Rongtong maintained holiday production and generated about RMB 53m output",
+   "tier": "primary",
+   "doc_date": "2026-02-26",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_rt_jy_resume_2026.html",
+   "hash": "7ebd4474b18a7d9ca00794b76acfb076b40399f3004d426e201daf0d37ac96ae",
+   "note": "Official government visit reports uninterrupted holiday production and approximately RMB 53 million of output. It corroborates current Jiangyou operation but does not restate nameplate.",
+   "bytes": 15128,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_nj_phase1_80k",
+   "url": "https://www.neijiang.gov.cn/njs/xmjsqk/202304/ae503e5aa90c438aa8d2254b8346b41b.shtml",
+   "publisher": "Neijiang People's Government",
+   "doc_type": "official project-progress report",
+   "title": "Neijiang Rongtong phase one: 80,000 t/y LFP plus 40,000 t/y FePO4",
+   "tier": "primary",
+   "doc_date": "2023-04-04",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_rt_nj_phase1_80k.html",
+   "hash": "4c6f761261be5c8d9677518a74202fb201ed9a772b7741702bebcd88ec4b611f",
+   "note": "Official project report defines phase one as 80,000 t/y LFP plus a separate 40,000 t/y FePO4 precursor line. Only the LFP component enters the CAM floor.",
+   "bytes": 39543,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_nj_phase1_production",
+   "url": "https://www.neijiang.gov.cn/njs/xmjsqk/202310/8e8f9c99aab643369f7a684379d25a43.shtml",
+   "publisher": "Neijiang People's Government",
+   "doc_type": "official production report",
+   "title": "Neijiang Rongtong phase one fully commissioned and in normal mass production",
+   "tier": "primary",
+   "doc_date": "2023-10-16",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_rt_nj_phase1_production.html",
+   "hash": "4810b80982b3841556385c33de4f7257f5da132f83c49ee12e854515c2c91546",
+   "note": "Official report says phase one was fully commissioned and in normal mass production, producing 120 t/day with 225 t/day at full output. It confirms the separately stated 80,000 t/y phase-one line entered operation.",
+   "bytes": 40776,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_nj_200k_eia",
+   "url": "https://www.neijiang.gov.cn/sthjj/zfxxgk/zhengc/qtwj/202304/fdd6639ed3634560b324341e0df9a45f.shtml",
+   "publisher": "Neijiang Ecology and Environment Bureau",
+   "doc_type": "official EIA approval",
+   "title": "Neijiang Rongtong revised 200,000 t/y phosphate-cathode project approval",
+   "tier": "primary",
+   "doc_date": "2023-03-14",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_rt_nj_200k_eia.html",
+   "hash": "976ce594ff1dd4cbe8d626eed20e3992f71f018222c455b5403a2d6cf5c6282b",
+   "note": "Official approval re-scopes the previously approved 160,000 t/y LFP project into 160,000 t/y LFP plus 40,000 t/y LMFP and removes recycling. The 160,000 and 200,000 figures overlap; approval is not proof that the remaining 120,000 t/y was built.",
+   "bytes": 92073,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_nj_digital_2025",
+   "url": "https://www.neijiang.gov.cn/njs/bmdt/202502/6aeed2711e0a4f91a161ed1f868d51d9.shtml",
+   "publisher": "Neijiang People's Government",
+   "doc_type": "official industry-development report",
+   "title": "Neijiang Rongtong industrial digital-transformation centre selected provincially",
+   "tier": "primary",
+   "doc_date": "2025-02-19",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_rt_nj_digital_2025.html",
+   "hash": "d36156f2f355dbf5b8da906133d74cf24fd47dbac7fd8f733fb06fc6489e7afa",
+   "note": "Official report confirms continuing industrial activity at the Neijiang Rongtong entity through its provincial digital-transformation centre. It does not quantify current output.",
+   "bytes": 48836,
    "http_status": 200,
    "archive_error": null,
    "capture_quality": "complete"
@@ -2076,16 +2331,67 @@
   {
    "id": "s_gotion_142k",
    "url": "https://cn.solarbe.com/news/20241126/91516.html",
-   "publisher": "碳索储能网 (company investor-platform reply)",
+   "publisher": "碳索储能网",
    "doc_type": "trade press",
-   "title": "Gotion in-house LFP CAM total 142,000 t/y; Lujiang plant 42,000 t/y",
+   "title": "Gotion LFP CAM total 142,000 t/y, calculated from 42,000 + 100,000 t/y",
    "tier": "trade",
    "doc_date": "2024-11-26",
-   "accessed": "2026-07-28",
+   "accessed": "2026-08-02",
    "archived_local": "archive/s_gotion_142k.html",
-   "hash": "d246e2418254ce5f8972cbde0f1a69df08bb41cd8975a5031e17e072952569c4",
-   "note": "v0.2 re-sourcing sprint (27-28 Jul 2026); fetched and quote-confirmed; snapshot archive still pending.",
-   "bytes": 43983,
+   "hash": "258631d9444d82cf22e79f52366dd3eb27d6e90c936b175c8da6a6a021865d53",
+   "note": "The investor-platform reply quoted here confirms full in-house LFP supply, not the 142,000 t/y figure. The publisher calculates 142,000 t/y from 42,000 t/y at the legacy Lujiang materials base plus 100,000 t/y at Gotion Kehong; v0.3.3 independently verifies both components.",
+   "bytes": 43923,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_gotion_42k_recruitment",
+   "url": "https://jy.slu.edu.cn/2022/0913/c556a39698/page.htm",
+   "publisher": "Gotion High-Tech via Anhui Sanlian University Employment Center",
+   "doc_type": "company recruitment brief (university-hosted)",
+   "title": "Gotion Lujiang materials base: 42,000 t/y LFP capacity",
+   "tier": "company",
+   "doc_date": "2022-09-13",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_gotion_42k_recruitment.html",
+   "hash": "e3dc6b3641f4debb3925c8c4e6a41732cf1ac53a562fd0a6ce831d2109428217",
+   "note": "Company-supplied 2023 campus recruitment brief with a Gotion email, telephone and Lujiang site address. It states current capacity of 42,000 t/y LFP, 10,000 t/y ternary, 5,000 t/y silicon-carbon anode and 1,000 t/y LTO.",
+   "bytes": 37004,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_gotion_42k_field_visit",
+   "url": "http://www.ahmba.com/m/info/298",
+   "publisher": "Anhui Institute of Business Administration",
+   "doc_type": "on-site field-visit report",
+   "title": "On-site visit to Gotion's Lujiang materials base: 42,000 t/y LFP",
+   "tier": "trade",
+   "doc_date": "2021-11-04",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_gotion_42k_field_visit.html",
+   "hash": "617c715e26f95a7ec60a5e5aa2e748bfee95999f85b68b0758d06cd44b16e254",
+   "note": "University field report following an on-site visit and briefing by Gotion Lujiang base managers. It independently states 42,000 t/y of LFP capacity.",
+   "bytes": 28727,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_gotion_kehong_100k",
+   "url": "https://www.gotion.com.cn/newsInfo/351",
+   "publisher": "Gotion High-Tech",
+   "doc_type": "company commissioning release",
+   "title": "Gotion Kehong phases 1 and 2 commissioned; operating capacity reaches 100,000 t/y",
+   "tier": "company",
+   "doc_date": "2022-11-09",
+   "accessed": "2026-08-02",
+   "archived_local": "archive/s_gotion_kehong_100k.html",
+   "hash": "38ec5811c9d8f26c03bca28ed4985c1f2cbf04a311c1a10ff50913fa68c05174",
+   "note": "Official Gotion release: phase 1 (50,000 t/y) entered production on 8 June 2022 and phase 2 (50,000 t/y) on 8 November 2022, bringing Gotion Kehong to 100,000 t/y. The eventual four-phase plan is 200,000 t/y and remains separate.",
+   "bytes": 29521,
    "http_status": 200,
    "archive_error": null,
    "capture_quality": "complete"
@@ -2533,15 +2839,15 @@
   {
    "id": "s_rt_top10exit",
    "url": "https://finance.sina.com.cn/roll/2026-01-30/doc-inhkakfm3646531.shtml",
-   "publisher": "SMM via Sina",
+   "publisher": "我的电池网 (MyBattery) via Sina",
    "doc_type": "trade press",
-   "title": "SMM 2025 LFP shipments TOP10: Rongtong fell out of the top 10",
+   "title": "EVTank 2025 LFP shipments: Taifeng Xianxing in the top 10; Rongtong outside it",
    "tier": "trade",
    "doc_date": "2026-01-30",
    "accessed": "2026-07-28",
    "archived_local": "archive/s_rt_top10exit.html",
    "hash": "cf1ce207700b1f01620a4c379b926216794ad52d8862a25d7dbf50964ec71aa9",
-   "note": "v0.3 second-source / geocoding pass (28 Jul 2026); fetched and quote-confirmed; snapshot via archive_sources.py pending.",
+   "note": "Fetched, quote-confirmed, and archived with SHA-256 verification. EVTank lists Taifeng Xianxing among the 2025 LFP shipment top 10 while placing Rongtong outside it. The Rongtong disagreement with SPIR is treated as a methodology conflict, not proof of shutdown.",
    "bytes": 118144,
    "http_status": 200,
    "archive_error": null,
@@ -2798,6 +3104,40 @@
    "hash": "1d00aefc58c24fe856ac698c79613e168ce43f0f112c16969defed5171d8cd20",
    "note": "v0.3 second-source / geocoding pass (28 Jul 2026); fetched and quote-confirmed; snapshot via archive_sources.py pending.",
    "bytes": 55955,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_daye_operations_2026",
+   "url": "http://www.hbdaye.gov.cn/xwzx/qsyxx/202607/t20260719_1344335.html",
+   "publisher": "Daye People's Government",
+   "doc_type": "government media profile",
+   "title": "Rongtong Hi-Tech technology breakthrough — Daye's new-energy materials strength",
+   "tier": "primary",
+   "doc_date": "2026-07-19",
+   "accessed": "2026-08-03",
+   "archived_local": "archive/s_rt_daye_operations_2026.html",
+   "hash": "0ac5e1eba7bd928c88e0d0d9c922ce931f6cd6aa43721c04c061c8f6bb8846a2",
+   "note": "Live Daye government profile. It identifies the active Daye Lake High-tech Zone base, reports near 70,000 tonnes in H1 2026 at full load, states line 7 at 40,000 tonnes before a prospective 75,000-tonne upgrade, names lines 5-6 as fourth-generation LFP and line 2 as NFPP sodium cathode. It does not identify line 7 as LFP/LMFP or confirm the upgrade completed.",
+   "bytes": 17328,
+   "http_status": 200,
+   "archive_error": null,
+   "capture_quality": "complete"
+  },
+  {
+   "id": "s_rt_daye_upgrade_2026",
+   "url": "http://www.hbdaye.gov.cn/xwzx/tpxw/202603/t20260326_1317108.html",
+   "publisher": "Daye People's Government",
+   "doc_type": "government project meeting",
+   "title": "Daye holds on-site meeting for Rongtong Hi-Tech project construction",
+   "tier": "primary",
+   "doc_date": "2026-03-26",
+   "accessed": "2026-08-03",
+   "archived_local": "archive/s_rt_daye_upgrade_2026.html",
+   "hash": "7cf9e42b77fbe95aec8ccbac498be631dee5fb2fdaf42b3bd093b0add604dfb4",
+   "note": "Fresh official Daye evidence that Rongtong remained active and had started a major technical-upgrade programme. It provides no chemistry-specific nameplate figure and is context only.",
+   "bytes": 10667,
    "http_status": 200,
    "archive_error": null,
    "capture_quality": "complete"
@@ -4068,19 +4408,19 @@
    "country": "China",
    "region": "China",
    "section": "CHINA — active / ramping producers",
-   "makes": "LFP (+LMFP planned)",
+   "makes": "LFP + LMFP",
    "method": "Solid-state",
    "route_family": "A. Solid-State (dry)",
    "stage": "CAM",
-   "chem_focus": "LFP",
+   "chem_focus": "LFP/LMFP",
    "status_raw": "Active",
    "sgroup": "operating",
    "dead_cause": null,
    "scale": "commercial",
-   "capacity_text": "Top-10 (10th 2024); ~100-145 kt; Reliance-India JV",
-   "notes": "v0.3: no filing-tier confirmation exists (no public bonds/prospectus; Daye government publications carry no figures). CONFLICT: SMM reports Rongtong FELL OUT of the 2025 LFP shipments top-10, against the SPIR H1-2026 #9 ranking and the company's 'top-3' claim — the counted ~300 kt is single-source-family (SPIR) and some capacity is likely idled.",
-   "conf": "High",
-   "src": "s054",
+   "capacity_text": "180 kt/y evidenced LFP floor: Jiangyou 100 kt (derived) + Neijiang phase-one 80 kt; Daye active but chemistry-specific tonnage unresolved",
+   "notes": "v0.3.6 preserves the 180,000 t/y chemistry-stated floor built from primary Jiangyou and Neijiang site evidence. New official Daye evidence confirms full-load activity and explicitly identifies lines 5-6 as LFP, but discloses no tonnage for those lines. It gives line 7 as 40,000 tonnes before a prospective 75,000-tonne upgrade while calling its product only generic lithium-battery material; the upgrade was not confirmed complete. Therefore Daye still contributes zero to the LFP/LMFP floor and pipeline. The 2025 Jiangyou 150,000 t/y general statement and Neijiang's overlapping 160,000 LFP + 40,000 LMFP approved plan remain visible as conflicts/context, not counted as simultaneously built.",
+   "conf": "Medium",
+   "src": "s_rt_jy_orders_2026",
    "claims": [
     {
      "kind": "capacity",
@@ -4114,7 +4454,7 @@
      "scope": "company",
      "chem": "LFP",
      "src": "s_rt_h1_26",
-     "note": "H1-2026 producer review: '整体规划产能52.5万吨/年，当前已建成落地产能约30万吨/年' — ~300,000 t/y built (planned total 525k incl. LMFP). Q1-2026 capacity sold out per SMM. Supersedes the seed's 100–145k range. Still no filing tier: IPO tutoring only, no prospectus public.",
+     "note": "Historical v0.3 claim: the H1-2026 producer review reported ~300,000 t/y built/deployed within a 525,000 t/y planned total that explicitly includes LMFP. It superseded the seed's 100–145k range but was initially tagged LFP; p007.c4 corrects that chemistry scope. No filing-tier confirmation was accessible.",
      "bundle": false,
      "duplicate_of": null,
      "target_date": null,
@@ -4124,7 +4464,7 @@
      "count_reason": "",
      "seed_row_source": false,
      "supersedes": "p007.c1",
-     "superseded_by": null,
+     "superseded_by": "p007.c4",
      "id": "p007.c2"
     },
     {
@@ -4137,7 +4477,7 @@
      "scope": "site",
      "chem": "LFP",
      "src": "s_rt_india",
-     "note": "India JV with Reliance (see p061): phase-1 80,000 t/y LFP plant, mass production expected Mar 2026 (not yet confirmed started).",
+     "note": "India JV with Reliance (see p061): phase-1 80,000 t/y LFP plant, mass production was expected in March 2026 but remained unconfirmed at the August-2026 dataset date.",
      "bundle": false,
      "duplicate_of": null,
      "target_date": "2026",
@@ -4149,16 +4489,270 @@
      "supersedes": null,
      "superseded_by": null,
      "id": "p007.c3"
+    },
+    {
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 300000,
+     "value_native": "约30万吨/年",
+     "as_of": "2026-07-06",
+     "basis": "reported",
+     "scope": "company",
+     "chem": "L(M)FP-unsplit",
+     "src": "s_rt_h1_26",
+     "srcs": [
+      "s_rt_itdcw",
+      "s_rt_india",
+      "s_rt_top10exit"
+     ],
+     "source_roles": {
+      "s_rt_h1_26": "Exact ~300,000 t/y built/deployed company-total figure",
+      "s_rt_itdcw": "Financing, headquarters and three-base profile context; does not restate 300,000 t/y",
+      "s_rt_india": "Company/base and India-JV context; does not restate 300,000 t/y",
+      "s_rt_top10exit": "2025 shipment-ranking conflict; not capacity evidence"
+     },
+     "note": "SPIR/起点锂电: '含磷酸锰铁锂品类在内，公司磷酸铁锂整体规划产能52.5万吨/年，当前已建成落地产能约30万吨/年' — approximately 300,000 t/y built/deployed across an unsplit LFP + LMFP company total. SPIR remained the only accessible source for the exact number. v0.3.5 supersedes this opaque aggregate with a smaller primary-evidenced site floor; the trade claim remains visible as correction history.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": null,
+     "site_key": null,
+     "scale": "commercial",
+     "counted": null,
+     "count_reason": "Superseded trade-reported aggregate; counts toward no total.",
+     "seed_row_source": false,
+     "supersedes": "p007.c2",
+     "superseded_by": "p007.c5",
+     "id": "p007.c4"
+    },
+    {
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 180000,
+     "value_native": "10 + 8 万吨/年 evidenced site floor",
+     "as_of": "2026-02",
+     "basis": "built",
+     "scope": "company",
+     "chem": "LFP",
+     "src": "s_rt_jy_orders_2026",
+     "srcs": [
+      "s_rt_nj_phase1_80k",
+      "s_rt_nj_phase1_production",
+      "s_rt_jy_resume_2026",
+      "s_rt_nj_digital_2025",
+      "s_rt_jy_150k_eia",
+      "s_rt_jy_formed_150k",
+      "s_rt_nj_200k_eia"
+     ],
+     "source_roles": {
+      "s_rt_jy_orders_2026": "Jiangyou operating-floor arithmetic: 200,000 t/y expected total less 100,000 t/y still under construction; 16 existing lines fully operating",
+      "s_rt_nj_phase1_80k": "Exact Neijiang phase-one component: 80,000 t/y LFP; the separate 40,000 t/y FePO4 line is excluded",
+      "s_rt_nj_phase1_production": "Primary confirmation that Neijiang phase one entered normal mass production; does not expand the 80,000 t/y component",
+      "s_rt_jy_resume_2026": "Fresh Jiangyou operating-status evidence; does not restate nameplate",
+      "s_rt_nj_digital_2025": "Fresh Neijiang producer-activity evidence; does not restate nameplate or output",
+      "s_rt_jy_150k_eia": "Original 150,000 t/y Jiangyou project design; approval evidence only, not built-capacity proof",
+      "s_rt_jy_formed_150k": "Conflicting general 2025 Jiangyou statement; excluded in favour of the later detailed 100,000 + 100,000 t/y account",
+      "s_rt_nj_200k_eia": "Overlapping approved Neijiang plan (160,000 LFP + 40,000 LMFP); excluded beyond the proven 80,000 t/y operating phase"
+     },
+     "evidence_method": "site-floor",
+     "components": [
+      {
+       "label": "Jiangyou operating LFP nameplate floor",
+       "value_ty": 100000,
+       "site_key": "jiangyou",
+       "evidence_basis": "arithmetic-difference",
+       "srcs": [
+        "s_rt_jy_orders_2026"
+       ],
+       "calculation": {
+        "operation": "difference",
+        "minuend_ty": 200000,
+        "subtrahend_ty": 100000
+       }
+      },
+      {
+       "label": "Neijiang phase-one LFP nameplate",
+       "value_ty": 80000,
+       "site_key": "neijiang",
+       "evidence_basis": "direct",
+       "srcs": [
+        "s_rt_nj_phase1_80k",
+        "s_rt_nj_phase1_production"
+       ]
+      }
+     ],
+     "status_srcs": [
+      "s_rt_jy_resume_2026",
+      "s_rt_nj_digital_2025"
+     ],
+     "conflict_srcs": [
+      "s_rt_jy_formed_150k",
+      "s_rt_nj_200k_eia"
+     ],
+     "note": "Evidenced site floor, not a company-total estimate: 100,000 t/y at Jiangyou is transparently derived from the latest detailed government account (200,000 t/y expected total minus the 100,000 t/y workshop still under construction), while Neijiang phase one is directly stated at 80,000 t/y and was reported in normal mass production. The floor excludes Daye, the unconfirmed Jiangyou 40,000 t/y LMFP project, Neijiang capacity beyond phase one, Tongling precursor, and any residual implied by SPIR's superseded ~300,000 t/y trade claim. Nameplate is not actual output.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": null,
+     "site_key": null,
+     "scale": "commercial",
+     "counted": null,
+     "count_reason": "Counts in the primary chemistry-stated LFP scope as a conservative site-evidenced floor.",
+     "seed_row_source": false,
+     "supersedes": "p007.c4",
+     "superseded_by": null,
+     "id": "p007.c5"
+    },
+    {
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 100000,
+     "value_native": "10万吨/年",
+     "as_of": "2026-02-06",
+     "basis": "construction",
+     "scope": "site",
+     "chem": "LFP",
+     "src": "s_rt_jy_orders_2026",
+     "note": "Jiangyou workshop 105's 16 lines were under construction and were expected to add 100,000 t/y, taking the site to 200,000 t/y. On commissioning, this addition must move from pipeline to operating rather than be added on top of a 200,000 t/y site total.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": "2026",
+     "site_key": "jiangyou",
+     "scale": "commercial",
+     "counted": null,
+     "count_reason": "",
+     "seed_row_source": false,
+     "supersedes": null,
+     "superseded_by": null,
+     "id": "p007.c6"
+    },
+    {
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 150000,
+     "value_native": "15万吨/年",
+     "as_of": "2025-09-25",
+     "basis": "reported",
+     "scope": "site",
+     "chem": "LFP",
+     "src": "s_rt_jy_formed_150k",
+     "note": "Conflict record: a general Jiangyou government profile states 150,000 t/y of LFP capacity had been formed. It is excluded from totals because the later, more detailed February-2026 report identifies 16 operating lines and a separate 100,000 t/y workshop under construction, implying a 100,000 t/y current operating floor.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": null,
+     "site_key": "jiangyou",
+     "scale": "commercial",
+     "counted": false,
+     "count_reason": "Preserved as a conflicting alternative reading; excluded from published totals.",
+     "seed_row_source": false,
+     "supersedes": null,
+     "superseded_by": null,
+     "id": "p007.c7"
+    },
+    {
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 40000,
+     "value_native": "4万吨（7号产线；原文仅称“锂电材料”）",
+     "as_of": "2026-07-19",
+     "basis": "reported",
+     "scope": "site",
+     "chem": "cathode-unsplit",
+     "src": "s_rt_daye_operations_2026",
+     "srcs": [
+      "s_rt_daye_upgrade_2026"
+     ],
+     "source_roles": {
+      "s_rt_daye_operations_2026": "Exact pre-upgrade 40,000-tonne line-7 figure and Daye full-load context; chemistry is stated only as generic lithium-battery material",
+      "s_rt_daye_upgrade_2026": "Fresh Daye project and enterprise-activity context; does not state line capacity or chemistry"
+     },
+     "note": "Daye government reporting confirms line 7 had 40,000 tonnes of pre-upgrade capacity, but calls the product only generic 'lithium-battery material'. The same article explicitly labels lines 5-6 as LFP and line 2 as NFPP sodium cathode, so line 7 is not chemistry-assigned by inference. The figure remains visible but excluded from every LFP/LMFP band.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": null,
+     "site_key": "daye",
+     "scale": "commercial",
+     "counted": false,
+     "count_reason": "Daye line-7 chemistry is unresolved; generic lithium-material tonnage cannot enter an LFP/LMFP total.",
+     "seed_row_source": false,
+     "supersedes": null,
+     "superseded_by": null,
+     "id": "p007.c8"
+    },
+    {
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 75000,
+     "value_native": "7.5万吨（7号产线扩容后总产能）",
+     "as_of": "2026-07-19",
+     "basis": "construction",
+     "scope": "site",
+     "chem": "cathode-unsplit",
+     "src": "s_rt_daye_operations_2026",
+     "source_roles": {
+      "s_rt_daye_operations_2026": "Prospective line-7 post-upgrade total; chemistry unspecified and completion not confirmed"
+     },
+     "note": "The July 19 Daye profile said line 7 would rise from 40,000 to 75,000 tonnes by the end of July. No later completion record was found by the 3 August dataset date. The 75,000-tonne figure is the post-upgrade line total, overlaps the existing 40,000 tonnes, and has no explicit LFP/LMFP chemistry; it is not counted in pipeline or operating totals.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": "2026-07",
+     "site_key": "daye",
+     "scale": "commercial",
+     "counted": false,
+     "count_reason": "Prospective overlapping total with unresolved chemistry and no completion confirmation.",
+     "seed_row_source": false,
+     "supersedes": null,
+     "superseded_by": null,
+     "id": "p007.c9"
+    },
+    {
+     "kind": "qualitative",
+     "product": "CAM",
+     "value_ty": null,
+     "value_native": "5号、6号产线专产第四代高端磷酸铁锂",
+     "as_of": "2026-07-19",
+     "basis": "reported",
+     "scope": "site",
+     "chem": "LFP",
+     "src": "s_rt_daye_operations_2026",
+     "note": "The live Daye government article explicitly identifies lines 5-6 as dedicated fourth-generation high-end LFP production and reports the site at full load in H1 2026, but gives no nameplate tonnage for either line. This proves Daye LFP activity without supporting a numeric LFP capacity contribution.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": null,
+     "site_key": "daye",
+     "scale": "commercial",
+     "counted": false,
+     "count_reason": "Explicit LFP operation, but no disclosed line tonnage.",
+     "seed_row_source": false,
+     "supersedes": null,
+     "superseded_by": null,
+     "id": "p007.c10"
     }
    ],
    "sites": [
     {
      "key": "daye",
-     "name": "Daye (Huangshi), Hubei — HQ + main base, 大冶湖高新区 (trade-tier evidence)",
+     "name": "Daye Lake High-tech Zone, Huangshi, Hubei — active HQ/main base; LFP tonnage unresolved",
      "lat": 30.098,
      "lon": 114.98,
      "geo_basis": "city-centroid",
      "primary": true,
+     "note": "Official July-2026 reporting confirms active LFP lines 5-6 but gives no tonnage; line 7's 40,000-to-75,000-tonne record is chemistry-unspecified. No Daye tonnage enters the v0.3.6 evidenced floor."
+    },
+    {
+     "key": "jiangyou",
+     "name": "Jiangyou, Sichuan — 100 kt/y evidenced operating floor + 100 kt/y building",
+     "lat": 31.778,
+     "lon": 104.745,
+     "geo_basis": "city-centroid",
+     "primary": false,
+     "note": ""
+    },
+    {
+     "key": "neijiang",
+     "name": "Neijiang, Sichuan — 80 kt/y LFP phase one operating",
+     "lat": 29.58,
+     "lon": 105.058,
+     "geo_basis": "city-centroid",
+     "primary": false,
      "note": ""
     }
    ],
@@ -4188,7 +4782,7 @@
    "dead_cause": null,
    "scale": "commercial",
    "capacity_text": "Entered top-10 in 2024; early LFP maker (est. 1999, Peking Univ.)",
-   "notes": "Clients: CATL, ATL; Nano One JDA; Prayon JV | v0.2 entity note: LFP operating entity is 青海泰丰先行锂能科技有限公司 (Taifeng Xianxing, Xining) in the 北大先行/Pulead lineage; HK IPO filed ~May 2024, listing outcome unconfirmed. Ranked #11 in H1-2026 LFP review.",
+   "notes": "Clients: CATL, ATL; Nano One JDA; Prayon JV | v0.2 entity note: LFP operating entity is 青海泰丰先行锂能科技有限公司 (Taifeng Xianxing, Xining) in the 北大先行/Pulead lineage; HK IPO filed ~May 2024, listing outcome unconfirmed. EVTank lists Taifeng Xianxing in the 2025 top 10; SPIR ranks it #11 in H1 2026.",
    "conf": "High",
    "src": "s055",
    "claims": [
@@ -4223,7 +4817,41 @@
      "scope": "company",
      "chem": "LFP",
      "src": "s_pulead_wm",
-     "note": "Western Mining SSE announcement (2023-06-14): '18.5万吨/年磷酸铁锂（原有2.5万吨/年…新建一期16万吨/年…2023年5月投料试生产）' — 185,000 t/y (phase 1 in trial feed-in production at disclosure). STALENESS FLAG: latest confirmed figure; no post-2023 update found. Fills a seed no-figure hole.",
+     "srcs": [
+      "s_pulead_inquiry",
+      "s_rt_top10exit",
+      "s_rt_h1_26"
+     ],
+     "source_roles": {
+      "s_pulead_wm": "Exact 185,000 t/y nameplate statement",
+      "s_pulead_inquiry": "Independent 25,000 + 160,000 t/y reconstruction and trial-production disclosure",
+      "s_rt_top10exit": "2025 top-10 shipment status; does not restate capacity",
+      "s_rt_h1_26": "H1-2026 #11 shipment status; does not restate capacity"
+     },
+     "evidence_method": "durable-nameplate",
+     "components": [
+      {
+       "label": "Legacy Xining LFP nameplate",
+       "value_ty": 25000,
+       "srcs": [
+        "s_pulead_wm",
+        "s_pulead_inquiry"
+       ]
+      },
+      {
+       "label": "Phase-1 LFP nameplate; trial production began May 2023",
+       "value_ty": 160000,
+       "srcs": [
+        "s_pulead_wm",
+        "s_pulead_inquiry"
+       ]
+      }
+     ],
+     "status_srcs": [
+      "s_rt_top10exit",
+      "s_rt_h1_26"
+     ],
+     "note": "Two Western Mining SSE filings state and independently reconstruct 185,000 t/y as 25,000 t/y legacy capacity plus a 160,000 t/y phase-1 line that entered trial feed-in production in May 2023. EVTank's 2025 top-10 list and SPIR's H1-2026 #11 ranking confirm current commercial activity but do not restate the exact capacity. This is durable built nameplate, not actual output; the filing's valuation model projected a multi-year ramp from 40,000 t in 2023 toward about 135,000 t in 2027. The separate 140,000 t/y phase 2 remains planned only.",
      "bundle": false,
      "duplicate_of": null,
      "target_date": null,
@@ -4745,7 +5373,7 @@
    "dead_cause": null,
    "scale": "commercial",
    "capacity_text": "Own CAM 50 kt -> 200 kt (Hefei/Lujiang); LMFP in Astroinno L600",
-   "notes": "Also a cell maker; own CAM since 2007 | v0.3: no newer company quantification found (FY2025 AR, 2024 ESG report, 2026 IR records all non-quantitative). A SPIR-based review (Jul 2026) put the Lujiang base at 'at least 50 kt' — inconsistent with the counted 142 kt (Nov 2024 company statement); unresolved. The 200 kt project groundbreaking is second-sourced by CNR state media.",
+   "notes": "Also a cell maker; own CAM since 2007 | v0.3.3: the counted 142 kt is now an explicit, archived component sum: 42 kt at the legacy Lujiang materials base plus 100 kt at Gotion Kehong. A Jul-2026 SPIR review's 'at least 50 kt' wording is a floor for a narrower/unclear Lujiang scope, not a replacement for the component-backed aggregate. The separate 200 kt project groundbreaking is second-sourced by CNR state media.",
    "conf": "High",
    "src": "s059",
    "claims": [
@@ -4803,7 +5431,7 @@
      "scope": "company",
      "chem": "LFP",
      "src": "s_gotion_142k",
-     "note": "Company investor-platform reply (via trade): in-house LFP CAM total 142,000 t/y (~70 GWh of cells); Lujiang plant 42,000 t/y; Kehong lines inside. FY2025 AR discloses no quantified CAM capacity (confirmed absence, three targeted reads).",
+     "note": "Historical v0.2 record: the trade article reports 142,000 t/y, but this record incorrectly attributed that arithmetic to the quoted investor-platform reply. The reply only confirms full self-supply. Superseded by p012.c5's transparent 42,000 + 100,000 t/y component sum.",
      "bundle": false,
      "duplicate_of": null,
      "target_date": null,
@@ -4813,7 +5441,7 @@
      "count_reason": "",
      "seed_row_source": false,
      "supersedes": "p012.c1",
-     "superseded_by": null,
+     "superseded_by": "p012.c5",
      "id": "p012.c3"
     },
     {
@@ -4838,6 +5466,58 @@
      "supersedes": "p012.c2",
      "superseded_by": null,
      "id": "p012.c4"
+    },
+    {
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 142000,
+     "value_native": null,
+     "as_of": "2024-11",
+     "basis": "reported",
+     "scope": "site",
+     "chem": "LFP",
+     "src": "s_gotion_142k",
+     "srcs": [
+      "s_gotion_142k",
+      "s_gotion_42k_recruitment",
+      "s_gotion_42k_field_visit",
+      "s_gotion_kehong_100k"
+     ],
+     "evidence_method": "component-sum",
+     "components": [
+      {
+       "label": "Legacy Lujiang materials-base LFP capacity",
+       "value_ty": 42000,
+       "as_of": "2022-09",
+       "srcs": [
+        "s_gotion_42k_recruitment",
+        "s_gotion_42k_field_visit"
+       ]
+      },
+      {
+       "label": "Gotion Kehong phases 1 and 2",
+       "value_ty": 100000,
+       "as_of": "2022-11-09",
+       "srcs": [
+        "s_gotion_kehong_100k"
+       ]
+      }
+     ],
+     "corroboration_srcs": [
+      "s_gotion_142k"
+     ],
+     "note": "Transparent component sum: 42,000 t/y at the legacy Lujiang materials base plus 100,000 t/y at Gotion Kehong (50,000 t/y phase 1 + 50,000 t/y phase 2). A Nov-2024 trade article independently reports the same 142,000 t/y total. Its quoted investor-platform reply confirms full self-supply, not the arithmetic; p012.c3's attribution is superseded. The separate 200,000 t/y four-phase plan remains pipeline only.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": null,
+     "site_key": "hefei",
+     "scale": "commercial",
+     "counted": null,
+     "count_reason": "",
+     "seed_row_source": false,
+     "supersedes": "p012.c3",
+     "superseded_by": null,
+     "id": "p012.c5"
     }
    ],
    "sites": [
@@ -4870,10 +5550,10 @@
    "sgroup": "operating",
    "dead_cause": null,
    "scale": "commercial",
-   "capacity_text": "~60 kt (48 lines); CATL supplier since 2021; top-10",
-   "notes": "",
-   "conf": "High",
-   "src": "s060",
+   "capacity_text": "100 kt/y historical built nameplate: 40 kt operating in Aug 2022 + 60 kt commissioned by Feb 2023; current utilization unresolved",
+   "notes": "Primary filings establish one Terui capacity chain: 40,000 t/y operating in August 2022 plus 60,000 t/y commissioned by February 2023. An official Zhongxian design notice ties the 100,000 t/y project to Chongqing Terui New Energy Materials at the Zhong County base. County records from 2025-2026 confirm continuing industrial employment, retrofit/carbon-reporting activity and battery R&D, but none confirms current LFP production or utilization. The claim therefore remains historical built nameplate and C-grade rather than being promoted through general corporate-liveness evidence.",
+   "conf": "Medium",
+   "src": "s_terui_reply",
    "claims": [
     {
      "kind": "capacity",
@@ -4907,7 +5587,34 @@
      "scope": "company",
      "chem": "LFP",
      "src": "s_terui_reply",
-     "note": "SSE inquiry reply (2022-08): 40,000 t/y operating + 60,000 t/y building = 100,000 t/y design; Yicai (Feb 2023) confirms the 60k came onstream. STALENESS FLAG: no post-2023 confirmation; absent from 2025/2026 top-producer lists; company site unreachable (expired SSL). Output history: 6,711 t (2020), 11,489 t (2021).",
+     "srcs": [
+      "s_terui_termination",
+      "s_terui_yicai"
+     ],
+     "source_roles": {
+      "s_terui_reply": "40,000 t/y operating plus 60,000 t/y under construction; 100,000 t/y design",
+      "s_terui_termination": "Primary confirmation that the additional 60,000 t/y had entered production",
+      "s_terui_yicai": "Independent report quoting the commissioning and merger-termination disclosure"
+     },
+     "evidence_method": "component-sum",
+     "components": [
+      {
+       "label": "Operating LFP design capacity disclosed in August 2022",
+       "value_ty": 40000,
+       "srcs": [
+        "s_terui_reply"
+       ]
+      },
+      {
+       "label": "Additional LFP capacity commissioned by February 2023",
+       "value_ty": 60000,
+       "srcs": [
+        "s_terui_termination",
+        "s_terui_yicai"
+       ]
+      }
+     ],
+     "note": "Primary filings establish 100,000 t/y built/design nameplate as 40,000 t/y operating in August 2022 plus an additional 60,000 t/y confirmed commissioned by February 2023. The merger termination is not evidence against the build: the listed-company announcement says the sellers sought revised valuation and performance terms because the new capacity was operating and results were better than expected. No post-2023 source confirms current utilization or output. Last disclosed output was 6,711 t (2020) and 11,489 t (2021), so 100,000 t/y must not be read as current production.",
      "bundle": false,
      "duplicate_of": null,
      "target_date": null,
@@ -4917,27 +5624,82 @@
      "count_reason": "",
      "seed_row_source": false,
      "supersedes": "p013.c1",
-     "superseded_by": null,
+     "superseded_by": "p013.c3",
      "id": "p013.c2"
+    },
+    {
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 100000,
+     "value_native": null,
+     "as_of": "2023-02",
+     "basis": "built",
+     "scope": "company",
+     "chem": "LFP",
+     "src": "s_terui_reply",
+     "srcs": [
+      "s_terui_termination",
+      "s_terui_zhongxian_design_2021",
+      "s_terui_zhongxian_env_2025",
+      "s_terui_zhongxian_jobs_2025",
+      "s_terui_zhongxian_innovation_2026"
+     ],
+     "source_roles": {
+      "s_terui_reply": "Exact historical component evidence: 40,000 t/y operating plus 60,000 t/y under construction",
+      "s_terui_termination": "Primary confirmation that the additional 60,000 t/y had entered production by February 2023",
+      "s_terui_zhongxian_design_2021": "Official entity/site record for the Zhongxian 100,000 t/y project; design evidence only",
+      "s_terui_zhongxian_env_2025": "Recent industrial-activity context; does not confirm LFP production or restate capacity",
+      "s_terui_zhongxian_jobs_2025": "Recent manufacturing-employment context; does not confirm line utilization",
+      "s_terui_zhongxian_innovation_2026": "Current enterprise/R&D context; does not confirm cathode production"
+     },
+     "evidence_method": "component-sum",
+     "components": [
+      {
+       "label": "Operating LFP design capacity disclosed in August 2022",
+       "value_ty": 40000,
+       "srcs": [
+        "s_terui_reply"
+       ]
+      },
+      {
+       "label": "Additional LFP capacity commissioned by February 2023",
+       "value_ty": 60000,
+       "srcs": [
+        "s_terui_termination"
+       ]
+      }
+     ],
+     "note": "Primary filings establish the historical 100,000 t/y built nameplate as 40,000 + 60,000 t/y, and the official Zhongxian design notice resolves the project entity/site. Fresh county records show that the Zhongxian enterprise continued to employ manufacturing staff, undertake green/intelligent retrofits and carbon reporting, and add battery R&D activity in 2025-2026. Those records do not confirm current LFP production, output or utilization, so they are labelled as context and do not upgrade the capacity grade.",
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": null,
+     "site_key": "zhongxian",
+     "scale": "commercial",
+     "counted": null,
+     "count_reason": "",
+     "seed_row_source": false,
+     "supersedes": "p013.c2",
+     "superseded_by": null,
+     "id": "p013.c3"
     }
    ],
    "sites": [
     {
      "key": "tongliang",
-     "name": "Tongliang District, Chongqing — HQ + original plant (trade)",
+     "name": "Tongliang District, Chongqing — group/HQ and historical plant context",
      "lat": 29.845,
      "lon": 106.056,
      "geo_basis": "city-centroid",
-     "primary": true,
-     "note": ""
+     "primary": false,
+     "note": "Not the official Zhongxian 100 kt/y project location."
     },
     {
      "key": "zhongxian",
-     "name": "Zhongxian, Chongqing — 100 kt project base (trade/county media)",
+     "name": "Zhongxian, Chongqing — official 100 kt/y LFP project base",
      "lat": 30.302,
      "lon": 108.037,
      "geo_basis": "city-centroid",
-     "primary": false,
+     "primary": true,
      "note": ""
     }
    ],
@@ -6259,7 +7021,7 @@
      "key": "taiwancentroid",
      "name": "Taiwan (site not stated in seed)",
      "lat": 23.7,
-     "lon": 121.0,
+     "lon": 121,
      "geo_basis": "region-only",
      "primary": true,
      "note": ""
@@ -6332,7 +7094,7 @@
      "key": "taiwancentroid",
      "name": "Taiwan (site not stated in seed)",
      "lat": 23.7,
-     "lon": 121.0,
+     "lon": 121,
      "geo_basis": "region-only",
      "primary": true,
      "note": ""
@@ -6395,7 +7157,7 @@
      "key": "taiwancentroid",
      "name": "Taiwan (site not stated in seed)",
      "lat": 23.7,
-     "lon": 121.0,
+     "lon": 121,
      "geo_basis": "region-only",
      "primary": true,
      "note": ""
@@ -6458,7 +7220,7 @@
      "key": "taiwancentroid",
      "name": "Taiwan (site not stated in seed)",
      "lat": 23.7,
-     "lon": 121.0,
+     "lon": 121,
      "geo_basis": "region-only",
      "primary": true,
      "note": ""
@@ -7003,21 +7765,21 @@
    "sgroup": "announced",
    "dead_cause": null,
    "scale": "commercial",
-   "capacity_text": "Morocco 50 kt (w/ Youshan/Huayou), MP target 2026",
-   "notes": "Tennessee plant is NCMA, not LFP",
-   "conf": "High",
+   "capacity_text": "Morocco MOU 50 kt; 2026 target unconfirmed",
+   "notes": "Tennessee plant is NCMA, not LFP. The Morocco project remains announced/MOU-stage.",
+   "conf": "Medium",
    "src": "s065",
    "claims": [
     {
      "kind": "capacity",
      "value_ty": 50000,
-     "as_of": "",
+     "as_of": "2023-09-25",
      "basis": "announced",
      "scope": "site",
      "chem": "LFP",
-     "duplicate_of": "p065.c1",
+     "duplicate_of": "p065.c3",
      "target_date": "2026",
-     "note": "Morocco 50 kt with Youshan/Huayou, MP target 2026 — SAME project as the Morocco-cluster row; counts once there",
+     "note": "Morocco 50 kt MOU with Youshan/Huayou; the stated 2026 mass-production target is unconfirmed. SAME project as the Morocco-cluster row; counts once there.",
      "id": "p043.c1",
      "product": "CAM",
      "src": "s065",
@@ -7027,7 +7789,7 @@
      "scale": "commercial",
      "counted": null,
      "count_reason": "",
-     "seed_row_source": true
+     "seed_row_source": false
     }
    ],
    "sites": [
@@ -8522,14 +9284,14 @@
    "route_family": "not disclosed",
    "stage": "CAM",
    "chem_focus": "LFP",
-   "status_raw": "Construction",
-   "sgroup": "building",
+   "status_raw": "Announced (MOU; 2026 target unconfirmed)",
+   "sgroup": "announced",
    "dead_cause": null,
    "scale": "commercial",
-   "capacity_text": "LG Chem-Youshan/Huayou JV ~50,000 tpa by 2026; BTR & others; >$700M pledged",
-   "notes": "Geographically ex-East-Asia but Chinese-owned",
-   "conf": "Med-High",
-   "src": "s103",
+   "capacity_text": "LG Chem-Huayou/Youshan MOU: 50,000 t/y; 2026 target unconfirmed",
+   "notes": "Primary LG disclosure records an MOU, not construction. A June 2025 Moroccan business source still described the project as announced; no construction or production milestone was found in LG Chem or Huayou FY2025 reports.",
+   "conf": "Medium",
+   "src": "s065",
    "claims": [
     {
      "kind": "capacity",
@@ -8549,8 +9311,10 @@
      "site_key": null,
      "scale": "commercial",
      "counted": null,
-     "count_reason": "",
-     "seed_row_source": true
+     "count_reason": "Superseded: the construction label is unsupported by the primary disclosure.",
+     "seed_row_source": true,
+     "supersedes": null,
+     "superseded_by": "p065.c3"
     },
     {
      "kind": "qualitative",
@@ -8572,12 +9336,58 @@
      "counted": null,
      "count_reason": "",
      "seed_row_source": true
+    },
+    {
+     "kind": "capacity",
+     "value_ty": 50000,
+     "as_of": "2023-09-25",
+     "basis": "announced",
+     "scope": "site",
+     "chem": "LFP",
+     "target_date": "2026",
+     "note": "LG Chem and Huayou/Youshan signed an MOU for a 50,000 t/y Morocco LFP plant. The stated 2026 mass-production target is unconfirmed; no verified construction or production milestone was found as of 2026-08-02.",
+     "id": "p065.c3",
+     "product": "CAM",
+     "src": "s065",
+     "value_native": null,
+     "bundle": false,
+     "duplicate_of": null,
+     "site_key": null,
+     "scale": "commercial",
+     "counted": null,
+     "count_reason": "Counts in the pipeline only as an announced/MOU-stage project.",
+     "seed_row_source": false,
+     "supersedes": "p065.c1",
+     "superseded_by": null
+    },
+    {
+     "kind": "qualitative",
+     "value_ty": null,
+     "as_of": "2025-06-04",
+     "basis": "announced",
+     "scope": "site",
+     "chem": "LFP",
+     "note": "LesEco.ma still described the 50,000 t/y LG Chem-Huayou project as announced in June 2025; no construction milestone was stated.",
+     "id": "p065.c4",
+     "product": "CAM",
+     "src": "s_leseco_morocco25",
+     "value_native": null,
+     "bundle": false,
+     "duplicate_of": null,
+     "target_date": null,
+     "site_key": null,
+     "scale": "commercial",
+     "counted": null,
+     "count_reason": "",
+     "seed_row_source": false,
+     "supersedes": null,
+     "superseded_by": null
     }
    ],
    "sites": [
     {
      "key": "moroccocentroid",
-     "name": "Morocco (cluster; specific sites not stated in seed)",
+     "name": "Morocco (project site not disclosed)",
      "lat": 31.8,
      "lon": -7.1,
      "geo_basis": "country-only",
@@ -8690,7 +9500,7 @@
    "name": "Formosa Lithium Iron Oxide (FEMTC)",
    "country": "Taiwan",
    "lat": 23.7,
-   "lon": 121.0
+   "lon": 121
   }
  ],
  "methods": [
@@ -9430,7 +10240,7 @@
  "gap_log": [
   {
    "id": "g01",
-   "gap": "RESOLVED in v0.2 (was: Yuneng no-figure): Yuneng's FY2025 AR nameplate (994.5 kt) is now counted. NEW top gap: 1.44 Mt/y of the headline (Yuneng 994.5k + Dynanonic 450k) is phosphate-FAMILY totals with no published LFP/LMFP split — the lower–headline gap is now the atlas's main uncertainty."
+   "gap": "RESOLVED in v0.2 (was: Yuneng no-figure): Yuneng's FY2025 AR nameplate (994.5 kt) is now counted. Current top gap: 1.5645 Mt/y of the headline (Yuneng 994.5k + Dynanonic 450k + Easpring 120k) is phosphate-family capacity with no published LFP/LMFP split — 45.9% of the broader operating total. Rongtong no longer contributes to that bucket because v0.3.5 replaces its trade-tier company estimate with a chemistry-stated site floor."
   },
   {
    "id": "g02",
@@ -9442,7 +10252,7 @@
   },
   {
    "id": "g04",
-   "gap": "No SHA-256 source snapshot archive yet (archive_sources.py port pending); several filings are cited via mirror hosts (Xueqiu/10jqka/Sina/QQ/Eastmoney) because CNINFO's site blocks direct fetch — originals exist on CNINFO."
+   "gap": "The SHA-256 source archive currently covers 180 of 189 sources: 164 complete captures and 16 proxy/partial captures, with 9 still missing. Several filings are archived through mirror hosts (Xueqiu/10jqka/Sina/QQ/Eastmoney) because CNINFO blocks direct scripted fetches; the original CNINFO records remain identified in the source metadata."
   },
   {
    "id": "g05",
@@ -9454,11 +10264,11 @@
   },
   {
    "id": "g07",
-   "gap": "Updated in v0.3: Wanrun 468 kt is now company-confirmed (May-2026 exchange-disclosed IR record) — resolved. Still weak: Rongtong ~300 kt remains single-source-family (SPIR) with a standing conflict (SMM: fell out of the 2025 shipments top-10); Gotion 142 kt remains a Nov-2024 company statement with a conflicting 'at least 50 kt' Lujiang figure in a Jul-2026 SPIR review."
+   "gap": "Updated in v0.3.6: Rongtong's live counted record remains a conservative 180,000 t/y LFP site floor from Jiangyou and Neijiang. A new archived Daye government profile confirms full-load site activity and explicitly identifies lines 5-6 as LFP, but gives them no tonnage. It states line 7 at 40,000 tonnes before a prospective 75,000-tonne upgrade while describing its product only as generic lithium-battery material; no completion record was found. Both line-7 figures are preserved uncounted, so Daye still contributes zero. Tongling remains precursor-only, and overlapping Jiangyou/Neijiang records remain excluded."
   },
   {
    "id": "g08",
-   "gap": "Staleness: Terui 100 kt design (2022-23 filings; absent from 2025-26 producer lists) and Pulead/Taifeng 185 kt (Jun 2023 filing; phase 1 was in trial production then) are counted with no newer confirmation."
+   "gap": "Updated in v0.3.5: Pulead/Taifeng's 185 kt nameplate remains an exact 25 kt + 160 kt primary component sum with independent producer-status corroboration. Terui's 100 kt historical built nameplate remains primary-backed as 40 kt operating + 60 kt commissioned by Feb 2023, and an official notice now resolves the 100 kt project to Zhongxian. Fresh 2025-2026 county records confirm employment, retrofit/carbon-reporting and R&D activity, but do not confirm LFP production or utilization; they are context only and the claim remains C-grade."
   },
   {
    "id": "g09",
@@ -9466,10 +10276,72 @@
   },
   {
    "id": "g10",
-   "gap": "Open conflicts shipped, not resolved: Lopal Indonesia phase-2 (62.5 kt 'complete' per trade vs 90 kt 'commissioning' per company); 珩创 Ningxia phase-1 (25 kt vs 30 kt); FEMTC (4.8 kt vs 5 kt, both weak); Dynanonic 450 kt AR total vs 370+80 kt Oct-2025 IR record; Wanhua Shandong project overlaps (1.05 Mt provincial listing vs counted Haiyang 500 kt only). New in v0.3: Lopal sales-vs-production figure swap between H-share results and A-share AR; Lopal website ~310 kt vs prospectus 200.7 kt designed (website figure retired); Gotion 142 kt vs 'at least 50 kt' (SPIR)."
+   "gap": "Open conflicts shipped, not resolved: Jiangyou Rongtong 150 kt formed capacity vs the 100 kt operating floor derived from a later workshop-level record; Lopal Indonesia phase-2 (62.5 kt 'complete' per trade vs 90 kt 'commissioning' per company); 珩创 Ningxia phase-1 (25 kt vs 30 kt); FEMTC (4.8 kt vs 5 kt, both weak); Dynanonic 450 kt AR total vs 370+80 kt Oct-2025 IR record; Wanhua Shandong project overlaps (1.05 Mt provincial listing vs counted Haiyang 500 kt only). Lopal's H-share/A-share sales-vs-production label conflict also remains. Gotion's Jul-2026 'at least 50 kt' SPIR wording is retained as a narrower-scope floor, not treated as a contradiction to the archived 42 kt + 100 kt component sum."
   }
  ],
  "changelog": [
+  {
+   "version": "0.3.6",
+   "date": "2026-08-03",
+   "changes": [
+    "Archived two live Daye government records that confirm Rongtong's active Daye Lake High-tech Zone base and current technical-upgrade programme.",
+    "Added an uncounted 40,000-tonne line-7 record and the prospective overlapping 75,000-tonne post-upgrade total. The official source labels line 7 only as generic lithium-battery material and no later completion record was found.",
+    "Added explicit qualitative evidence that Daye lines 5-6 produce fourth-generation LFP. Because the source gives no tonnage for those LFP lines, Daye remains zero in the chemistry-specific operating floor.",
+    "Published totals are deliberately unchanged: lower 1,845,470 · headline 3,409,970 · upper 3,409,970 · pipeline 3,362,250 t/y. FePO4 precursor remains 890,000 t/y."
+   ]
+  },
+  {
+   "version": "0.3.5",
+   "date": "2026-08-02",
+   "changes": [
+    "Replaced Rongtong's trade-tier 300,000 t/y L(M)FP-unsplit company estimate append-only with a primary-backed 180,000 t/y chemistry-stated LFP site floor.",
+    "Made the floor reproducible as Jiangyou 100,000 t/y (200,000 expected total minus 100,000 under construction) plus Neijiang phase-one 80,000 t/y. Every operand, component, site-status record and conflict source is separately labelled in the public claim bundle.",
+    "Added Jiangyou's 100,000 t/y workshop expansion to pipeline. Retained the conflicting official 150,000 t/y formed-capacity statement as an uncounted record, and excluded Daye, precursor-only Tongling and overlapping Neijiang plan remainder from the floor.",
+    "Resolved Terui's mapped 100,000 t/y project base to Zhongxian and added fresh official employment, retrofit/carbon-reporting and R&D context. None proves current LFP output or utilization, so the historical built-nameplate claim remains C-grade.",
+    "Published totals deliberately re-pinned: lower 1,845,470 · headline 3,409,970 · upper 3,409,970 · pipeline 3,362,250 t/y. FePO4 precursor remains 890,000 t/y."
+   ]
+  },
+  {
+   "version": "0.3.4",
+   "date": "2026-08-02",
+   "changes": [
+    "Strengthened Pulead/Taifeng's 185,000 t/y claim with a second primary SSE filing that independently reconstructs 25,000 + 160,000 t/y, plus EVTank 2025 and SPIR H1-2026 shipment-status corroboration. The figure is explicitly nameplate, not output.",
+    "Added a general durable-nameplate evidence method: an exact primary component sum no more than 60 months old can grade B only when separate independent operating-status evidence is current and no source is presented as restating a number it does not contain.",
+    "Strengthened Terui's 100,000 t/y built nameplate as a transparent 40,000 + 60,000 t/y component sum. A newly archived primary termination filing confirms the additional 60,000 t/y had entered production and that the failed merger did not stop or finance the line; current utilization remains unknown.",
+    "Kept Rongtong's 300,000 t/y L(M)FP-unsplit claim at trade tier. Added profile, programme and ranking-conflict documents with explicit source roles stating that only SPIR supports the exact number.",
+    "Published totals are unchanged: lower 1,665,470 · headline 3,529,970 · upper 3,529,970 · pipeline 3,262,250 t/y. FePO4 precursor remains 890,000 t/y."
+   ]
+  },
+  {
+   "version": "0.3.3",
+   "date": "2026-08-02",
+   "changes": [
+    "Corrected Gotion's 142,000 t/y attribution append-only: the prior record incorrectly described the figure as a direct investor-platform company answer; the quoted answer only confirmed full self-supply.",
+    "Re-published 142,000 t/y as a transparent component sum: 42,000 t/y at the legacy Lujiang materials base (company recruitment brief, independently corroborated by an on-site university field report) plus 100,000 t/y at Gotion Kehong (official Gotion commissioning release).",
+    "Added multi-source provenance and machine-readable components to the live claim. The Nov-2024 trade article remains current corroboration; the separate 200,000 t/y four-phase plan remains pipeline only.",
+    "Published totals are unchanged: lower 1,665,470 · headline 3,529,970 · upper 3,529,970 · pipeline 3,262,250 t/y. FePO4 precursor remains 890,000 t/y."
+   ]
+  },
+  {
+   "version": "0.3.2",
+   "date": "2026-08-02",
+   "changes": [
+    "Corrected Rongtong Hi-Tech's ~300,000 t/y live claim from LFP to L(M)FP-unsplit after verifying that the cited SPIR/Sina passage explicitly says the company total includes LMFP; the previous chemistry tag remains visible as superseded history.",
+    "Kept the company-total figure in the broader operating scope but removed it from the primary chemistry-stated LFP/LMFP scope. No filing-tier, regulator-grade, or site-level chemistry split was accessible; the live archived source remains trade tier and is labelled built/deployed rather than full-utilisation output.",
+    "Corrected the Rongtong shipment-ranking conflict metadata: SPIR ranked the company #7 in 2025 and #9 in H1 2026, while EVTank placed it outside the 2025 top 10. The disagreement is retained as a methodology conflict, not treated as evidence of shutdown.",
+    "Published totals: lower 1,665,470 · headline 3,529,970 · upper 3,529,970 · pipeline 3,262,250 t/y. FePO4 precursor remains 890,000 t/y."
+   ]
+  },
+  {
+   "version": "0.3.1",
+   "date": "2026-08-02",
+   "changes": [
+    "Corrected the LG Chem-Huayou/Youshan Morocco 50,000 t/y project from under construction to announced/MOU-stage; the original construction claim remains visible as superseded history.",
+    "Replaced the missing Green Car Congress dependency for the counted figure with LG Corp's primary September-2023 disclosure and added June-2025 Moroccan business-press corroboration.",
+    "Marked the stated 2026 mass-production target unconfirmed after LG Chem and Huayou FY2025 report checks found no verified construction or production milestone.",
+    "Published totals are unchanged: lower 1,965,470 · headline 3,529,970 · upper 3,529,970 · pipeline 3,262,250 t/y."
+   ]
+  },
   {
    "version": "0.3.0",
    "date": "2026-07-28",

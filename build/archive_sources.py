@@ -38,7 +38,7 @@ except ImportError:
     sys.exit("pip install requests   (this script runs on your machine, not in the build)")
 
 can = json.load(open(CANON, encoding="utf-8"))
-UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) LFP-Atlas-archiver/0.3.1 (+research use; contact repo owner)"}
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) LFP-Atlas-archiver/0.3.6 (+research use; contact repo owner)"}
 
 def save():
     json.dump(can, open(CANON, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
