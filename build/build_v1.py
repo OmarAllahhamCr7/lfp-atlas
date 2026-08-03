@@ -384,9 +384,9 @@ _re_pp = sum(q["pipe_ty"] for q in plants_pub)
 assert (_re_lo, _re_hd, _re_up, _re_pp) == (bands["lower"], bands["headline"], bands["upper"], bands["pipeline"]), \
     "bands not reproducible from public rows"
 # regression pins — update ONLY deliberately, with a changelog entry (NMC discipline)
-# v0.3.5 re-pin (2026-08-02): Rongtong's unsplit 300 kt company estimate is
-# replaced by a primary-backed 180 kt/y LFP site floor; +100 kt/y Jiangyou
-# construction is added to pipeline.
+# v0.3.6 re-pin (2026-08-03): Daye's active LFP lines are documented, but their
+# tonnage is not. Line 7's 40 kt / prospective 75 kt figures remain uncounted
+# because the official source gives only a generic lithium-material chemistry.
 PINNED = (1845470, 3409970, 3409970, 3362250)
 assert (bands["lower"], bands["headline"], bands["upper"], bands["pipeline"]) == PINNED, \
     "BANDS MOVED: %r (pinned %r)" % ((bands["lower"], bands["headline"], bands["upper"], bands["pipeline"]), PINNED)

@@ -1,14 +1,14 @@
 {
  "meta": {
   "name": "LFP Atlas",
-  "version": "0.3.5",
-  "dataset_date": "2026-08-02",
+  "version": "0.3.6",
+  "dataset_date": "2026-08-03",
   "seed_compiled": "2026-07-19",
-  "as_of": "2 August 2026",
-  "generated": "2026-08-02",
+  "as_of": "3 August 2026",
+  "generated": "2026-08-03",
   "plants": 65,
   "seed": "LFP_LMFP_Synthesis_Methods_and_Producers.xlsx (compiled 19 Jul 2026)",
-  "cite": "LFP Atlas v0.3.5 — global LFP/LMFP cathode synthesis-route and producer census. CC-BY 4.0, attribution 'LFP Atlas' + version. Companion to NMC Atlas; both fold into Cathodes ATLAS.",
+  "cite": "LFP Atlas v0.3.6 — global LFP/LMFP cathode synthesis-route and producer census. CC-BY 4.0, attribution 'LFP Atlas' + version. Companion to NMC Atlas; both fold into Cathodes ATLAS.",
   "license": "CC-BY 4.0",
   "key_findings": [
    "•  ONE route dominates ~all commercial LFP tonnage: high-temperature solid-state CARBOTHERMAL REDUCTION fed by a (co-precipitated) FePO4 precursor  ->  spray-dried with Li source + carbon  ->  calcined under inert gas. These are linked STAGES of one workflow, not competing methods.",
@@ -2467,8 +2467,8 @@
    "chem_focus": "LFP/LMFP",
    "status_raw": "Active",
    "sgroup": "operating",
-   "capacity_text": "180 kt/y evidenced LFP floor: Jiangyou 100 kt (derived) + Neijiang phase-one 80 kt; Jiangyou +100 kt under construction",
-   "notes": "v0.3.5 replaces the opaque ~300,000 t/y trade-reported LFP/LMFP company total with a conservative chemistry-stated floor built from primary site evidence. Jiangyou contributes 100,000 t/y, transparently derived from the latest government arithmetic (200,000 t/y expected total less a 100,000 t/y workshop still under construction); Neijiang contributes the explicitly stated 80,000 t/y LFP phase one that entered normal mass production. Daye remains excluded because no regulator-grade capacity record was recovered. The 2025 Jiangyou 150,000 t/y general statement and Neijiang's overlapping 160,000 LFP + 40,000 LMFP approved plan remain visible as conflicts/context, not counted as simultaneously built.",
+   "capacity_text": "180 kt/y evidenced LFP floor: Jiangyou 100 kt (derived) + Neijiang phase-one 80 kt; Daye active but chemistry-specific tonnage unresolved",
+   "notes": "v0.3.6 preserves the 180,000 t/y chemistry-stated floor built from primary Jiangyou and Neijiang site evidence. New official Daye evidence confirms full-load activity and explicitly identifies lines 5-6 as LFP, but discloses no tonnage for those lines. It gives line 7 as 40,000 tonnes before a prospective 75,000-tonne upgrade while calling its product only generic lithium-battery material; the upgrade was not confirmed complete. Therefore Daye still contributes zero to the LFP/LMFP floor and pipeline. The 2025 Jiangyou 150,000 t/y general statement and Neijiang's overlapping 160,000 LFP + 40,000 LMFP approved plan remain visible as conflicts/context, not counted as simultaneously built.",
    "conf": "Medium",
    "scale": "commercial",
    "x": 786.84,
@@ -2488,14 +2488,14 @@
    "sites": [
     {
      "key": "daye",
-     "name": "Daye (Huangshi), Hubei — HQ/main base; no tonnage enters the evidenced floor",
+     "name": "Daye Lake High-tech Zone, Huangshi, Hubei — active HQ/main base; LFP tonnage unresolved",
      "lat": 30.098,
      "lon": 114.98,
      "x": 786.84,
      "y": 158.93,
      "geo_basis": "city-centroid",
      "primary": true,
-     "note": "HQ/main-base marker. No Daye tonnage enters the v0.3.5 evidenced floor."
+     "note": "Official July-2026 reporting confirms active LFP lines 5-6 but gives no tonnage; line 7's 40,000-to-75,000-tonne record is chemistry-unspecified. No Daye tonnage enters the v0.3.6 evidenced floor."
     },
     {
      "key": "jiangyou",
@@ -3006,6 +3006,159 @@
      "caveats": [
       "stated as a floor"
      ]
+    },
+    {
+     "id": "p007.c8",
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 40000,
+     "value_native": "4万吨（7号产线；原文仅称“锂电材料”）",
+     "as_of": "2026-07-19",
+     "basis": "reported",
+     "scope": "site",
+     "chem": "cathode-unsplit",
+     "note": "Daye government reporting confirms line 7 had 40,000 tonnes of pre-upgrade capacity, but calls the product only generic 'lithium-battery material'. The same article explicitly labels lines 5-6 as LFP and line 2 as NFPP sodium cathode, so line 7 is not chemistry-assigned by inference. The figure remains visible but excluded from every LFP/LMFP band.",
+     "bundle": false,
+     "duplicate_of": null,
+     "supersedes": null,
+     "superseded_by": null,
+     "target_date": null,
+     "scale": "commercial",
+     "site_key": "daye",
+     "counted_operating": false,
+     "counted_pipeline": false,
+     "counted_upper_only": false,
+     "src_title": "Rongtong Hi-Tech technology breakthrough — Daye's new-energy materials strength",
+     "src_pub": "Daye People's Government",
+     "src_type": "government media profile",
+     "src_date": "2026-07-19",
+     "src_url": "http://www.hbdaye.gov.cn/xwzx/qsyxx/202607/t20260719_1344335.html",
+     "src_tier": "primary",
+     "sources": [
+      {
+       "id": "s_rt_daye_operations_2026",
+       "title": "Rongtong Hi-Tech technology breakthrough — Daye's new-energy materials strength",
+       "publisher": "Daye People's Government",
+       "doc_type": "government media profile",
+       "doc_date": "2026-07-19",
+       "url": "http://www.hbdaye.gov.cn/xwzx/qsyxx/202607/t20260719_1344335.html",
+       "tier": "primary",
+       "role": "Exact pre-upgrade 40,000-tonne line-7 figure and Daye full-load context; chemistry is stated only as generic lithium-battery material"
+      },
+      {
+       "id": "s_rt_daye_upgrade_2026",
+       "title": "Daye holds on-site meeting for Rongtong Hi-Tech project construction",
+       "publisher": "Daye People's Government",
+       "doc_type": "government project meeting",
+       "doc_date": "2026-03-26",
+       "url": "http://www.hbdaye.gov.cn/xwzx/tpxw/202603/t20260326_1317108.html",
+       "tier": "primary",
+       "role": "Fresh Daye project and enterprise-activity context; does not state line capacity or chemistry"
+      }
+     ],
+     "source_count": 2,
+     "components": [],
+     "evidence_method": null,
+     "status_sources": [],
+     "conflict_sources": [],
+     "corroboration_sources": [],
+     "public_confidence": "High",
+     "caveats": []
+    },
+    {
+     "id": "p007.c9",
+     "kind": "capacity",
+     "product": "CAM",
+     "value_ty": 75000,
+     "value_native": "7.5万吨（7号产线扩容后总产能）",
+     "as_of": "2026-07-19",
+     "basis": "construction",
+     "scope": "site",
+     "chem": "cathode-unsplit",
+     "note": "The July 19 Daye profile said line 7 would rise from 40,000 to 75,000 tonnes by the end of July. No later completion record was found by the 3 August dataset date. The 75,000-tonne figure is the post-upgrade line total, overlaps the existing 40,000 tonnes, and has no explicit LFP/LMFP chemistry; it is not counted in pipeline or operating totals.",
+     "bundle": false,
+     "duplicate_of": null,
+     "supersedes": null,
+     "superseded_by": null,
+     "target_date": "2026-07",
+     "scale": "commercial",
+     "site_key": "daye",
+     "counted_operating": false,
+     "counted_pipeline": false,
+     "counted_upper_only": false,
+     "src_title": "Rongtong Hi-Tech technology breakthrough — Daye's new-energy materials strength",
+     "src_pub": "Daye People's Government",
+     "src_type": "government media profile",
+     "src_date": "2026-07-19",
+     "src_url": "http://www.hbdaye.gov.cn/xwzx/qsyxx/202607/t20260719_1344335.html",
+     "src_tier": "primary",
+     "sources": [
+      {
+       "id": "s_rt_daye_operations_2026",
+       "title": "Rongtong Hi-Tech technology breakthrough — Daye's new-energy materials strength",
+       "publisher": "Daye People's Government",
+       "doc_type": "government media profile",
+       "doc_date": "2026-07-19",
+       "url": "http://www.hbdaye.gov.cn/xwzx/qsyxx/202607/t20260719_1344335.html",
+       "tier": "primary",
+       "role": "Prospective line-7 post-upgrade total; chemistry unspecified and completion not confirmed"
+      }
+     ],
+     "source_count": 1,
+     "components": [],
+     "evidence_method": null,
+     "status_sources": [],
+     "conflict_sources": [],
+     "corroboration_sources": [],
+     "public_confidence": "High",
+     "caveats": []
+    },
+    {
+     "id": "p007.c10",
+     "kind": "qualitative",
+     "product": "CAM",
+     "value_ty": null,
+     "value_native": "5号、6号产线专产第四代高端磷酸铁锂",
+     "as_of": "2026-07-19",
+     "basis": "reported",
+     "scope": "site",
+     "chem": "LFP",
+     "note": "The live Daye government article explicitly identifies lines 5-6 as dedicated fourth-generation high-end LFP production and reports the site at full load in H1 2026, but gives no nameplate tonnage for either line. This proves Daye LFP activity without supporting a numeric LFP capacity contribution.",
+     "bundle": false,
+     "duplicate_of": null,
+     "supersedes": null,
+     "superseded_by": null,
+     "target_date": null,
+     "scale": "commercial",
+     "site_key": "daye",
+     "counted_operating": false,
+     "counted_pipeline": false,
+     "counted_upper_only": false,
+     "src_title": "Rongtong Hi-Tech technology breakthrough — Daye's new-energy materials strength",
+     "src_pub": "Daye People's Government",
+     "src_type": "government media profile",
+     "src_date": "2026-07-19",
+     "src_url": "http://www.hbdaye.gov.cn/xwzx/qsyxx/202607/t20260719_1344335.html",
+     "src_tier": "primary",
+     "sources": [
+      {
+       "id": "s_rt_daye_operations_2026",
+       "title": "Rongtong Hi-Tech technology breakthrough — Daye's new-energy materials strength",
+       "publisher": "Daye People's Government",
+       "doc_type": "government media profile",
+       "doc_date": "2026-07-19",
+       "url": "http://www.hbdaye.gov.cn/xwzx/qsyxx/202607/t20260719_1344335.html",
+       "tier": "primary"
+      }
+     ],
+     "source_count": 1,
+     "components": [],
+     "evidence_method": null,
+     "status_sources": [],
+     "conflict_sources": [],
+     "corroboration_sources": [],
+     "public_confidence": "High",
+     "caveats": []
     }
    ],
    "row_src": {
@@ -13684,6 +13837,20 @@
    "doc_type": "trade press",
    "tier": "trade",
    "url": "https://www.itdcw.com/news/chuangtouyanjiu/0209153M62026.html"
+  },
+  {
+   "id": "s_rt_daye_operations_2026",
+   "publisher": "Daye People's Government",
+   "doc_type": "government media profile",
+   "tier": "primary",
+   "url": "http://www.hbdaye.gov.cn/xwzx/qsyxx/202607/t20260719_1344335.html"
+  },
+  {
+   "id": "s_rt_daye_upgrade_2026",
+   "publisher": "Daye People's Government",
+   "doc_type": "government project meeting",
+   "tier": "primary",
+   "url": "http://www.hbdaye.gov.cn/xwzx/tpxw/202603/t20260326_1317108.html"
   }
  ],
  "gaps": {
@@ -13715,7 +13882,7 @@
    },
    {
     "id": "g07",
-    "gap": "Updated in v0.3.5: Rongtong's trade-tier ~300,000 t/y L(M)FP-unsplit company estimate is superseded and no longer counted. The live record is a conservative 180,000 t/y LFP site floor: Jiangyou 100,000 t/y derived transparently as 200,000 expected total minus 100,000 under construction, plus Neijiang's directly stated 80,000 t/y commissioned phase one. A separate official Jiangyou 150,000 t/y formed-capacity statement is retained as an explicit uncounted conflict. Daye remains unquantified, Tongling is precursor-only, and the revised Neijiang 200,000 t/y plan overlaps phase one and is not added. Gotion's 142,000 t/y component sum now names its aggregate corroboration source explicitly."
+    "gap": "Updated in v0.3.6: Rongtong's live counted record remains a conservative 180,000 t/y LFP site floor from Jiangyou and Neijiang. A new archived Daye government profile confirms full-load site activity and explicitly identifies lines 5-6 as LFP, but gives them no tonnage. It states line 7 at 40,000 tonnes before a prospective 75,000-tonne upgrade while describing its product only as generic lithium-battery material; no completion record was found. Both line-7 figures are preserved uncounted, so Daye still contributes zero. Tongling remains precursor-only, and overlapping Jiangyou/Neijiang records remain excluded."
    },
    {
     "id": "g08",
@@ -14060,14 +14227,24 @@
    }
   ],
   "archive": {
-   "snapshotted": 178,
-   "complete": 162,
+   "snapshotted": 180,
+   "complete": 164,
    "proxy_partial": 16,
-   "total": 187,
+   "total": 189,
    "about": "SHA-256 snapshots via build/archive_sources.py + integrity pass via build/verify_archive.py (both run on the maintainer's machine). Only 'complete' captures count as clean coverage; proxy/partial marks block pages, stubs and non-PDF bodies (hash kept for drift detection). Several filings archive via mirror hosts because CNINFO blocks scripted fetches — originals stated in the source titles. --check re-downloads and reports silent edits."
   }
  },
  "changelog": [
+  {
+   "version": "0.3.6",
+   "date": "2026-08-03",
+   "changes": [
+    "Archived two live Daye government records that confirm Rongtong's active Daye Lake High-tech Zone base and current technical-upgrade programme.",
+    "Added an uncounted 40,000-tonne line-7 record and the prospective overlapping 75,000-tonne post-upgrade total. The official source labels line 7 only as generic lithium-battery material and no later completion record was found.",
+    "Added explicit qualitative evidence that Daye lines 5-6 produce fourth-generation LFP. Because the source gives no tonnage for those LFP lines, Daye remains zero in the chemistry-specific operating floor.",
+    "Published totals are deliberately unchanged: lower 1,845,470 · headline 3,409,970 · upper 3,409,970 · pipeline 3,362,250 t/y. FePO4 precursor remains 890,000 t/y."
+   ]
+  },
   {
    "version": "0.3.5",
    "date": "2026-08-02",

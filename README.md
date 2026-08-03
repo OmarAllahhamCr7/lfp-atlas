@@ -6,8 +6,8 @@ the patent history that shaped the industry, capacity claims and the sourcing sh
 Sibling of **NMC Atlas**; the two are schema-compatible by design and fold into **Cathodes ATLAS**.
 
 **65 producer rows · 28 synthesis routes in 5 families · 18 patent & licensing events ·
-146 discrete claims (110 with figures, 25 superseded) · 187 sources · v0.3.5 ·
-dataset date 2 August 2026.**
+149 discrete claims (112 with figures, 25 superseded) · 189 sources · v0.3.6 ·
+dataset date 3 August 2026.**
 
 Headline: **3.41 Mt/y of operating nameplate documented at producer level** (primary chemistry-stated scope 1.85 —
 chemistry stated outright), a further **3.36 Mt/y announced or under construction**, and
@@ -91,6 +91,15 @@ uncounted; Daye remains unquantified. Terui is now mapped to its official Zhongx
 100,000 t/y project base, with fresh industrial-activity context kept separate from
 production evidence, so its historical built-nameplate claim remains C-grade.
 
+**v0.3.6 (Daye evidence resolution)** archives fresh official Daye records without
+forcing a chemistry split they do not support. The Daye government confirms active,
+full-load production and explicitly identifies lines 5-6 as fourth-generation LFP,
+but publishes no tonnage for those LFP lines. Line 7 is stated at 40,000 tonnes before
+a prospective 75,000-tonne upgrade, yet its product is described only as generic
+lithium-battery material and no completion record was found. Both numeric line-7
+records are visible but uncounted; Daye therefore remains zero in the LFP/LMFP floor
+and the published totals do not change.
+
 ## Two ways to run it
 
 **Standalone** — `LFP_Atlas_standalone.html`. One file, ~0.5 MB. Double-click it. No server,
@@ -159,6 +168,9 @@ cumulative" ships as cumulative; neither enters any total.
 - [x] v0.3.5 — Rongtong trade aggregate replaced by a primary-backed 180 kt/y
       site floor; Jiangyou's 100 kt/y construction addition and 150 kt conflict
       disclosed; Terui site/current-context record hardened without a grade upgrade
+- [x] v0.3.6 — Daye official operating and upgrade evidence archived; lines 5-6
+      confirmed as LFP without tonnage; line 7's chemistry-unspecified 40/75 kt
+      records preserved uncounted; totals unchanged
 - [ ] v0.4 — run the archiver + commit snapshots; supply links with tonnage; LMFP
       absolute-base resolution; charts pane; long-tail re-sourcing (Taiwan, Japan, Western
       announced projects); Daye and Terui permit/court-record recovery

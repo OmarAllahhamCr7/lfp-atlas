@@ -12,7 +12,7 @@ const D = JSON.parse(dataJs.replace(/^window\.DATA=/, "").replace(/;\s*$/, ""));
 
 /* ---- structural integrity ---- */
 ok(D.meta && D.plants && D.methods && D.families && D.patent_events && D.geo && D.gaps, "payload has all blocks");
-eq(D.meta.version, "0.3.5", "dataset version");
+eq(D.meta.version, "0.3.6", "dataset version");
 eq(D.plants.length, 65, "65 producer rows");
 eq(D.methods.length, 28, "28 methods");
 eq(D.families.length, 5, "5 families");
@@ -22,6 +22,8 @@ const ids = D.plants.map(p => p.id);
 eq(new Set(ids).size, ids.length, "plant ids unique");
 const cids = D.plants.flatMap(p => p.cap_claims.map(c => c.id));
 eq(new Set(cids).size, cids.length, "claim ids unique");
+eq(cids.length, 149, "149 discrete claims");
+eq(D.sources_index.length, 189, "189 sources");
 
 /* ---- every displayed figure is cited ---- */
 for (const p of D.plants) for (const c of p.cap_claims)
@@ -140,6 +142,21 @@ eq(rongtongCurrent.status_sources, ["s_rt_jy_resume_2026", "s_rt_nj_digital_2025
 eq(rongtongCurrent.conflict_sources, ["s_rt_jy_formed_150k", "s_rt_nj_200k_eia"], "Rongtong conflicts are explicit and excluded");
 ok(rongtongPipeline.counted_pipeline && rongtong.pipe_ty === 180000, "Rongtong Jiangyou and India pipeline additions count separately");
 ok(!rongtongConflict.counted_operating && rongtongConflict.value_ty === 150000, "Rongtong 150 kt conflict remains visible but uncounted");
+/* v0.3.6 Daye evidence resolution */
+const dayeLine7 = rongtong.cap_claims.find(c => c.id === "p007.c8");
+const dayeUpgrade = rongtong.cap_claims.find(c => c.id === "p007.c9");
+const dayeLfp = rongtong.cap_claims.find(c => c.id === "p007.c10");
+ok(dayeLine7.chem === "cathode-unsplit" && dayeLine7.value_ty === 40000, "Daye line 7 preserves generic pre-upgrade tonnage");
+ok(!dayeLine7.counted_operating && !dayeLine7.counted_upper_only, "Daye generic line-7 capacity counts nowhere");
+eq(dayeLine7.sources.map(s => s.id), [
+  "s_rt_daye_operations_2026",
+  "s_rt_daye_upgrade_2026",
+], "Daye line-7 evidence bundle disclosed");
+ok(dayeUpgrade.basis === "construction" && dayeUpgrade.value_ty === 75000, "Daye prospective line-7 total is preserved");
+ok(!dayeUpgrade.counted_pipeline && dayeUpgrade.note.includes("not counted"), "Unconfirmed overlapping Daye upgrade stays out of pipeline");
+ok(dayeLfp.kind === "qualitative" && dayeLfp.chem === "LFP" && dayeLfp.value_ty == null, "Daye lines 5-6 prove LFP activity without invented tonnage");
+ok(rongtong.op_lower === 180000 && rongtong.op_ty === 180000 && rongtong.pipe_ty === 180000, "Daye evidence leaves Rongtong totals unchanged");
+ok(D.gaps.archive.complete === 164 && D.gaps.archive.total === 189, "Daye archives increase clean coverage without gaps");
 ok(D.gaps.archive.total === D.sources_index.length, "archive coverage denominator matches sources");
 /* BASF exception: reBand would allow it but canonical carries counted=false — verify it shipped uncounted */
 const basf = D.plants.find(p => p.company === "BASF");
